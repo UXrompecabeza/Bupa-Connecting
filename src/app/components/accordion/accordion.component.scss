@@ -1,0 +1,76 @@
+@import '../../scss/var';
+
+.accordion {
+  background-color: #FFF;
+  .accordion-item {
+    border-top: 1px solid $brand-blue_main;
+    position: relative;
+    overflow: hidden;
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+
+      &:checked {
+        + label {
+          background-color: #efffda;
+        }
+      }
+    }
+    .accordion-header {
+      font-size: 14px;
+      position: relative;
+      padding: 1em;
+      margin: 0 !important;
+      display: block;
+      cursor: pointer;
+
+      .accordion-title{
+        color: $brand-blue_dark;
+        font-weight: 500;
+      }
+      .accordion-subtitle{
+        color: $brand-blue_main;
+        font-weight: 300;
+        padding-left: 1em;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      .icon{
+        position: absolute;
+
+        &_mail{
+          @extend .icon;
+          right: 1.5em;
+          top: 1.2em;
+        }
+        &_search{
+          @extend .icon;
+          right: 4.5em;
+          top: 1em;
+        }
+        &_noexam{
+          @extend .icon;
+          width: 1.8em;
+          top: 1em;
+          right: 1.5em;
+        }
+      }
+    }
+    &:last-child{
+      border-bottom: 1px solid $brand-blue_main;
+    }
+    .accordion-body{
+      max-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height .35s;
+      -o-transition: max-height .35s;
+      transition: max-height .35s;
+    }
+    input:checked ~ .accordion-body {
+      max-height: 90vh;
+    }
+  }
+}

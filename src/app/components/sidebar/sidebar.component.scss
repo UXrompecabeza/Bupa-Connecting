@@ -1,0 +1,26 @@
+@import '../../scss/var.scss';
+
+.sidebar_background {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #295d83, #4d8bb4);
+    transition: 1s;
+    .sidebar-list-button {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        li {
+            .sidebar-icon {
+                font-size: 26px;
+                margin-top: 25%;
+                margin-bottom: 25%;
+            }
+            p[class^='text'] {
+                display: none;
+            }
+        }
+        li[class^='buttons-sidebar']:focus-within {
+            background-color: $brand-blue_dark;
+        }
+        
+    }
+}

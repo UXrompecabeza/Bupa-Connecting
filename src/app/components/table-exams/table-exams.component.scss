@@ -1,0 +1,71 @@
+@import '../../scss/var';
+
+table{
+  width: 100%;
+  
+  .table-header{
+    background-color: #F5FFFA;
+    color: $gray_typo;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 1em;
+    position: relative;
+    cursor: pointer;
+
+    .icon_orden{
+      width: 10px;
+      margin: 0 .5em;
+    }
+  }
+
+  .table-body{
+    font-size: 12px;
+    tr{
+      border-bottom: 1px solid #f0f0f0;
+      vertical-align: top;
+
+      .table-typo-light_blue_link{
+        font-weight: 300;
+        color: $brand-blue_main;
+        display: inline;
+        padding: 0 0 .5em 1em;
+        cursor: pointer;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      .table-typo-light_blue_dark{
+        font-weight: 300;
+        color: $brand-blue_dark;
+        display: block;   
+        padding: 1em 0 .5em 1em;   
+      }
+      .table-typo_strong{
+        font-weight: 500;
+        color: $brand-blue_dark;
+        display: block;
+        padding: 1em 1em .5em 1em;
+      }
+      .no-padding-top{
+        padding-top: 0 !important;
+      }
+
+      .icon{
+        &_location{
+          margin: -.5em .5em 0;
+        }
+        &_calendar{
+          margin: -7.5em 0 0 -2.5em;
+        }
+        &_image{
+          margin: -3.5em 0 0 -2em;
+          width: 2em;
+        }
+        &_dots{
+          margin: 2.5em 0 0 1em;
+        }
+      }
+    }
+  }
+}

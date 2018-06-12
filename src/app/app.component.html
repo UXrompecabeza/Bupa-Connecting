@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="row fix-margin">
+  <div class="col-lg-3 col-xl-3 display-content">
+    <div class="col-2">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-10">
+      <app-info-patients></app-info-patients>
+    </div>  
+  </div> 
+  <div class="col-lg-9 col-xl-9">
+    <app-container-box-main-view></app-container-box-main-view>
+    
+    <app-modal-indications></app-modal-indications>
+    <app-modal-scheduled></app-modal-scheduled>
+    <app-modal-promotions></app-modal-promotions>
+    <button class="patients-buttons" data-toggle="modal" data-target="#modal-success"></button>
+    <button class="patients-buttons" data-toggle="modal" data-target="#modal-notification"></button>
+  </div>    
+</div>
+<app-modal-landscape></app-modal-landscape>

@@ -1,0 +1,47 @@
+
+<table>
+    <thead>
+      <tr>
+        <th class="table-header" [class.active]="order === 'info.center'"(click)="setOrder('info.center')"> Prestador
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.date'"(click)="setOrder('info.date')"> Próxima hora
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.price'"(click)="setOrder('info.price')"> Copago
+            <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+          </th>
+        <th class="table-header" [class.active]="order === 'info.doctor'"(click)="setOrder('info.doctor')"> Médico
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header"></th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      <tr *ngFor="let row of collection | orderBy: order:reverse:'case-insensitive'">
+        <td class="table-body-row"> 
+          <span class="table-typo_strong">{{ row.info.center[0] }}</span> 
+          <span class="table-typo-light_blue_link">{{ row.info.center[1] }}
+            <img class="icon_location" src="./assets/icons/icon-location.svg"/>
+          </span> 
+        </td>
+        <td class="table-body-row"> 
+          <span class="table-typo_strong">{{ row.info.date[0] }}</span> 
+          <span class="table-typo-light_blue_dark no-padding-top">{{ row.info.date[1] }}</span>
+          <img class="icon_calendar" src="./assets/icons/icon-calendar.svg"/> 
+        </td>
+        <td class="table-body-row"> 
+          <span class="table-typo-light_blue_dark"> ${{ row.info.price }}</span>
+        </td>
+        <td class="table-body-row"> 
+          <span class="table-typo-light_blue_dark">{{ row.info.doctor }}</span>
+          <img class="icon_image" src="{{row.info.image}}"/> 
+        </td>
+        <td class="table-body-row">
+          <a>
+            <img class="icon_dots" src="./assets/icons/icon-settings.svg"/> 
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

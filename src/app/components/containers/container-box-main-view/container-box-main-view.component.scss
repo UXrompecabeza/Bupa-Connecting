@@ -1,0 +1,44 @@
+@import '../../../scss/var';
+
+.container-box{
+  width: 100%;
+  background-color: $brand-blue_light;
+  padding-top: 1em;
+
+  .tabs{
+    margin-bottom: .29em;
+
+    .tab-button{
+      width: 130px;
+      height: 30px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      color: $brand-blue_dark;
+      font-size: 14px;
+      padding: .5em 1.5em;
+      text-align: center;
+      text-decoration: none;
+      &_todo{
+        margin: 1.5em .5em 1.5em 1.5em;
+        @extend .tab-button;
+      }
+      &_ready{
+        margin: 1.5em 1.5em 1.5em 0em;
+        @extend .tab-button;
+      }
+    }
+  }
+
+  svg{
+    fill: #C5017F;
+    margin: 0 0 -.15em -9.4em;
+  }
+  .container-inner_todo{
+    padding: .8em;
+    background-color: #FFF;
+    height: 100%;
+  }
+  .container-inner_ready{
+    @extend .container-inner_todo;
+  }
+}

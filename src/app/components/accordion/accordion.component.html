@@ -1,0 +1,25 @@
+<div class="accordion">
+  <div class="tab accordion-item" *ngFor="let orden of ordenes; let i = index">
+    <input id="acc{{i}}" type="checkbox">
+    <label for="acc{{i}}" class="accordion-header">
+        <span class="accordion-title"> {{orden.info.exam}} </span> 
+        <span class="accordion-subtitle" data-toggle="modal" data-target="#modal-indications"> {{orden.info.indication}} </span>
+        <img class="icon_mail" src="../../../assets/icons/icon-mail.svg">
+    </label>
+    <div class="accordion-body">
+      <app-table-exams></app-table-exams>
+    </div>
+  </div>
+  <div class="tab accordion-item" *ngFor="let orden of ordenes2; let i = index">
+    <input id="acc{{i + 1}}" type="checkbox">
+    <label for="acc{{i + 1}}" class="accordion-header">
+        <span class="accordion-title"> {{orden.info.exam}} </span> 
+        <span class="accordion-subtitle" data-toggle="modal" data-target="#modal-indications"> {{orden.info.indication}} </span>
+        <img class="icon_search" src="../../../assets/icons/icon-search.svg">
+        <img class="icon_noexam" src="../../../assets/icons/icon-no-exam-on.svg">
+    </label>
+    <div class="accordion-body">
+      <app-table-exams></app-table-exams>
+    </div>
+  </div>
+</div>

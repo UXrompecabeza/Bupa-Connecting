@@ -1,0 +1,27 @@
+@import './scss/reset.scss';
+@import './scss/var.scss';
+@import './scss/mixin.scss';
+@import './scss/mediaqueries.scss';
+// @import './scss/fonts.scss';
+
+.no-padding{
+    padding: 0 !important;
+}
+
+.button {
+    @include button;
+}
+
+.fix-margin {
+    margin-right: 0!important;
+}
+.display-content {
+    display: inherit;
+}
+.fix.width {
+    max-width: 23%!important;
+}
+
+.container-accordion {
+    position: relative;
+}

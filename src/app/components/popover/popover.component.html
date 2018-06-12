@@ -1,0 +1,11 @@
+<button (click)="show = !show">popover</button>
+
+<div *ngIf="show">
+  <svg></svg>
+  <ul>
+    <li *ngFor="let pop of popovers">
+      <span>{{ pop.id }}</span>
+      <span>{{ pop.name }}</span>
+    </li>
+  </ul>
+</div>

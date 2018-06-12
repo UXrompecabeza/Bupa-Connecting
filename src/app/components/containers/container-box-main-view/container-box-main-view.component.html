@@ -1,0 +1,20 @@
+<div class="container-box">
+  <div class="tabs">
+    <a href="#" class="tab-button_todo" (click)= "changeValue(true)" [ngStyle]="{'background-color': tab === true ? 'white' : 'transparent'}">
+      <span [ngStyle]="{'font-weight': tab === true ? 500 : 300}">Por agendar</span>
+    </a>
+    <a href="#" class="tab-button_ready" (click)= "changeValue(false)" [ngStyle]="{'background-color': tab === false ? 'white' : 'transparent'}" >
+      <span [ngStyle]="{'font-weight': tab === false ? 500 : 300}">Lo agendado</span>
+    </a>
+    <svg width="4mm" height="4mm">
+      <circle cx="2mm" cy="2mm" r="4"/>
+    </svg>
+  </div>
+  <div class="container-inner_todo" *ngIf="tab">
+    <app-table-order></app-table-order>
+  </div>
+  <div class="container-inner_ready" *ngIf="!tab">
+    <app-popover></app-popover>
+    <app-accordion></app-accordion>
+  </div>
+</div>
