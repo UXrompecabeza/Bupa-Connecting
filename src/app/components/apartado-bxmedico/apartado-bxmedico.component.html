@@ -1,0 +1,28 @@
+<div class="apartado-bxmedico">
+  <h3>Martes 16 Mayo 2018</h3>
+  <h4>Disponibilidad de horas por médico</h4>
+  <div class="row">
+    <div class="col-6 col-mañana">
+      <h6>Horario Mañana</h6>
+      <ul>
+        <li *ngFor="let hora of morning">
+          <label class="container">{{hora}}
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-tarde">
+      <h6>Horario Tarde</h6>
+      <ul>
+        <li *ngFor="let hora of afternoon">
+          <label class="container">{{hora}}
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

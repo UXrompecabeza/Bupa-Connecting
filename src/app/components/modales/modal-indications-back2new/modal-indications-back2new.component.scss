@@ -1,0 +1,49 @@
+@import '../../../scss/var';
+@import './progress-tracker/_progress-tracker-variables.scss';
+@import './progress-tracker/_progress-tracker.scss';
+
+#modal-indications-back2new {
+    .modal-lg {
+        max-width: 75em!important;
+    }
+    .modal-content {
+        border-radius: 1.25em;
+        padding: 1em;
+        padding-top: 1.2em;
+        .modal-body {
+            padding-top: 0;
+            button {
+              border: none;
+              background-color: #FFF;
+              position: absolute;
+              right: 0;
+              color: $brand-blue_link;
+              cursor: pointer;
+            }
+            h5 {
+                padding-top: 0.5em;
+                color: $brand-blue_dark;
+                font-weight: 600;
+                font-size: 24px;
+                margin-bottom: 2em;
+                span {
+                    font-weight: 400;
+                }
+            }
+            .close {
+                font-weight: 400;
+                font-size: 32px;
+            }
+            .progress-step {
+                .progress-marker {
+                    font-size: 13px;
+                }
+                .progress-text {
+                    padding-right: 9em;
+                    font-size: 14px;
+                    color: $gray_typo;
+                }
+            }
+        }  
+    }   
+}

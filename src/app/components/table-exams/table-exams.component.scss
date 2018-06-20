@@ -41,17 +41,19 @@ table{
         display: block;   
         padding: 1em 0 .5em 1em;   
       }
-      .table-typo_strong{
+      .table-typo_strong {
         font-weight: 500;
         color: $brand-blue_dark;
         display: block;
         padding: 1em 1em .5em 1em;
       }
-      .no-padding-top{
+      .no-padding-top {
         padding-top: 0 !important;
       }
-
-      .icon{
+      .more-options {
+        cursor: pointer;
+      }
+      .icon {
         &_location{
           margin: -.5em .5em 0;
         }
@@ -66,6 +68,55 @@ table{
           margin: 2.5em 0 0 1em;
         }
       }
+      .container-popover {
+        position: absolute;
+        display: inline-block;
+        z-index: 1;
+        right: -.4em;
+        top: 8.5em;
+      }
+        .triangle {
+          position: absolute;
+          width: 0; 
+          height: 0; 
+          &-back {
+            @extend .triangle;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid $grey-background;
+            right: 1em;
+            top: -.39em;
+          }
+          &-front {
+            @extend .triangle;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid #FFF;
+            right: 1em;
+            top: -.35em;
+          }
+        }
+        ul {
+          list-style: none;
+          width: 11.25em;
+          padding: 0;
+          background-color: #FFF;
+          li {
+            border: 1px solid $grey-background;
+            border-bottom: none;
+            padding: .5em 1.5em;
+            color: $gray_typo;
+            font-size: 12px;
+            cursor: pointer;
+            &:last-child {
+              border-bottom: 1px solid $grey-background;
+            }
+            &:hover {
+              background-color: $brand-blue_main;
+              color: #FFF;
+            }
+          }
+        }
+      }
     }
   }
-}

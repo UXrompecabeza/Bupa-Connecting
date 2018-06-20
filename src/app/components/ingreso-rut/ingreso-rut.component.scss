@@ -1,0 +1,26 @@
+@import '../../scss/var.scss';
+.ingreso-rut {
+  background-color: #e5f2f9;
+  padding: 1.42em;
+  margin-left: 1em;
+  width: 84%;
+  span {
+    color: $brand-blue_main;
+    font-size: 18px;
+    font-weight: $medium;
+    padding: 1.5em;
+  }
+  input {
+    width: 40em;
+    padding: .5em 1em;
+    font-size: 14px;
+    border: none;
+  }
+  button {
+    color: #FFF;
+    background-color: #0079c8;
+    font-size: 14px;
+    padding: .6em 2.8em;
+    margin-left: 2em;
+  }
+}

@@ -7,17 +7,14 @@
 .no-padding{
     padding: 0 !important;
 }
+.no-margin{
+    margin: 0 !important;
+}
 
 .button {
     @include button;
 }
 
-.fix-margin {
-    margin-right: 0!important;
-}
-.display-content {
-    display: inherit;
-}
 .fix.width {
     max-width: 23%!important;
 }

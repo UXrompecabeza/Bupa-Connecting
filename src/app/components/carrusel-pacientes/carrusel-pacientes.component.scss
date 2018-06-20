@@ -1,0 +1,48 @@
+@import '../../scss/var.scss';
+.carrusel-pacientes {
+  .icon-woman {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  .patient-logo {
+    text-align: center;
+  }
+  .patients-data {
+    padding-top: 5%;
+    text-align: center;
+    .patients-name {
+        color: $brand-blue_main;
+        font-size: 20px;
+        font-weight: $medium;
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+    .patients-{
+      margin-bottom: 0;
+      color: $purple;
+      font-weight: $medium;
+      &contact {
+        @extend .patients-;
+        font-size: 14px;
+        padding-bottom: .5em;
+      }
+      &mail {
+        @extend .patients-;
+        padding-top: 1em;
+        font-size: 12px;
+      }
+    }
+    .patients{
+      color: $gray_typo;
+      margin: 0;
+      &-genre-age {
+        @extend .patients;
+        font-size: 14px;
+      }
+      &-rut {
+        @extend .patients;
+      font-size: 12px;
+      }
+    }
+  }
+}

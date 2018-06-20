@@ -1,21 +1,23 @@
 <app-header></app-header>
-<div class="row fix-margin">
-  <div class="col-lg-3 col-xl-3 display-content">
-    <div class="col-2">
-        <app-sidebar></app-sidebar>
-    </div>
-    <div class="col-10">
-      <app-info-patients></app-info-patients>
-    </div>  
+<app-sidebar></app-sidebar>
+<!-- Pantalla paciente agendar -->
+<!-- <div class="row container-views">
+  <div class="col-lg-3 display-content">
+    <app-info-patients></app-info-patients>
   </div> 
-  <div class="col-lg-9 col-xl-9">
+  <div class="col-lg-9">
     <app-container-box-main-view></app-container-box-main-view>
-    
-    <app-modal-indications></app-modal-indications>
-    <app-modal-scheduled></app-modal-scheduled>
-    <app-modal-promotions></app-modal-promotions>
-    <button class="patients-buttons" data-toggle="modal" data-target="#modal-success"></button>
-    <button class="patients-buttons" data-toggle="modal" data-target="#modal-notification"></button>
   </div>    
-</div>
+</div> -->
+<!-- Pantalla menú principal -->
+<app-menu-inicial></app-menu-inicial>
+<!-- Modales -->
+<app-modal-indications></app-modal-indications>
+<app-modal-indications-back2new></app-modal-indications-back2new>
+<app-modal-scheduled></app-modal-scheduled>
+<app-modal-scheduled-fail></app-modal-scheduled-fail>
+<app-modal-promotions></app-modal-promotions>
+<app-modal-nueva-reserva></app-modal-nueva-reserva>
+<app-reserva-horaprecio></app-reserva-horaprecio>
 <app-modal-landscape></app-modal-landscape>
+<app-modal-cv-doctor></app-modal-cv-doctor>

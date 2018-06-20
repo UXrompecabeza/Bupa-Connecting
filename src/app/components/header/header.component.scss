@@ -23,15 +23,14 @@ header {
         }
       }
       .img-brand {
-        width: 8em;
         height: 2.68em;
-        margin-right: 0.5em;
+        margin: 0 0.7em 0 2em;
       }
       .navbar-title {
         display: inline-block;
-        font-size: 1.25em;
-        font-family: $font-family;
-        padding-top: 0.4em;
+        font-size: 20px;
+        font-weight: $medium;
+        padding-top: 0.6em;
       }
     }
     .header-user {
@@ -40,10 +39,8 @@ header {
         display: inherit;
         .user-img {
           border-radius: 50%;
-          width: 2.8em;
-          height: 2.5em;
-          margin-right: 0.5em;
-          margin-top: 0.2em;
+          height: 2.6em;
+          margin: .5em .5em 0 0;
         }
         .user-info_text {
           .user {
@@ -51,22 +48,18 @@ header {
             margin: 0;
           }
           .user-name {
-            margin-top: 0.5em;
-            font-weight: bold;
+            margin-top: 1em;
+            margin-bottom: -.2em;
+            font-weight: $medium;
           }
           .user-place {
-            font-weight: lighter;
+            font-weight: $light;
           }
         }
       }
       .icon-notifications {
         cursor: pointer;
-        margin-left: 1.8em;
-      }
-      .icon-menu-barra {
-        cursor: pointer;
-        font-size: 1.2em;
-        margin-left: 2em;
+        margin: .5em .5em 0 3em;
       }
     }
   }

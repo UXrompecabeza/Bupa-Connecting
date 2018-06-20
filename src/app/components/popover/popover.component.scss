@@ -1,0 +1,52 @@
+@import '../../scss/var';
+
+.container-popover {
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  .triangle {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    &-back {
+      @extend .triangle;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid $grey-background;
+      right: 1em;
+      top: -.39em;
+    }
+    &-front {
+      @extend .triangle;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #FFF;
+      right: 1em;
+      top: -.35em;
+    }
+  }
+  ul {
+    list-style: none;
+    width: 11.25em;
+    padding: 0;
+    background-color: #FFF;
+    li {
+      border: 1px solid $grey-background;
+      border-bottom: none;
+      padding: .5em 1.5em;
+      color: $gray_typo;
+      font-size: 12px;
+      cursor: pointer;
+      &:last-child {
+        border-bottom: 1px solid $grey-background;
+      }
+      &:hover {
+        background-color: $brand-blue_main;
+        color: #FFF;
+      }
+    }
+  }
+  &:hover ul li + .triangle-back {
+    border-bottom-color: red;
+  }
+}

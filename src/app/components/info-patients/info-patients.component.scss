@@ -7,54 +7,10 @@
     border-right: 1px solid $gray_disabled;
     padding-top: 5%;
     text-align: center;
-    .icon-woman {
-        padding-left: 30%;
-        padding-right: 30%;
-    }
-    .patients-data {
-        padding-top: 5%;
-        text-align: center;
-    }
-    .patients-name {
-        color: $brand-blue_main;
-        font-size: 1em;
-        font-weight: 600;
-        padding-right: 6%;
-        padding-left: 6%;
-    }
-    .patients-genre-age {
-       /* margin-top: 0.9em;*/
-        font-size: 0.8em;
-        color: $gray_typo;
-    }
-    .patients-contact {
-        margin-bottom: 0;
-        color: $purple;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    .patients-mail {
-        font-size: 12px;
-    }
-    .patients-rut {
-        /*margin-top: 0.4em;*/
-        margin-bottom: 0;
-        font-size: 12px;
-        color: $gray_typo;
-    }
-    .patients-prevision {
-        font-size: 0.75em;
-        color: $gray_typo
-    }
     .datos-paciente {
         color: $brand-blue_main;
         font-size: 11px;
-    }
-    .patients-buttons {
-        @include buttons-patients;
-        &:focus {
-            outline: none;
-        }
+        padding: .7em 0 1em 0;
     }
     .container-state {
         padding-top: 5%;

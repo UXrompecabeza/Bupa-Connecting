@@ -1,20 +1,21 @@
 <div class="container-box">
   <div class="tabs">
-    <a href="#" class="tab-button_todo" (click)= "changeValue(true)" [ngStyle]="{'background-color': tab === true ? 'white' : 'transparent'}">
-      <span [ngStyle]="{'font-weight': tab === true ? 500 : 300}">Por agendar</span>
-    </a>
-    <a href="#" class="tab-button_ready" (click)= "changeValue(false)" [ngStyle]="{'background-color': tab === false ? 'white' : 'transparent'}" >
-      <span [ngStyle]="{'font-weight': tab === false ? 500 : 300}">Lo agendado</span>
-    </a>
-    <svg width="4mm" height="4mm">
-      <circle cx="2mm" cy="2mm" r="4"/>
-    </svg>
-  </div>
-  <div class="container-inner_todo" *ngIf="tab">
-    <app-table-order></app-table-order>
-  </div>
-  <div class="container-inner_ready" *ngIf="!tab">
-    <app-popover></app-popover>
-    <app-accordion></app-accordion>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="agendar-tab" data-toggle="tab" href="#agendar" role="tab" aria-controls="agendar" aria-selected="true">Por agendar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="agendado-tab" data-toggle="tab" href="#agendado" role="tab" aria-controls="agendado" aria-selected="false">Lo agendado</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active container-inner_todo" id="agendar" role="tabpanel" aria-labelledby="agendar-tab">
+        <app-table-order></app-table-order>
+      </div>
+      <div class="tab-pane fade container-inner_ready" id="agendado" role="tabpanel" aria-labelledby="agendado-tab">
+        <app-popover></app-popover>
+        <app-accordion></app-accordion>
+      </div>
+    </div>
   </div>
 </div>

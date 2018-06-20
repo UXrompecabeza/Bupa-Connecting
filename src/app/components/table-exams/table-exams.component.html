@@ -21,9 +21,9 @@
       <tr *ngFor="let row of collection | orderBy: order:reverse:'case-insensitive'">
         <td class="table-body-row"> 
           <span class="table-typo_strong">{{ row.info.center[0] }}</span> 
-          <span class="table-typo-light_blue_link">{{ row.info.center[1] }}
+          <a class="table-typo-light_blue_link" href="https://www.google.com/maps/place/Integram%C3%A9dica+Manquehue/@-33.4109654,-70.5689973,17z/data=!3m1!4b1!4m5!3m4!1s0x9662ceddf67196bb:0xa970f45009653d42!8m2!3d-33.4109654!4d-70.5668086" target="_blank">{{ row.info.center[1] }}
             <img class="icon_location" src="./assets/icons/icon-location.svg"/>
-          </span> 
+          </a> 
         </td>
         <td class="table-body-row"> 
           <span class="table-typo_strong">{{ row.info.date[0] }}</span> 
@@ -38,9 +38,16 @@
           <img class="icon_image" src="{{row.info.image}}"/> 
         </td>
         <td class="table-body-row">
-          <a>
+          <a class="more-options" (click)="show = !show">
             <img class="icon_dots" src="./assets/icons/icon-settings.svg"/> 
           </a>
+          <div class="container-popover" *ngIf="show">
+            <div class="triangle-back"></div>
+            <div class="triangle-front"></div>
+            <ul>
+              <li (click)="show = !show" *ngFor="let pop of popover">{{ pop }}</li>
+            </ul>
+          </div>
         </td>
       </tr>
     </tbody>

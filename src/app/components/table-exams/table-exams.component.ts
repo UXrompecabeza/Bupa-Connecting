@@ -17,7 +17,7 @@ export class TableExamsComponent implements OnInit {
         date: ['10:15 am','05/05/2018'],
         price: '48.500',
         doctor: 'Eduardo Navarro Alarcón',
-        image: './assets/icons/perfil-doctor.png'
+        image: './assets/icons/icon-cv-doctor.svg'
       }
     }, {
       info: {
@@ -25,7 +25,7 @@ export class TableExamsComponent implements OnInit {
         date: ['11:15 am','05/05/2018'],
         price: '58.500',
         doctor: 'María Nuñez Muñoz',
-        image: './assets/icons/perfil-doctora.png'
+        image: './assets/icons/icon-cv-doctor.svg'
       }
     }, {
       info: {
@@ -33,7 +33,7 @@ export class TableExamsComponent implements OnInit {
         date: ['9:15 am','05/05/2018'],
         price: '40.500',
         doctor: 'Pedro Hidalgo Pino',
-        image: './assets/icons/perfil-doctor.png'
+        image: './assets/icons/icon-cv-doctor.svg'
       }
     }, 
   ];
@@ -50,6 +50,8 @@ export class TableExamsComponent implements OnInit {
 
     this.order = value;
   }
+
+  popover = ['Agendar hora', 'Más horarios']
 
   ngOnInit() {
   }

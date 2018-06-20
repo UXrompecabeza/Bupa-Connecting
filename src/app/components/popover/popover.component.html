@@ -1,11 +1,9 @@
 <button (click)="show = !show">popover</button>
 
-<div *ngIf="show">
-  <svg></svg>
+<div class="container-popover" *ngIf="show">
+  <div class="triangle-back"></div>
+  <div class="triangle-front"></div>
   <ul>
-    <li *ngFor="let pop of popovers">
-      <span>{{ pop.id }}</span>
-      <span>{{ pop.name }}</span>
-    </li>
+    <li *ngFor="let pop of popover">{{ pop }}</li>
   </ul>
 </div>
