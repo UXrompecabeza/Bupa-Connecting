@@ -9,6 +9,8 @@ export class ReservaHoraprecioComponent implements OnInit {
 
   constructor() { }
 
+  daySelected: boolean = true;
+  
   filtroEspecialidad: any[];
   filtroMedicos: any[];
 

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarioExtendidoComponent implements OnInit {
 
+  weekSelected: boolean = true;
+
   constructor() { }
 
   ngOnInit() {

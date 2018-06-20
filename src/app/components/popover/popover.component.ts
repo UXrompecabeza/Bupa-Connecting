@@ -12,7 +12,10 @@ export class PopoverComponent implements OnInit {
   ngOnInit() {
   }
 
+  show: boolean = true;
+
   popover = ['Agendar hora', 'Más horarios']
+
 
 }
 

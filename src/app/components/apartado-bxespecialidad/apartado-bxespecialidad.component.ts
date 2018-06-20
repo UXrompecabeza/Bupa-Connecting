@@ -12,6 +12,8 @@ export class ApartadoBxespecialidadComponent implements OnInit {
   ngOnInit() {
   }
 
+  hourSelected: boolean = true;
+
   isClassVisible: true;
 
   doctors: any[] = [
