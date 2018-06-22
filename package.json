@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod && firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
     "angular-tabs-component": "^1.0.6",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "ngx-order-pipe": "^2.0.1",

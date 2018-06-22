@@ -1,7 +1,10 @@
 @import '../../scss/var.scss';
 
 .sidebar_background {
-    height: 100vh;
+    @media (max-width: 995px) {
+        display: none;
+    }
+    height: 94vh;
     background-image: linear-gradient(to bottom, #295d83, #4d8bb4);
     transition: .5s;
     width: 4%;
@@ -13,13 +16,13 @@
         padding: 0;
         display: inline-block;
         text-align: left;
-        li {
+        .buttons-sidebar {
             height: 3em;
             padding: .7em 0 0 .9em;
-            width: 10.5em;
+            width: 11.5em;
             cursor: pointer;
             .sidebar-icon {
-                font-size: 26px;
+                width: 1.8em;
             }
             span {
                 padding-left: 1em;
@@ -29,6 +32,10 @@
             &:focus-within {
                 background-color: $brand-blue_dark;
             }
+        }
+        .bottom-menu {
+            position: absolute;
+            bottom: 2em;
         }
     }
     &:hover {

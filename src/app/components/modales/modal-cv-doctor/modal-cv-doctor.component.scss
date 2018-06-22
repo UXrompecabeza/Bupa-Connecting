@@ -36,53 +36,103 @@
                   padding: 0;
                   border: 1px solid #f2f2f2;
                   border-radius: 8px;
-                  margin: 4em 1em 2em 1em;
-                  height: 35em;
+                  margin: 5em 1em 2em 1em;
                   width: 30.5%;
                   flex: inherit;
+                  text-align: center;
+                  .img-doctor {
+                    position: absolute;
+                    left: 35%;
+                    top: -8%;
+                  }
+                  h2 {
+                    font-size: 16px;
+                    color: $brand-blue_main;
+                    padding-top: 5em;
+                  }
+                  h4 {
+                    font-size: 14px;
+                    color: $gray_typo;
+                    font-weight: $regular;
+                  }
+                  h5 {
+                    font-size: 14px;
+                    color: $gray_typo;
+                    font-weight: $light;
+                  }
+                  h3 {
+                    font-size: 16px;
+                    color: $brand-blue_dark;
+                    font-weight: $regular;
+                    padding: 2em 0 1em 1em;
+                    text-align: left;
+                  }
+                  .especialidades {
+                    padding-top: .5em;
+                    h5 {
+                      padding-left: 1em ;
+                      text-align: left;
+                      padding-bottom: .5em;
+                    }
+                  }
+                  p {
+                    font-size: 12px;
+                    color: $gray_typo;
+                    font-weight: $light;
+                    text-align: left;
+                    padding: 0 1.5em;
+                  }
+                  .centro-medico-manquehue {
+                    border-top: 1px solid $grey-background;
+                    text-align: left;
+                    padding: 1.5em 0 0 1em;
+                    h6 {
+                      font-size: 14px;
+                      font-weight: $light;
+                    }
+                    .phone-center {
+                      padding-top: 1em;
+                      span {
+                        color: $brand-blue_main;
+                        font-size: 14px;
+                        padding-left: 1em;
+                      }
+                    }
+                  }
                   /* The container */
                   .container {
                     display: block;
                     position: relative;
-                    padding-left: 35px;
-                    margin-bottom: 12px;
+                    padding: 0 0 .5em 4em;
                     cursor: pointer;
-                    font-size: 22px;
+                    font-size: 13px;
+                    text-align: left;
+                    color: $brand-blue_main;
                     -webkit-user-select: none;
                     -moz-user-select: none;
                     -ms-user-select: none;
                     user-select: none;
                   }
-
-                  /* Hide the browser's default radio button */
                   .container input {
                     position: absolute;
                     opacity: 0;
                     cursor: pointer;
                   }
-
-                  /* Create a custom radio button */
                   .checkmark {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    height: 25px;
-                    width: 25px;
-                    background-color: #eee;
+                    height: 1.5em;
+                    width: 1.5em;
+                    margin-left: 1.5em;
+                    background-color: #fff;
                     border-radius: 50%;
+                    border: 1px solid #bfddf1;
                   }
-
-                  /* On mouse-over, add a grey background color */
-                  .container:hover input ~ .checkmark {
-                    background-color: #ccc;
-                  }
-
-                  /* When the radio button is checked, add a blue background */
                   .container input:checked ~ .checkmark {
-                    background-color: #2196F3;
+                    background-color: $brand-blue_main;
+                    border-color: $brand-blue_main;
                   }
-
-                  /* Create the indicator (the dot/circle - hidden when not checked) */
                   .checkmark:after {
                     content: "";
                     position: absolute;
@@ -96,12 +146,12 @@
 
                   /* Style the indicator (dot/circle) */
                   .container .checkmark:after {
-                  top: 9px;
-                  left: 9px;
-                  width: 8px;
-                  height: 8px;
-                  border-radius: 50%;
-                  background: white;
+                    top: .35em;
+                    left: .35em;
+                    width: .7em;
+                    height: .7em;
+                    border-radius: 50%;
+                    background: white;
                   }
                 }
               }

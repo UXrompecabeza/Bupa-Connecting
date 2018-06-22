@@ -4,70 +4,69 @@ header {
   @media (max-width: 995px) {
     display: none;
   }
-  .header-navbar {
-    width: 100%;
-    height: 3.3em;
+  .row {
+    margin: 0;
     background-color: $brand-blue_main;
     color: #fff;
-    padding-left: 0;
+    .col-6 {
+      padding: 0;
+    }
     .header-brand {
-      .header-button_burger {
-        width: 2em;
-        height: 2em;
-        padding-left: 2%;
+      padding-left: .5em;
+      button {
         cursor: pointer;
         background-color: $brand-blue_main;
         border: none;
+        img {
+          height: 1em;
+        }
         &:focus {
           outline: none;
         }
       }
       .img-brand {
-        height: 2.68em;
-        margin: 0 0.7em 0 2em;
+        height: 2em;
+        margin: 0 1.2em 0 2.5em;
       }
-      .navbar-title {
+      h1 {
         display: inline-block;
         font-size: 20px;
         font-weight: $medium;
-        padding-top: 0.6em;
+        padding-top: 1em;
       }
     }
     .header-user {
-      display: inline-flex;
+      text-align: right;
+      padding-right: 2.5em;
       .user-info {
-        display: inherit;
+        display: inline-block;
         .user-img {
           border-radius: 50%;
           height: 2.6em;
-          margin: .5em .5em 0 0;
+          margin: 0 .5em .7em 0;
         }
         .user-info_text {
+          display: inline-block;
           .user {
             font-size: 0.75em;
             margin: 0;
-          }
-          .user-name {
-            margin-top: 1em;
-            margin-bottom: -.2em;
-            font-weight: $medium;
-          }
-          .user-place {
-            font-weight: $light;
+            &-name {
+              @extend .user;
+              margin-top: 1em;
+              margin-bottom: -.2em;
+              font-weight: $medium;
+            }
+            &-place {
+              @extend .user;
+              font-weight: $light;
+            }
           }
         }
       }
       .icon-notifications {
         cursor: pointer;
-        margin: .5em .5em 0 3em;
+        margin: 0 .5em .7em 3em;
       }
     }
   }
-}
-
-.no-padding{
-  padding: 0 !important;
-}
-.fix-margin {
-  margin-right: 0!important;
 }

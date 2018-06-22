@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="30px" viewBox="0 0 28 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ejecutivo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="002-home" transform="translate(-15.000000, -238.000000)">
+            <g id="Group-12" transform="translate(15.000000, 238.000000)">
+                <rect id="Rectangle-33" fill="#FFFFFF" x="9" y="0" width="10" height="30" rx="5"></rect>
+                <rect id="Rectangle-33" fill="#FFFFFF" transform="translate(14.000000, 15.000000) scale(-1, -1) rotate(-90.000000) translate(-14.000000, -15.000000) " x="9" y="1" width="10" height="28" rx="5"></rect>
+                <circle id="Oval" fill="#FA5000" cx="14" cy="5" r="3"></circle>
+                <circle id="Oval" fill="#FA5000" cx="14" cy="25" r="3"></circle>
+                <circle id="Oval" fill="#05345C" cx="14" cy="15" r="4"></circle>
+                <circle id="Oval" fill="#FA5000" cx="5" cy="15" r="3"></circle>
+                <circle id="Oval" fill="#FA5000" cx="23" cy="15" r="3"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

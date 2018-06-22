@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarioExtendidoComponent implements OnInit {
 
-  weekSelected: boolean = true;
+  mayo: boolean = true;
+  junio: boolean = false;
+  julio: boolean = false;
+  junio2: boolean = false;
+  mayo2: boolean = false;
 
   constructor() { }
 

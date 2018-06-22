@@ -1,0 +1,161 @@
+@import '../../../scss/var';
+
+#modal-cvDoctor-hora {
+    .modal-lg {
+        max-width: 75em!important;
+    }
+    .modal-content {
+        border-radius: 1.25em;
+        padding: 0;
+        .modal-body {
+            padding: 0;
+            .header {
+              border-bottom: 1px solid $grey-background;
+              button {
+                border: none;
+                background-color: #FFF;
+                position: absolute;
+                right: 1em;
+                top: 1em;
+                color: $brand-blue_link;
+                cursor: pointer;
+              }
+              h5 {
+                  padding: 1em 1.5em;
+                  color: $brand-blue_dark;
+                  font-weight: $regular;
+                  font-size: 24px;
+                  margin: 0;
+              }
+            }
+            .doctor-info {
+              .row {
+                margin: 0;
+                padding: 0 1.5em;
+                .col-4 {
+                  padding: 0;
+                  border: 1px solid #f2f2f2;
+                  border-radius: 8px;
+                  margin: 5em 1em 2em 1em;
+                  width: 30.5%;
+                  flex: inherit;
+                  text-align: center;
+                  .img-doctor {
+                    position: absolute;
+                    left: 35%;
+                    top: -8%;
+                  }
+                  h2 {
+                    font-size: 16px;
+                    color: $brand-blue_main;
+                    padding-top: 5em;
+                  }
+                  h4 {
+                    font-size: 14px;
+                    color: $gray_typo;
+                    font-weight: $regular;
+                  }
+                  h5 {
+                    font-size: 14px;
+                    color: $gray_typo;
+                    font-weight: $light;
+                  }
+                  h3 {
+                    font-size: 16px;
+                    color: $brand-blue_dark;
+                    font-weight: $regular;
+                    padding: 2em 0 1em 1em;
+                    text-align: left;
+                  }
+                  .especialidades {
+                    padding-top: .5em;
+                    h5 {
+                      padding-left: 1em ;
+                      text-align: left;
+                      padding-bottom: .5em;
+                    }
+                  }
+                  p {
+                    font-size: 12px;
+                    color: $gray_typo;
+                    font-weight: $light;
+                    text-align: left;
+                    padding: 0 1.5em;
+                  }
+                  .centro-medico-manquehue {
+                    border-top: 1px solid $grey-background;
+                    text-align: left;
+                    padding: 1.5em 0 0 1em;
+                    h6 {
+                      font-size: 14px;
+                      font-weight: $light;
+                    }
+                    .phone-center {
+                      padding-top: 1em;
+                      span {
+                        color: $brand-blue_main;
+                        font-size: 14px;
+                        padding-left: 1em;
+                      }
+                    }
+                  }
+                  /* The container */
+                  .container {
+                    display: block;
+                    position: relative;
+                    padding: 0 0 .5em 4em;
+                    cursor: pointer;
+                    font-size: 13px;
+                    text-align: left;
+                    color: $brand-blue_main;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                  }
+                  .container input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                  }
+                  .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 1.5em;
+                    width: 1.5em;
+                    margin-left: 1.5em;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    border: 1px solid #bfddf1;
+                  }
+                  .container input:checked ~ .checkmark {
+                    background-color: $brand-blue_main;
+                    border-color: $brand-blue_main;
+                  }
+                  .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                  }
+
+                  /* Show the indicator (dot/circle) when checked */
+                  .container input:checked ~ .checkmark:after {
+                    display: block;
+                  }
+
+                  /* Style the indicator (dot/circle) */
+                  .container .checkmark:after {
+                    top: .35em;
+                    left: .35em;
+                    width: .7em;
+                    height: .7em;
+                    border-radius: 50%;
+                    background: white;
+                  }
+                }
+              }
+            }
+        }  
+    }   
+}

@@ -1,5 +1,8 @@
 @import '../../scss/var.scss';
 .menuInicial {
+  @media (max-width: 995px) {
+    display: none;
+  }
   height: 100vh;
   .date {
     text-align: center;

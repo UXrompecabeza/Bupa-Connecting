@@ -66,11 +66,14 @@
       .carrusel-horas {
         overflow-y: hidden;
         overflow-x: scroll;
-        .icon-day {
+        .icon-day, .icon-afternoon {
           background-color: #FFF;
           position: absolute;
           padding: 0 .5em;
           z-index: 2;
+          img {
+            width: 25px;
+          }
         }
         ul {
           text-align: left;
@@ -102,9 +105,9 @@
             }
             .checkmark {
               position: absolute;
-              top: 0;
+              top: -.1em;
               left: -.6em;
-              height: 1.5em;
+              height: 1.7em;
               width: 3.5em;
               background-color: #FFF;
               border-radius: 5px;
@@ -112,9 +115,9 @@
             }
             .container input:checked ~ .checkmark {
               background-color: #40a2a4;
-              .apartado-bxespecialidad {
-                background: red !important;
-              }
+            }
+            .container input:checked ~ .setTime {
+              color: white !important;
             }
             .separador {
               padding-left: .7em;

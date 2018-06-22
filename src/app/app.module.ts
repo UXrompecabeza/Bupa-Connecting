@@ -36,6 +36,8 @@ import { InfoPacienteEncontradoComponent } from './components/info-paciente-enco
 import { CalendarioExtendidoComponent } from './components/calendario-extendido/calendario-extendido.component';
 import { ModalIndicationsBack2newComponent } from './components/modales/modal-indications-back2new/modal-indications-back2new.component';
 import { ModalCvDoctorComponent } from './components/modales/modal-cv-doctor/modal-cv-doctor.component';
+import { ModalCvDoctorHComponent } from './components/modales/modal-cv-doctor-h/modal-cv-doctor-h.component';
+import { CarruselMesComponent } from './components/carrusel-mes/carrusel-mes.component';
 
 
 @NgModule({
@@ -69,7 +71,9 @@ import { ModalCvDoctorComponent } from './components/modales/modal-cv-doctor/mod
     InfoPacienteEncontradoComponent,
     CalendarioExtendidoComponent,
     ModalIndicationsBack2newComponent,
-    ModalCvDoctorComponent
+    ModalCvDoctorComponent,
+    ModalCvDoctorHComponent,
+    CarruselMesComponent
   ],
   imports: [
     BrowserModule,

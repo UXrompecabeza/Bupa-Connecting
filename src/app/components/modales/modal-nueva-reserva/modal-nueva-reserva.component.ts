@@ -9,12 +9,22 @@ export class ModalNuevaReservaComponent implements OnInit {
 
   constructor() { }
 
-  daySelected: boolean = true;
+  daySelected: boolean = false;
+  next: boolean = false;
+  next2: boolean = false;
+  next3: boolean = false;
+  calendar1: boolean = false;
+  calendar2: boolean = false;
+  calendar3: boolean = false;
+  resumen: boolean = false;
+  resumen2: boolean = false;
 
+  semana: boolean = true;
+  semana2: boolean = false;
+  semana3: boolean = false;
+  
   filtroEspecialidad: any[];
   filtroMedicos: any[];
-
-  isClassVisible: false;
 
     ngOnInit() {
       this.filtroEspecialidad = [

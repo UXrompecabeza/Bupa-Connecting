@@ -21,8 +21,22 @@
         </div>
         <ul>
           <li *ngFor="let hora of hoursAvailable">
-            <label class="container">{{ hora }}
+            <label class="container">
               <input type="radio" name="hour">
+              <span class="setTime">{{ hora }}</span>
+              <span class="checkmark" (click)="hourSelected = !hourSelected;"></span>
+            </label>
+            <span class="separador">-</span>
+          </li>
+        </ul>
+        <div class="icon-afternoon">
+          <img src="./assets/icons/icon-sunset.svg">
+        </div>
+        <ul>
+          <li *ngFor="let horaT of hoursAvailableAfternoon">
+            <label class="container">
+              <input type="radio" name="hour">
+              <span class="setTime">{{ horaT }}</span>
               <span class="checkmark" (click)="hourSelected = !hourSelected;"></span>
             </label>
             <span class="separador">-</span>

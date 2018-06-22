@@ -21,7 +21,7 @@ export class TableExamsComponent implements OnInit {
       }
     }, {
       info: {
-        center: ['Integramédica Las Condes','Las Condes 123, Las Condes'],
+        center: ['Integramédica Las Condes','Las Condes noroeste segundo 123, Las Condes'],
         date: ['11:15 am','05/05/2018'],
         price: '58.500',
         doctor: 'María Nuñez Muñoz',

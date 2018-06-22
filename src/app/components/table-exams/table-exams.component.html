@@ -19,10 +19,13 @@
     </thead>
     <tbody class="table-body">
       <tr *ngFor="let row of collection | orderBy: order:reverse:'case-insensitive'">
-        <td class="table-body-row"> 
+        <td class="table-body-row info-centro"> 
           <span class="table-typo_strong">{{ row.info.center[0] }}</span> 
-          <a class="table-typo-light_blue_link" href="https://www.google.com/maps/place/Integram%C3%A9dica+Manquehue/@-33.4109654,-70.5689973,17z/data=!3m1!4b1!4m5!3m4!1s0x9662ceddf67196bb:0xa970f45009653d42!8m2!3d-33.4109654!4d-70.5668086" target="_blank">{{ row.info.center[1] }}
+          <a class="table-typo-light_blue_link" href="https://www.google.com/maps/place/Integram%C3%A9dica+Manquehue/@-33.4109654,-70.5689973,17z/data=!3m1!4b1!4m5!3m4!1s0x9662ceddf67196bb:0xa970f45009653d42!8m2!3d-33.4109654!4d-70.5668086" target="_blank">
             <img class="icon_location" src="./assets/icons/icon-location.svg"/>
+            <div class="link-direccion">
+              <span>{{ row.info.center[1] }}</span>
+            </div>
           </a> 
         </td>
         <td class="table-body-row"> 
@@ -35,17 +38,22 @@
         </td>
         <td class="table-body-row"> 
           <span class="table-typo-light_blue_dark">{{ row.info.doctor }}</span>
-          <img class="icon_image" src="{{row.info.image}}"/> 
+          <img class="icon_image" data-dismiss="modal" data-toggle="modal" data-target="#modal-cvDoctor-hora" src="{{row.info.image}}"/> 
         </td>
         <td class="table-body-row">
           <a class="more-options" (click)="show = !show">
-            <img class="icon_dots" src="./assets/icons/icon-settings.svg"/> 
+            <img class="icon_dots" src="./assets/icons/icon-chevron-button.svg"/> 
           </a>
           <div class="container-popover" *ngIf="show">
             <div class="triangle-back"></div>
             <div class="triangle-front"></div>
             <ul>
-              <li (click)="show = !show" *ngFor="let pop of popover">{{ pop }}</li>
+              <li data-dismiss="modal" data-toggle="modal" data-target="#modal-success">
+                Agendar hora
+              </li>
+              <li data-dismiss="modal" data-toggle="modal" data-target="#nuevaReserva">
+                Más horas
+              </li>
             </ul>
           </div>
         </td>

@@ -39,7 +39,8 @@
                             margin-right: .2em;
                         }
                         svg {
-							height: 19px;
+							height: 20px;
+							width: 20px;
                             path {
                                 fill: #6C6E71;
                             }
@@ -58,6 +59,7 @@
             }
             .tab-content {
 				padding: 1em 2em 2em 2em;
+				min-height: 37.3em;
 				h6 {
 					font-size: 12px;
 					color: $gray_typo;
@@ -96,10 +98,14 @@
 											@extend select;
 											cursor: pointer;
 									}
+									input::-webkit-calendar-picker-indicator {
+										display: none;
+									}
 							}
 					}
 					.calendar {
 						margin-top: 1.5em;
+						position: relative;
 						button {
 							background-color: white;
 							border: none;
@@ -107,13 +113,24 @@
 						}
 						.carousel-date {
 							padding: 0 1em;
+							text-align: center;
 							img {
 								vertical-align: inherit;
+							}
+							.left-arrow {
+								position: absolute;
+								left: 1em;
+								top: 2.7em;
+							}
+							.right-arrow {
+								position: absolute;
+								right: 1em;
+								top: 2.7em;
 							}
 							.date-text {
 								display: inline-block;
 								text-align: center;
-								padding: 0 29%;
+								padding: 0 27%;
 								h5 {
 									font-size: 14px;
 									font-weight: $light;
