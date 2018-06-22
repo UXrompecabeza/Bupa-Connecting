@@ -2,9 +2,13 @@
 
 body {
   background-color: #fff;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Montserrat' !important;
   overflow-y: hidden;
   margin: 0 auto;
+}
+
+button, input {
+  font-family: 'Montserrat' !important;
 }
 
 .container-views {

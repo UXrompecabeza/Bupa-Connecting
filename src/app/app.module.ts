@@ -38,6 +38,7 @@ import { ModalIndicationsBack2newComponent } from './components/modales/modal-in
 import { ModalCvDoctorComponent } from './components/modales/modal-cv-doctor/modal-cv-doctor.component';
 import { ModalCvDoctorHComponent } from './components/modales/modal-cv-doctor-h/modal-cv-doctor-h.component';
 import { CarruselMesComponent } from './components/carrusel-mes/carrusel-mes.component';
+import { ModalReservaAbiertaComponent } from './components/modales/modal-reserva-abierta/modal-reserva-abierta.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { CarruselMesComponent } from './components/carrusel-mes/carrusel-mes.com
     ModalIndicationsBack2newComponent,
     ModalCvDoctorComponent,
     ModalCvDoctorHComponent,
-    CarruselMesComponent
+    CarruselMesComponent,
+    ModalReservaAbiertaComponent
   ],
   imports: [
     BrowserModule,
