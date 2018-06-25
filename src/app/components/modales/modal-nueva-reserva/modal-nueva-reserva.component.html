@@ -552,9 +552,9 @@
                       </table>
                     </div>
                 </div>
-                <div class="col-4 horas">
+                <div class="col-4 horas" (click)="resumen = !resumen" >
                   <div class="container-vacio">
-                    <div *ngIf="next2" (click)="resumen = !resumen" class="apartado-hora">
+                    <div *ngIf="next2" class="apartado-hora">
                         <app-apartado-bxmedico></app-apartado-bxmedico>
                     </div>
                     <div *ngIf="calendar2" class="apartado-calendario">
@@ -814,9 +814,9 @@
                   <div class="col-4 horas">
                     <div class="container-vacio">
                       <div *ngIf="next3" class="apartado-hora">
-                          <app-apartado-bxmedico></app-apartado-bxmedico>
+                          <app-apartado-bxmedico (click)="resumen2 = !resumen2" ></app-apartado-bxmedico>
                       </div>
-                      <div *ngIf="calendar3" (click)="resumen2 = !resumen2" class="apartado-calendario">
+                      <div *ngIf="calendar3" class="apartado-calendario">
                         <app-calendario-extendido></app-calendario-extendido>
                       </div>
                     </div>

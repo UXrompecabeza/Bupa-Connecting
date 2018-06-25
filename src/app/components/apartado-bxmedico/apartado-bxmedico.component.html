@@ -5,11 +5,20 @@
     <div class="col-6 col-mañana">
       <h6>Horario Mañana</h6>
       <ul>
+        <li>
+          <div *ngIf="shadow" class="back-shadow">
+              <img src="../../../assets/icons/icon-hours-on.svg">
+          </div>
+          <img (click)="shadow = !shadow" src="../../../assets/icons/icon-hours-off.svg">
+          <span (click)="shadow = !shadow">8:00</span>
+        </li>
         <li *ngFor="let hora of morning">
-          <label class="container">{{hora}}
+          <img src="../../../assets/icons/icon-hours-off.svg">
+          <span>{{hora}}</span>
+          <!-- <label class="container">{{hora}}
             <input type="radio" name="radio">
             <span class="checkmark"></span>
-          </label>
+          </label> -->
         </li>
       </ul>
     </div>
@@ -17,10 +26,12 @@
       <h6>Horario Tarde</h6>
       <ul>
         <li *ngFor="let hora of afternoon">
-          <label class="container">{{hora}}
+          <img src="../../../assets/icons/icon-hours-off.svg">
+          <span>{{hora}}</span>
+          <!-- <label class="container">{{hora}}
             <input type="radio" name="radio">
             <span class="checkmark"></span>
-          </label>
+          </label> -->
         </li>
       </ul>
     </div>
