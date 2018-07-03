@@ -70,38 +70,15 @@
               }
               .filtros {
                 padding-right: 1em !important;
-                ul {
-                    padding: 0;
-                    li {
-                        list-style: none;
-                        margin-bottom: 1em;
-                        position: relative;
-                        img {
-                            position: absolute;
-                            top: .7em;
-                            left: 1em;
-                        }
-                        select {
-                            background-image: url("../../../../assets/icons/icon-arrow-blue-bottom.svg");
-                            background-repeat: no-repeat;
-                            -moz-appearance:none; /* Firefox */
-                            -webkit-appearance:none; /* Safari and Chrome */
-                            appearance:none;
-                            border: 1px solid $gray_disabled;
-                            background-position-y: 50%;
-                            background-position-x: 96%;
-                            width: 100%;
-                            padding: .5em 3em;
-                            background-size: 4%;
-                        }
-                        input {
-                            @extend select;
-                            cursor: pointer;
-                        }
-                        input::-webkit-calendar-picker-indicator {
-                          display: none;
-                        }
-                    }
+                .filtro {
+                  position: relative;
+                  padding-bottom: 1em;
+                  img {
+                    position: absolute;
+                    z-index: 10;
+                    top: .7em;
+                    left: 1em;
+                  }
                 }
                 .calendar {
                   margin-top: 1.5em;
@@ -209,6 +186,7 @@
                 }
                 .container-calendar {
                   width: 46.1%;
+                  position: relative;
                 }
               }
               .resumen {

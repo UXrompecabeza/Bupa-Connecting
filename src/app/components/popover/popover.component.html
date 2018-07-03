@@ -1,4 +1,4 @@
-<button (click)="show = !show">popover</button>
+<!-- <button (click)="show = !show">popover</button>
 
 <div class="container-popover" *ngIf="show">
   <div class="triangle-back"></div>
@@ -6,4 +6,47 @@
   <ul>
     <li *ngFor="let pop of popover">{{ pop }}</li>
   </ul>
+</div> -->
+
+<div class="filtro">
+  <img src="../../../assets/icons/icon-search.svg" alt="">
+  <ng-select [items]="doctor"
+    bindLabel="name"
+    placeholder="Nombre del médico *">
+  </ng-select>
+</div>
+<div class="filtro">
+  <img src="../../../assets/icons/icon-search.svg" alt="">
+  <ng-select [items]="especialidad"
+    bindLabel="name"
+    placeholder="Especialidad *">
+  </ng-select>
+</div>
+<div class="filtro">
+  <img src="../../../assets/icons/icon-search.svg" alt="">
+  <ng-select [items]="prestacion"
+    bindLabel="name"
+    placeholder="Prestación *">
+  </ng-select>
+</div>
+<div class="filtro">
+  <img src="../../../assets/icons/icon-search.svg" alt="">
+  <ng-select [items]="region"
+    bindLabel="name"
+    placeholder="Región">
+  </ng-select>
+</div>
+<div class="filtro">
+  <img src="../../../assets/icons/icon-search.svg" alt="">
+  <ng-select [items]="comuna"
+    bindLabel="name"
+    placeholder="Comuna">
+  </ng-select>
+</div>
+<div class="filtro">
+  <img src="../../../assets/icons/icon-search.svg" alt="">
+  <ng-select [items]="centro"
+    bindLabel="name"
+    placeholder="Centro médico *">
+  </ng-select>
 </div>

@@ -39,6 +39,8 @@ import { ModalCvDoctorComponent } from './components/modales/modal-cv-doctor/mod
 import { ModalCvDoctorHComponent } from './components/modales/modal-cv-doctor-h/modal-cv-doctor-h.component';
 import { CarruselMesComponent } from './components/carrusel-mes/carrusel-mes.component';
 import { ModalReservaAbiertaComponent } from './components/modales/modal-reserva-abierta/modal-reserva-abierta.component';
+import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -80,7 +82,9 @@ import { ModalReservaAbiertaComponent } from './components/modales/modal-reserva
   imports: [
     BrowserModule,
     OrderModule,
-    TabModule
+    TabModule,
+    NgSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

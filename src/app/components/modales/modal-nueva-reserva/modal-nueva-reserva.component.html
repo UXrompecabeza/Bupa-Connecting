@@ -76,69 +76,41 @@
               <h6><span>*</span> Campos obligatorios</h6>
                 <div class="row no-margin">
                   <div class="col-4 no-padding filtros">
-                      <ul>
-                        <li>
-                          <img src="../../../../assets/icons/icon-search.svg">
-                          <input type="text" list="filterEsp1" name="filterEsp1" placeholder="Especialidad *" />
-                          <datalist id="filterEsp1">
-                            <select>
-                              <option value="Medicina General">Medicina General</option>
-                              <option value="Cardiología">Cardiología</option>
-                              <option value="Traumatología">Traumatología</option>
-                              <option value="Geriatría">Geriatría</option>
-                              <option value="Psicología">Psicología</option>
-                            </select>
-                          </datalist>
-                        </li>
-                        <li>
-                          <img src="../../../../assets/icons/icon-search.svg">
-                          <input type="text" list="filterEsp2" name="filterEsp2" placeholder="Prestación *" />
-                          <datalist id="filterEsp2">
-                            <select>
-                              <option value="Cruz Blanca">Cruz Blanca</option>
-                              <option value="Fonasa">Fonasa</option>
-                              <option value="Colmena">Colmena</option>
-                            </select>
-                          </datalist>
-                        </li>
-                        <li>
-                          <img src="../../../../assets/icons/icon-search.svg">
-                          <input type="text" list="filterEsp3" name="filterEsp3" placeholder="Región" />
-                          <datalist id="filterEsp3">
-                            <select>
-                              <option value="RM">RM</option>
-                              <option value="I">I</option>
-                              <option value="II">II</option>
-                              <option value="V">V</option>
-                              <option value="VI">VI</option>
-                            </select>
-                          </datalist>
-                        </li>
-                        <li>
-                          <img src="../../../../assets/icons/icon-search.svg">
-                          <input type="text" list="filterEsp4" name="filterEsp4" placeholder="Comuna" />
-                          <datalist id="filterEsp4">
-                            <select>
-                              <option value="Las Condes">Las Condes</option>
-                              <option value="Vitacura">Vitacura</option>
-                              <option value="Lo Barnechea">Lo Barnechea</option>
-                              <option value="La Reina">La Reina</option>
-                              <option value="Providencia">Providencia</option>
-                            </select>
-                          </datalist>
-                        </li>
-                        <li>
-                          <img src="../../../../assets/icons/icon-search.svg">
-                          <input type="text" list="filterEsp5" name="filterEsp5" placeholder="Centro médico" />
-                          <datalist id="filterEsp5">
-                            <select>
-                              <option value="Integramédica Manquehue">Integramédica Manquehue</option>
-                              <option value="Integramédica Las Condes">Integramédica Las Condes</option>
-                              <option value="Clinica Bupa Santiago">Clinica Bupa Santiago</option>
-                            </select>
-                          </datalist>
-                        </li>
-                      </ul>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="especialidad"
+                        bindLabel="name"
+                        placeholder="Especialidad *">
+                      </ng-select>
+                    </div>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="prestacion"
+                        bindLabel="name"
+                        placeholder="Prestación *">
+                      </ng-select>
+                    </div>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="region"
+                        bindLabel="name"
+                        placeholder="Región">
+                      </ng-select>
+                    </div>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="comuna"
+                        bindLabel="name"
+                        placeholder="Comuna">
+                      </ng-select>
+                    </div>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="centro"
+                        bindLabel="name"
+                        placeholder="Centro médico *">
+                      </ng-select>
+                    </div>
                     <div class="calendar" *ngIf="semana && !semana2">
                       <button (click)="calendar1 = !calendar1">
                         <img src="../../../../assets/icons/icon-more-hours.svg" alt="">
@@ -307,7 +279,7 @@
                       <div *ngIf="next" class="apartado-hora">
                         <app-apartado-bxespecialidad></app-apartado-bxespecialidad>
                       </div>
-                      <div *ngIf="calendar1" class="apartado-calendario">
+                      <div *ngIf="calendar1 && !next" class="apartado-calendario">
                         <app-calendario-extendido></app-calendario-extendido>
                       </div>
                     </div>
@@ -326,69 +298,48 @@
               <span>*</span> Campos obligatorios</h6>
               <div class="row no-margin">
                 <div class="col-4 no-padding filtros">
-                    <ul>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp1" name="filterEsp1" placeholder="Especialidad *" />
-                        <datalist id="filterEsp1">
-                          <select>
-                            <option value="Medicina General">Medicina General</option>
-                            <option value="Cardiología">Cardiología</option>
-                            <option value="Traumatología">Traumatología</option>
-                            <option value="Geriatría">Geriatría</option>
-                            <option value="Psicología">Psicología</option>
-                          </select>
-                        </datalist>
-                      </li>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp2" name="filterEsp2" placeholder="Prestación *" />
-                        <datalist id="filterEsp2">
-                          <select>
-                            <option value="Cruz Blanca">Cruz Blanca</option>
-                            <option value="Fonasa">Fonasa</option>
-                            <option value="Colmena">Colmena</option>
-                          </select>
-                        </datalist>
-                      </li>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp3" name="filterEsp3" placeholder="Región" />
-                        <datalist id="filterEsp3">
-                          <select>
-                            <option value="RM">RM</option>
-                            <option value="I">I</option>
-                            <option value="II">II</option>
-                            <option value="V">V</option>
-                            <option value="VI">VI</option>
-                          </select>
-                        </datalist>
-                      </li>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp4" name="filterEsp4" placeholder="Comuna" />
-                        <datalist id="filterEsp4">
-                          <select>
-                            <option value="Las Condes">Las Condes</option>
-                            <option value="Vitacura">Vitacura</option>
-                            <option value="Lo Barnechea">Lo Barnechea</option>
-                            <option value="La Reina">La Reina</option>
-                            <option value="Providencia">Providencia</option>
-                          </select>
-                        </datalist>
-                      </li>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp5" name="filterEsp5" placeholder="Centro médico" />
-                        <datalist id="filterEsp5">
-                          <select>
-                            <option value="Integramédica Manquehue">Integramédica Manquehue</option>
-                            <option value="Integramédica Las Condes">Integramédica Las Condes</option>
-                            <option value="Clinica Bupa Santiago">Clinica Bupa Santiago</option>
-                          </select>
-                        </datalist>
-                      </li>
-                    </ul>
+                  <div class="filtro">
+                    <img src="../../../assets/icons/icon-search.svg" alt="">
+                    <ng-select [items]="doctor"
+                      bindLabel="name"
+                      placeholder="Nombre del médico *">
+                    </ng-select>
+                  </div>
+                  <div class="filtro">
+                    <img src="../../../assets/icons/icon-search.svg" alt="">
+                    <ng-select [items]="especialidad"
+                      bindLabel="name"
+                      placeholder="Especialidad *">
+                    </ng-select>
+                  </div>
+                  <div class="filtro">
+                    <img src="../../../assets/icons/icon-search.svg" alt="">
+                    <ng-select [items]="prestacion"
+                      bindLabel="name"
+                      placeholder="Prestación *">
+                    </ng-select>
+                  </div>
+                  <div class="filtro">
+                    <img src="../../../assets/icons/icon-search.svg" alt="">
+                    <ng-select [items]="region"
+                      bindLabel="name"
+                      placeholder="Región">
+                    </ng-select>
+                  </div>
+                  <div class="filtro">
+                    <img src="../../../assets/icons/icon-search.svg" alt="">
+                    <ng-select [items]="comuna"
+                      bindLabel="name"
+                      placeholder="Comuna">
+                    </ng-select>
+                  </div>
+                  <div class="filtro">
+                    <img src="../../../assets/icons/icon-search.svg" alt="">
+                    <ng-select [items]="centro"
+                      bindLabel="name"
+                      placeholder="Centro médico *">
+                    </ng-select>
+                  </div>  
                     <div class="calendar" *ngIf="semana && !semana2">
                       <button (click)="calendar2 = !calendar2">
                         <img src="../../../../assets/icons/icon-more-hours.svg" alt="">
@@ -557,7 +508,7 @@
                     <div *ngIf="next2" class="apartado-hora">
                         <app-apartado-bxmedico></app-apartado-bxmedico>
                     </div>
-                    <div *ngIf="calendar2" class="apartado-calendario">
+                    <div *ngIf="calendar2 && !next2" class="apartado-calendario">
                       <app-calendario-extendido></app-calendario-extendido>
                     </div>
                   </div>
@@ -575,79 +526,41 @@
               <h6><span>*</span> Campos obligatorios</h6>
                 <div class="row no-margin">
                   <div class="col-4 no-padding filtros">
-                    <ul>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp1" name="filterEsp1" placeholder="Especialidad *" />
-                        <datalist id="filterEsp1">
-                          <select>
-                            <option value="Medicina General">Medicina General</option>
-                            <option value="Cardiología">Cardiología</option>
-                            <option value="Traumatología">Traumatología</option>
-                            <option value="Geriatría">Geriatría</option>
-                            <option value="Psicología">Psicología</option>
-                            <option value="Medicina2 General">Medicina2 General</option>
-                            <option value="Cardiología2">Cardiología2</option>
-                            <option value="Traumatología2">Traumatología2</option>
-                            <option value="Geriatría2">Geriatría2</option>
-                            <option value="Psicología2">Psicología2</option>
-                          </select>
-                        </datalist>
-                      </li>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp2" name="filterEsp2" placeholder="Prestación *" />
-                        <datalist id="filterEsp2">
-                          <select>
-                            <option value="Cruz Blanca">Cruz Blanca</option>
-                            <option value="Fonasa">Fonasa</option>
-                            <option value="Colmena">Colmena</option>
-                            <option value="Medicina General3">Medicina General3</option>
-                            <option value="Cardiología3">Cardiología3</option>
-                            <option value="Traumatología3">Traumatología3</option>
-                            <option value="Geriatría3">Geriatría3</option>
-                            <option value="Psicología3">Psicología3</option>
-                          </select>
-                        </datalist>
-                      </li>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp3" name="filterEsp3" placeholder="Región" />
-                        <datalist id="filterEsp3">
-                          <select>
-                            <option value="RM">RM</option>
-                            <option value="I">I</option>
-                            <option value="II">II</option>
-                            <option value="V">V</option>
-                            <option value="VI">VI</option>
-                          </select>
-                        </datalist>
-                      </li>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp4" name="filterEsp4" placeholder="Comuna" />
-                        <datalist id="filterEsp4">
-                          <select>
-                            <option value="Las Condes">Las Condes</option>
-                            <option value="Vitacura">Vitacura</option>
-                            <option value="Lo Barnechea">Lo Barnechea</option>
-                            <option value="La Reina">La Reina</option>
-                            <option value="Providencia">Providencia</option>
-                          </select>
-                        </datalist>
-                      </li>
-                      <li>
-                        <img src="../../../../assets/icons/icon-search.svg">
-                        <input type="text" list="filterEsp5" name="filterEsp5" placeholder="Centro médico" />
-                        <datalist id="filterEsp5">
-                          <select>
-                            <option value="Integramédica Manquehue">Integramédica Manquehue</option>
-                            <option value="Integramédica Las Condes">Integramédica Las Condes</option>
-                            <option value="Clinica Bupa Santiago">Clinica Bupa Santiago</option>
-                          </select>
-                        </datalist>
-                      </li>
-                    </ul>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="especialidad"
+                        bindLabel="name"
+                        placeholder="Especialidad *">
+                      </ng-select>
+                    </div>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="prestacion"
+                        bindLabel="name"
+                        placeholder="Prestación *">
+                      </ng-select>
+                    </div>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="region"
+                        bindLabel="name"
+                        placeholder="Región">
+                      </ng-select>
+                    </div>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="comuna"
+                        bindLabel="name"
+                        placeholder="Comuna">
+                      </ng-select>
+                    </div>
+                    <div class="filtro">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="centro"
+                        bindLabel="name"
+                        placeholder="Centro médico *">
+                      </ng-select>
+                    </div>
                     <div class="calendar" *ngIf="semana && !semana2">
                       <button (click)="calendar3 = !calendar3">
                         <img src="../../../../assets/icons/icon-more-hours.svg" alt="">
@@ -816,7 +729,7 @@
                       <div *ngIf="next3" class="apartado-hora">
                           <app-apartado-bxmedico (click)="resumen2 = !resumen2" ></app-apartado-bxmedico>
                       </div>
-                      <div *ngIf="calendar3" class="apartado-calendario">
+                      <div *ngIf="calendar3 && !next3" class="apartado-calendario">
                         <app-calendario-extendido></app-calendario-extendido>
                       </div>
                     </div>
