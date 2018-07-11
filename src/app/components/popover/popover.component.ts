@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgSelectModule, NgOption} from '@ng-select/ng-select';
+// import { DatePickerComponent } from 'gijgo-angular-wrappers';
+// import * as types from 'gijgo'
 
 @Component({
   selector: 'app-popover',

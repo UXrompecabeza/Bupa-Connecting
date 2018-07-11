@@ -75,13 +75,14 @@
                   padding-bottom: 1em;
                   img {
                     position: absolute;
-                    z-index: 10;
+                    z-index: 1010;
                     top: .7em;
                     left: 1em;
                   }
                 }
                 .calendar {
                   margin-top: 1.5em;
+                  position: relative;
                   button {
                     background-color: white;
                     border: none;
@@ -92,10 +93,19 @@
                     img {
                       vertical-align: inherit;
                     }
+                    .left-arrow {
+                      position: absolute;
+                      left: 1em;
+                      top: 2.7em;
+                    }
+                    .right-arrow {
+                      position: absolute;
+                      right: 1em;
+                      top: 2.7em;
+                    }
                     .date-text {
-                      display: inline-block;
                       text-align: center;
-                      padding: 0 27%;
+                      text-align: center;
                       h5 {
                         font-size: 14px;
                         font-weight: $light;

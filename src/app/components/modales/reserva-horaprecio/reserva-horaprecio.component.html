@@ -116,12 +116,12 @@
                           <img src="../../../../assets/icons/icon-more-hours.svg" alt="">
                         </button>
                         <div class="carousel-date">
-                          <img src="../../../../assets/icons/icon-arrow-left-grey.svg" alt="">
+                          <img src="../../../../assets/icons/icon-arrow-left-grey.svg" class="left-arrow" alt="">
                           <div class="date-text">
                             <h5>Mayo 2018</h5>
                             <h6>Semana del 15 al 21</h6>
                           </div>
-                          <img src="../../../../assets/icons/icon-arrow-right-blue.svg" alt="">
+                          <img src="../../../../assets/icons/icon-arrow-right-blue.svg" alt="" class="right-arrow">
                         </div>
                         <table>
                           <tr>
@@ -139,8 +139,8 @@
                               <span>15</span>
                             </td>
                             <td>
-                              <div [ngClass]="{'selected': daySelected }" class="circle-background active-b" (click)="next = !next"></div>
-                              <span (click)="daySelected = !daySelected;" [ngClass]="{'selected': daySelected }" class="active">16</span>
+                              <div [ngClass]="{'selected': daySelected }" class="circle-background active-b"></div>
+                              <span (click)="daySelected = !daySelected; next = !next" [ngClass]="{'selected': daySelected }" class="active">16</span>
                             </td>
                             <td>
                               <div class="circle-background active-b"></div>
@@ -252,12 +252,12 @@
                         <img src="../../../../assets/icons/icon-more-hours.svg" alt="">
                       </button>
                       <div class="carousel-date">
-                        <img src="../../../../assets/icons/icon-arrow-left-grey.svg" alt="">
+                        <img src="../../../../assets/icons/icon-arrow-left-grey.svg" alt="" class="left-arrow">
                         <div class="date-text">
                           <h5>Mayo 2018</h5>
                           <h6>Semana del 15 al 21</h6>
                         </div>
-                        <img src="../../../../assets/icons/icon-arrow-right-blue.svg" alt="">
+                        <img src="../../../../assets/icons/icon-arrow-right-blue.svg" alt="" class="right-arrow">
                       </div>
                       <table>
                         <tr>
@@ -275,8 +275,8 @@
                             <span>15</span>
                           </td>
                           <td>
-                            <div [ngClass]="{'selected': daySelected }" (click)="next2 = !next2"  class="circle-background active-b"></div>
-                            <span (click)="daySelected = !daySelected;" [ngClass]="{'selected': daySelected }" class="active">16</span>
+                            <div [ngClass]="{'selected': daySelected }" class="circle-background active-b"></div>
+                            <span (click)="daySelected = !daySelected; next2 = !next2" [ngClass]="{'selected': daySelected }" class="active">16</span>
                           </td>
                           <td>
                             <div class="circle-background active-b"></div>
@@ -380,12 +380,12 @@
                           <img src="../../../../assets/icons/icon-more-hours.svg" alt="">
                         </button>
                         <div class="carousel-date">
-                          <img src="../../../../assets/icons/icon-arrow-left-grey.svg" alt="">
+                          <img src="../../../../assets/icons/icon-arrow-left-grey.svg" alt="" class="left-arrow">
                           <div class="date-text">
                             <h5>Mayo 2018</h5>
                             <h6>Semana del 15 al 21</h6>
                           </div>
-                          <img src="../../../../assets/icons/icon-arrow-right-blue.svg" alt="">
+                          <img src="../../../../assets/icons/icon-arrow-right-blue.svg" alt="" class="right-arrow">
                         </div>
                         <table>
                           <tr>
@@ -403,8 +403,8 @@
                               <span>15</span>
                             </td>
                             <td>
-                              <div [ngClass]="{'selected': daySelected }" class="circle-background active-b" (click)="next3 = !next3" ></div>
-                              <span (click)="daySelected = !daySelected;" [ngClass]="{'selected': daySelected }" class="active">16</span>
+                              <div [ngClass]="{'selected': daySelected }" class="circle-background active-b"></div>
+                              <span (click)="daySelected = !daySelected; next3 = !next3" [ngClass]="{'selected': daySelected }" class="active">16</span>
                             </td>
                             <td>
                               <div class="circle-background active-b"></div>

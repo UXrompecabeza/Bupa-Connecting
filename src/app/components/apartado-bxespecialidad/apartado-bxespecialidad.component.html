@@ -23,7 +23,7 @@
           <li *ngFor="let hora of hoursAvailable">
             <label class="container">
               <input type="radio" name="hour">
-              <span class="setTime">{{ hora }}</span>
+              <span class="setTime" (click)="hourSelected = !hourSelected;">{{ hora }}</span>
               <span class="checkmark" (click)="hourSelected = !hourSelected;"></span>
             </label>
             <span class="separador">-</span>
@@ -36,7 +36,7 @@
           <li *ngFor="let horaT of hoursAvailableAfternoon">
             <label class="container">
               <input type="radio" name="hour">
-              <span class="setTime">{{ horaT }}</span>
+              <span class="setTime" (click)="hourSelected = !hourSelected;">{{ horaT }}</span>
               <span class="checkmark" (click)="hourSelected = !hourSelected;"></span>
             </label>
             <span class="separador">-</span>

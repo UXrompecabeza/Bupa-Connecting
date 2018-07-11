@@ -1,3 +1,7 @@
+@ng-select/ng-select@2.3.1
+MIT
+MIT
+
 bootstrap@4.0.0-alpha.6
 MIT
 The MIT License (MIT)

@@ -23,7 +23,21 @@ export class ModalNuevaReservaComponent implements OnInit {
   semana2: boolean = false;
   semana3: boolean = false;
 
-    ngOnInit() {}
+    ngOnInit(
+    ) {}
+
+    monthWeek = ['Mayo 2018','Junio 2018'];
+    weekDays = ['15','21'];
+    weekCalendar = ['Mie','Jue','Vie','Sab','Dom','Lun','Mar'];
+    daysWeekCalendar = [
+      {day: 4, class: 'Samuel Mendez'},
+      {day: 5, class: 'Patricia Oyarzún'},
+      {day: 6, class: 'Olga Klein'},
+      {day: 7, class: 'Fernanda Gomez'},
+      {day: 8, class: 'Norberto Brown'},
+      {day: 9, class: 'Gastón Lara'},
+      {day: 10, class: 'Dennise Kant'}
+    ];
     
       doctor = [
         {id: 1, name: 'Karen Medina'},

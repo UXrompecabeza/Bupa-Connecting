@@ -75,7 +75,7 @@
 						padding-bottom: 1em;
 						img {
 							position: absolute;
-							z-index: 10;
+							z-index: 1010;
 							top: .7em;
 							left: 1em;
 						}
@@ -105,9 +105,7 @@
 								top: 2.7em;
 							}
 							.date-text {
-								display: inline-block;
 								text-align: center;
-								padding: 0 27%;
 								h5 {
 									font-size: 14px;
 									font-weight: $light;
@@ -178,5 +176,10 @@
 	.selected {
 		color: #FFF;
 		background-color: $brand-blue_main !important;
-	}   
+	}
+	// .apartado-calendario {
+	// 	width: 10em;
+	// 	height: 30em;
+	// 	background-color: red;
+	// }
 }

@@ -10,6 +10,7 @@
   border: 1px solid $gray_disabled;
   border-radius: 8px;
   text-align: center;
+  transition: width 1s;
   .header {
     border-bottom: 1px solid $gray_disabled;
     h3 {
