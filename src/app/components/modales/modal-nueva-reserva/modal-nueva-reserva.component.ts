@@ -19,10 +19,6 @@ export class ModalNuevaReservaComponent implements OnInit {
   resumen: boolean = false;
   resumen2: boolean = false;
 
-  semana: boolean = true;
-  semana2: boolean = false;
-  semana3: boolean = false;
-
     ngOnInit(
     ) {}
 
@@ -30,13 +26,13 @@ export class ModalNuevaReservaComponent implements OnInit {
     weekDays = ['15','21'];
     weekCalendar = ['Mie','Jue','Vie','Sab','Dom','Lun','Mar'];
     daysWeekCalendar = [
-      {day: 4, class: 'Samuel Mendez'},
-      {day: 5, class: 'Patricia Oyarzún'},
-      {day: 6, class: 'Olga Klein'},
-      {day: 7, class: 'Fernanda Gomez'},
-      {day: 8, class: 'Norberto Brown'},
-      {day: 9, class: 'Gastón Lara'},
-      {day: 10, class: 'Dennise Kant'}
+      {day: 15, class: '', classb:'circle-background'},
+      {day: 16, class: 'active', classb:'circle-background active-b'},
+      {day: 17, class: 'active', classb:'circle-background active-b'},
+      {day: 18, class: 'active', classb:'circle-background active-b'},
+      {day: 19, class: '', classb:'circle-background'},
+      {day: 20, class: '', classb:'circle-background'},
+      {day: 21, class: '', classb:'circle-background'}
     ];
     
       doctor = [

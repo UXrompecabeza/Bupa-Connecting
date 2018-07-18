@@ -11,3 +11,76 @@
 <!-- <div style="padding: 10px">
   <gijgo-datepicker #datepicker [configuration]="configuration"></gijgo-datepicker>
 </div> -->
+
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="calendar" *ngIf="semana3">
+          <button (click)="calendar3 = !calendar3">
+            <img src="../../../../assets/icons/icon-more-hours.svg" alt="">
+          </button>
+          <div class="carousel-date">
+            <img src="../../../../assets/icons/icon-arrow-left-blue.svg" class="left-arrow" alt="">
+            <div class="date-text">
+              <h5>Mayo - Junio 2018</h5>
+              <h6>Semana del 29 al 5</h6>
+            </div>
+            <img src="../../../../assets/icons/icon-arrow-right-blue.svg" class="right-arrow" alt="">
+          </div>
+          <table>
+            <tr>
+              <th>Lun</th>
+              <th>Mar</th>
+              <th>Mie</th>
+              <th>Jue</th>
+              <th>Vie</th>
+              <th>Sab</th>
+              <th>Dom</th>
+            </tr>
+            <tr class="days">
+              <td>
+                <div class="circle-background"></div>
+                <span>29</span>
+              </td>
+              <td>
+                <div [ngClass]="{'selected': daySelected }" (click)="next3 = !next3" class="circle-background active-b"></div>
+                <span (click)="daySelected = !daySelected;" [ngClass]="{'selected': daySelected }" class="active">30</span>
+              </td>
+              <td>
+                <div class="circle-background active-b"></div>
+                <span class="active">1</span>
+              </td>
+              <td>
+                <div class="circle-background active-b"></div>
+                <span class="active">2</span>
+              </td>
+              <td>
+                <div class="circle-background active-b"></div>
+                <span class="active">3</span>
+              </td>
+              <td>
+                <div class="circle-background"></div>
+                <span>4</span>
+              </td>
+              <td>
+                <div class="circle-background"></div>
+                <span>5</span>
+              </td>
+            </tr>
+          </table>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Random second slide">
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[2]" alt="Random third slide">
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>

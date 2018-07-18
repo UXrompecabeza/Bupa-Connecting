@@ -5,77 +5,31 @@
   border: 1px solid $gray_disabled;
   border-radius: 8px;
   text-align: center;
-  h3 {
-    font-size: 16px;
-    padding-top: 1.5em;
-    margin: 0;
+}
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  width: 2rem;
+}
+.custom-day:hover, .custom-day.focused {
+  background-color: #bfdef1;
+  border-radius: 1rem;
+}
+.hidden {
+  display: none;
+}
+.day {      
+    text-align: center;
+    padding: 7px;
+    border-radius: 1rem;
+    width: 100% !important;
   }
-  h4 {
-    font-size: 12px;
-    font-weight: $light;
-    color: $gray_typo;
-    padding: .5em 0 1.5em 0;
+.ngb-dp-day{
+    width: 3rem !important;
+    height: 3rem !important;
   }
-  .month {
-    .icon-arrow-left {
-      position: absolute;
-      left: 2.5em;
-    }
-    span {
-      font-size: 16px;
-      font-weight: $light;
-    }
-    .icon-arrow-right {
-      position: absolute;
-      right: 2.5em;
-    }
-  }
-  .calendar {
-    padding: 1.5em 0;
-    table {
-      margin: 1em 1em 0 1em;
-      thead {
-        height: 2em;
-        th {
-          font-weight: 300;
-          font-size: 12px;
-          text-align: center;
-          width: 9%;
-        }
-      }
-      tbody {
-        border-top: 1px solid $gray_disabled;
-        tr {
-          height: 2em;
-          position: relative;
-          td {
-            font-weight: 400;
-            font-size: 14px;
-            text-align: center;
-            color: $brand-blue_main;
-            cursor: pointer;
-          }
-          .shadow-back {
-            width: 19.5em;
-            height: 2em;
-            position: absolute;
-            background-color: rgba(0, 121, 200, 0.07);
-            z-index: 0;
-            border-radius: 26px;
-          }
-          .choosen {
-            background-color: $brand-blue_main;
-            color: #FFF;
-          }
-          span {
-            position: relative;
-            z-index: 20;
-          }
-        }
-        .new-space {
-          height: 1em;
-        }
-      }
-    }
-  }
+:host-context .ngb-dp-day {
+  background-color: green;
 }
