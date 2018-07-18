@@ -16,3 +16,20 @@ button, input {
   width: 96%;
   margin-left: 4% !important;
 }
+
+div:focus {
+  outline: 0 !important;
+}
+
+.ngb-dp-day{
+  width: 3rem !important;
+  height: 3rem !important;
+}
+.ngb-dp-weekday {
+  width: 3rem !important;
+  margin-top: 1em;
+}
+[_nghost-c27] {
+  border: none !important;
+  padding-top: 1em;
+}

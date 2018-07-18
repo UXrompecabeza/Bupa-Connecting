@@ -18,6 +18,7 @@ export class ModalNuevaReservaComponent implements OnInit {
   calendar3: boolean = false;
   resumen: boolean = false;
   resumen2: boolean = false;
+  inputFocus: boolean = false;
 
     ngOnInit(
     ) {}

@@ -22,3 +22,7 @@
 .container-accordion {
     position: relative;
 }
+
+:focus {
+    outline: 1px solid red;
+}
