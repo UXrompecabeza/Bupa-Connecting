@@ -18,10 +18,14 @@ button, input {
   margin-left: 4% !important;
 }
 
-div:focus {
+div:focus, input:focus {
   outline: 0 !important;
 }
-
+input:-moz-focusring {
+  outline: 0 !important;
+  border: 1px solid #d8d8d8;
+  padding-left: 50px !important;
+}
 .ngb-dp-day{
   width: 3rem !important;
   height: 3rem !important;
