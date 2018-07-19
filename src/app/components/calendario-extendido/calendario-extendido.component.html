@@ -1,10 +1,12 @@
 <div class="calendario-extendido">
+  <h4>Búsqueda avanzada</h4>
+  <h5>Selecciona mes y semana</h5>
   <ngb-datepicker [(ngModel)]="model" [dayTemplate]="customDay"></ngb-datepicker>
 </div>
 <ng-template #customDay let-date="date" let-day="day" let-currentMonth="currentMonth" let-selected="selected" let-disabled="disabled" let-focused="focused">
   <div class="day">
     <span class="custom-day" [class.weekend]="isWeekend(date)" 
-            [class.bg-primary]="selected" [class.hidden]="date.month !== currentMonth" [class.text-muted]="disabled">
+            [class.selected]="selected" [class.hidden]="date.month !== currentMonth" [class.text-muted]="disabled">
         {{ date.day }}
       </span>
     </div>  

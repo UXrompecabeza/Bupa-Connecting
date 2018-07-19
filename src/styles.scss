@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
+@import 'app/scss/var.scss';
 
 body {
   background-color: #fff;
@@ -24,12 +25,17 @@ div:focus {
 .ngb-dp-day{
   width: 3rem !important;
   height: 3rem !important;
+  color: $brand-blue_main;
+  font-size: 14px;
+  font-weight: $light;
 }
 .ngb-dp-weekday {
   width: 3rem !important;
   margin-top: 1em;
+  font-style: normal !important;
+  font-weight: $light !important;
+  font-size: 12px !important;
 }
 [_nghost-c27] {
   border: none !important;
-  padding-top: 1em;
 }

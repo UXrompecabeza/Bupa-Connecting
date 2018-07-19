@@ -5,13 +5,22 @@
   border: 1px solid $gray_disabled;
   border-radius: 8px;
   text-align: center;
+  padding-top: 1em;
+  h4 {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 11px;
+    font-weight: $light;
+  }
 }
 .custom-day {
   text-align: center;
-  padding: 0.185rem 0.25rem;
+  padding: 0.4em 0.25rem 0.185rem 0.25rem;
   border-radius: 0.25rem;
   display: inline-block;
   width: 2rem;
+  height: 2rem;
   &:focus {
     outline-color: red !important;
   }
@@ -19,6 +28,11 @@
 .custom-day:hover {
   background-color: #bfdef1;
   border-radius: 1rem;
+}
+.selected {
+  background-color: #0079C8 !important;
+  color: white;
+  border-radius: 50% !important;
 }
 .hidden {
   display: none;
