@@ -4,8 +4,10 @@
 body {
   background-color: #fff;
   font-family: 'Montserrat' !important;
-  overflow-y: hidden;
-  margin: 0 auto;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 button, input {
@@ -27,14 +29,12 @@ input:-moz-focusring {
   padding-left: 50px !important;
 }
 .ngb-dp-day{
-  width: 3rem !important;
   height: 3rem !important;
   color: $brand-blue_main;
   font-size: 14px;
   font-weight: $light;
 }
 .ngb-dp-weekday {
-  width: 3rem !important;
   margin-top: 1em;
   font-style: normal !important;
   font-weight: $light !important;
@@ -42,4 +42,29 @@ input:-moz-focusring {
 }
 [_nghost-c27] {
   border: none !important;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1139px) {
+	.ngb-dp-day{
+    width: 2.4rem !important;
+  }
+  .ngb-dp-weekday {
+    width: 2.4rem !important;
+  }
+}
+@media only screen and (min-width: 1140px) and (max-width: 1189px) {
+	.ngb-dp-day{
+    width: 2.7rem !important;
+  }
+  .ngb-dp-weekday {
+    width: 2.7rem !important;
+  }
+}
+@media (min-width: 1190px) {
+	.ngb-dp-day{
+    width: 3rem !important;
+  }
+  .ngb-dp-weekday {
+    width: 3rem !important;
+  }
 }

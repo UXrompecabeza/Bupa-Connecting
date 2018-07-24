@@ -183,7 +183,6 @@
 										border-radius: 50%;
 										position: absolute;
 										z-index: -1;
-										left: .65em;
 										top: .65em;
 									}
 									span {
@@ -222,5 +221,22 @@
 	// }
 	.contraer {
 		width: 75% !important;
+	}
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1079px) {
+	.circle-background {
+		left: 13.5%;
+	}
+}
+@media only screen and (min-width: 1080px) and (max-width: 1149px) {
+	.circle-background {
+		left: 16.5%;
+	}
+}
+
+@media (min-width: 1150px) {
+	.circle-background {
+		left: .65em;
 	}
 }
