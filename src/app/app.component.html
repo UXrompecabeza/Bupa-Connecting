@@ -1,18 +1,21 @@
-<app-header></app-header>
-<app-sidebar></app-sidebar>
-<!-- Pantalla paciente agendar -->
-<!-- <div class="row container-views">
-  <div class="col-lg-3 display-content">
-    <app-info-patients></app-info-patients>
-  </div> 
-  <div class="col-lg-9">
-    <app-container-box-main-view></app-container-box-main-view>
-  </div>    
-</div> -->
-<!-- <app-carrusel-mes></app-carrusel-mes> -->
-<!-- Pantalla menú principal -->
-<app-menu-inicial></app-menu-inicial>
-<!-- <app-popover></app-popover> -->
+<app-login *ngIf="login" (click)="login=!login"></app-login>
+<div *ngIf="!login">
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+  <!-- Pantalla paciente agendar -->
+  <!-- <div class="row container-views">
+    <div class="col-lg-3 display-content">
+      <app-info-patients></app-info-patients>
+    </div> 
+    <div class="col-lg-9">
+      <app-container-box-main-view></app-container-box-main-view>
+    </div>    
+  </div> -->
+  <!-- <app-carrusel-mes></app-carrusel-mes> -->
+  <!-- Pantalla menú principal -->
+  <app-menu-inicial></app-menu-inicial>
+  <!-- <app-popover></app-popover> -->
+</div>
 <!-- Modales -->
 <app-modal-indications></app-modal-indications>
 <app-modal-indications-back2new></app-modal-indications-back2new>

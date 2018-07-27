@@ -43,6 +43,7 @@ import { CarruselMesComponent } from './components/carrusel-mes/carrusel-mes.com
 import { ModalReservaAbiertaComponent } from './components/modales/modal-reserva-abierta/modal-reserva-abierta.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './views/login/login.component';
 
 
 @NgModule({
@@ -79,7 +80,8 @@ import {FormsModule} from '@angular/forms';
     ModalCvDoctorComponent,
     ModalCvDoctorHComponent,
     CarruselMesComponent,
-    ModalReservaAbiertaComponent
+    ModalReservaAbiertaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
