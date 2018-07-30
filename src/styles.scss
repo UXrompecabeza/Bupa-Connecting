@@ -23,10 +23,13 @@ button, input {
 div:focus, input:focus {
   outline: 0 !important;
 }
+input {
+  padding: 0 1em;
+}
 input:-moz-focusring {
   outline: 0 !important;
   border: 1px solid #d8d8d8;
-  padding-left: 50px !important;
+  // padding-left: 50px !important;
 }
 .ngb-dp-day{
   height: 3rem !important;

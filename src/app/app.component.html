@@ -1,5 +1,5 @@
-<app-login *ngIf="login" (click)="login=!login"></app-login>
-<div *ngIf="!login">
+<app-login *ngIf="noLogin" (dismissLogin)="hideLogin()"></app-login>
+<div class="menuRut">
   <app-header></app-header>
   <app-sidebar></app-sidebar>
   <!-- Pantalla paciente agendar -->

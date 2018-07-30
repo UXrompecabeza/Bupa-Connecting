@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'app';
   login: boolean = true;
 
+  noLogin:boolean = true;
+  hideLogin() {
+    this.noLogin = false;
+  }
 }

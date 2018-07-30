@@ -12,11 +12,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  // @Output() loginChange = new EventEmitter();
+  @Output() dismissLogin:EventEmitter<any> = new EventEmitter();
 
-  // login() {
+  dismissWindow() {
 
-  //   this.counter = this.counter + 1;
-  //   this.loginChange.emit(this.counter);
-  // }
+    this.dismissLogin.emit();
+  }
 }
