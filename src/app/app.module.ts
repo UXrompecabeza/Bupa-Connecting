@@ -44,6 +44,8 @@ import { ModalReservaAbiertaComponent } from './components/modales/modal-reserva
 import { NgSelectModule } from '@ng-select/ng-select';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './views/login/login.component';
+import { PacienteNoEncontradoComponent } from './components/paciente-no-encontrado/paciente-no-encontrado.component';
+import { EditarPacienteComponent } from './components/modales/editar-paciente/editar-paciente.component';
 
 
 @NgModule({
@@ -81,7 +83,9 @@ import { LoginComponent } from './views/login/login.component';
     ModalCvDoctorHComponent,
     CarruselMesComponent,
     ModalReservaAbiertaComponent,
-    LoginComponent
+    LoginComponent,
+    PacienteNoEncontradoComponent,
+    EditarPacienteComponent
   ],
   imports: [
     BrowserModule,

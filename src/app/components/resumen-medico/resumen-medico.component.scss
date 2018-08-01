@@ -1,4 +1,5 @@
 @import '../../scss/var';
+@import '../../scss/mixin';
 .resumen-medico {
   height: 32.85em;
   background-color: #FFF;
@@ -42,20 +43,46 @@
   .section-paciente {
     border-bottom: 1px solid $gray_disabled;
     padding: 1em 0;
+    position: relative;
     h5 {
       font-size: 16px;
       color: $gray_typo;
       margin: 1em 0 .2em 0;
     }
-    p {
-      font-size: 16px;
-      color: $purple;
-      font-weight: $regular;
-      margin-bottom: 0;
-      cursor: pointer;
-      &:hover {
-        text-decoration: underline;
+    .mail-paciente {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      width: 100%;
+      padding: .5em 0;
+      background-color: #FFF;
+      overflow: hidden;
+      transition: width .5s;
+      span {
+        font-size: 16px;
+        color: $purple;
+        font-weight: $regular;
+        margin-right: 1em;
       }
+      img {
+        cursor: pointer;
+      }
+    }
+    .mail-editable {
+      input {
+        margin-right: .5em;
+        height: 2.2em;
+        width: 75%;
+      }
+      button {
+        @include button-white;
+        width: 16%;
+        padding: .5em 1em;
+        height: 2.5em;
+      }
+    }
+    .editMail {
+      width: 0!important;
     }
   }
   .section-consulta {

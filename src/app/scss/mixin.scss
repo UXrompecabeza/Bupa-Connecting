@@ -7,6 +7,15 @@
   font-size: 14px;
   border: none;
 }
+@mixin button-white {
+  border-radius: 0.3em;
+  background-color: #fff;
+  height: 3em;
+  color: $brand-blue_main;
+  vertical-align: middle;
+  font-size: 14px;
+  border: 1px solid $brand-blue_main;
+}
 
 @mixin buttons-patients {
   border-radius: 4px;

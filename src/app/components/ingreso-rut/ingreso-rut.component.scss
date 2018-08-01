@@ -1,14 +1,14 @@
 @import '../../scss/var.scss';
 .ingreso-rut {
   background-color: #e5f2f9;
-  padding: 1.42em;
+  padding: 1.42em 2%;
   margin-left: 1em;
-  max-width: 59em;
+  width: 100%;
   span {
     color: $brand-blue_main;
     font-size: 18px;
     font-weight: $medium;
-    padding: 1.5em;
+    padding: 1.5em 2%;
   }
   input {
     max-width: 40em;
@@ -16,13 +16,14 @@
     font-size: 14px;
     border: none;
     min-width: 26em;
+    width: 58%
   }
   button {
     color: #FFF;
     background-color: #0079c8;
     font-size: 14px;
     padding: .6em 2.8em;
-    margin-left: 2em;
+    margin-left: 2%;
     cursor: pointer;
   }
 }

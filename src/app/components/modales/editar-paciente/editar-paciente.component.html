@@ -1,0 +1,85 @@
+<div class="modal" id="modal-editarPaciente" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5>Editar datos paciente</h5>
+        <div class="editarDatos">
+          <div class="row">
+            <div class="col-4">
+              <div class="rut campo-datos">
+                <label>RUT</label>
+                <input type="text" value="16.456.789-0" disabled>
+              </div>
+              <div class="fecha-nacimiento campo-datos">
+                <label>Fecha de nacimiento</label>
+                <input type="text" value="01" disabled>
+                <input type="text" value="10" disabled>
+                <input type="text" value="1986" disabled>
+              </div>
+              <div class="correo campo-datos">
+                <label>Correo</label>
+                <span>Agregar otro</span>
+                <input type="text" value="francisca.v@gmail.com">
+              </div>
+              <div class="calle campo-datos">
+                <label>Dirección</label>
+                <input type="text" value="Calle / número">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="nombres campo-datos">
+                <label>Nombres</label>
+                <input type="text" value="Francisca Andrea" disabled>
+              </div>
+              <div class="genero campo-datos">
+                <label>Género</label>
+                <input type="text" value="Mujer" disabled>
+              </div>
+              <div class="telefono campo-datos">
+                <label>Teléfono</label>
+                <span>Agregar otro</span>
+                <!-- <input type="text"> -->
+                <ng-select [items]="telefono"
+                  bindLabel="name" placeholder="+569 62224567">
+                </ng-select>
+              </div>
+              <div class="ciudad campo-datos">
+                <input type="text" value="Comuna">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="apellidos campo-datos">
+                <label>Apellidos</label>
+                <input type="text" value="Velasco Ferrada" disabled>
+              </div>
+              <div class="prevision campo-datos">
+                <label>Previsión</label>
+                <!-- <input type="text"> -->
+                <ng-select [items]="prestacion"
+                  bindLabel="name" placeholder="Cruz Blanca">
+                </ng-select>
+              </div>
+              <div class="nacionalidad campo-datos">
+                <label>Nacionalidad</label>
+                <input type="text" value="Chilena" disabled>
+              </div>
+              <div class="region campo-datos">
+                <!-- <input type="text"> -->
+                <ng-select [items]="region"
+                  bindLabel="name"
+                  placeholder="Región Metropolitana">
+                </ng-select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="guardar">
+          <button data-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

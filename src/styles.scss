@@ -14,12 +14,6 @@ button, input {
   font-family: 'Montserrat' !important;
 }
 
-.container-views {
-  margin-right: 0 !important;
-  width: 96%;
-  margin-left: 4% !important;
-}
-
 div:focus, input:focus {
   outline: 0 !important;
 }
@@ -45,6 +39,13 @@ input:-moz-focusring {
 }
 [_nghost-c27] {
   border: none !important;
+}
+.editarDatos {
+  .ng-select {
+    .ng-input {
+      padding: 3em;
+    }
+  }
 }
 
 @media only screen and (min-width: 900px) and (max-width: 1139px) {

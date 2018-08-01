@@ -38,16 +38,21 @@
   overflow: hidden;
   position: fixed;
   width: 100%;
-  .date {
-    text-align: center;
+  .container-views {
+    margin: 0;
     width: 100%;
-    padding: .57em;
-    span {
-      font-size: 16px;
-      color: $brand-blue_dark;
-      font-weight: $regular;
-    }
+    .date {
+      text-align: center;
+      width: 100%;
+      padding: .57em;
+      span {
+        font-size: 16px;
+        color: $brand-blue_dark;
+        font-weight: $regular;
+      }
+  }
   }
   .col-2 {
+    display: block;
   }
 }
