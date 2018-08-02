@@ -4,9 +4,9 @@
       <span>Miércoles 02 de Mayo de 2018</span>
     </div>
     <div class="col-9">
-      <app-ingreso-rut></app-ingreso-rut>
-      <app-paciente-encontrado></app-paciente-encontrado>
-      <app-paciente-no-encontrado></app-paciente-no-encontrado>
+      <app-ingreso-rut (dismissLoginEmpty)="changeLogin()"></app-ingreso-rut>
+      <app-paciente-encontrado *ngIf="loginSuccess"></app-paciente-encontrado>
+      <app-paciente-no-encontrado *ngIf="noLoginEmpty"></app-paciente-no-encontrado>
     </div>
     <div class="col-3"></div>
   </div>

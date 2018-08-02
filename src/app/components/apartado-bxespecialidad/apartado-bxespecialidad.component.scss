@@ -1,5 +1,15 @@
 @import '../../scss/var';
 .apartado-bxespecialidad {
+@media only screen and (min-width: 995px) and (max-width: 1045px) {
+  width: 216%;
+}
+@media only screen and (min-width: 1046px) and (max-width: 1109px) {
+  width: 215%;
+}
+@media only screen and (min-width: 1110px) and (max-width: 1183px) {
+  width: 214%;
+}
+
   width: 213%;
   z-index: 2;
   position: relative;

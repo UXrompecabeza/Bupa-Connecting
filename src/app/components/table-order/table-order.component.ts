@@ -8,7 +8,8 @@ import { OrderPipe } from 'ngx-order-pipe';
 })
 export class TableOrderComponent implements OnInit {
 
-  private _isOpen : boolean = false;
+  private _isOpen : boolean = true;
+  isOpen:boolean = true
   closeAllTips(): void {
     this.tips.forEach((tip) => {
       tip.isOpen = false;

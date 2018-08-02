@@ -46,6 +46,7 @@ import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './views/login/login.component';
 import { PacienteNoEncontradoComponent } from './components/paciente-no-encontrado/paciente-no-encontrado.component';
 import { EditarPacienteComponent } from './components/modales/editar-paciente/editar-paciente.component';
+import { AgendarPacienteComponent } from './views/agendar-paciente/agendar-paciente.component';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { EditarPacienteComponent } from './components/modales/editar-paciente/ed
     ModalReservaAbiertaComponent,
     LoginComponent,
     PacienteNoEncontradoComponent,
-    EditarPacienteComponent
+    EditarPacienteComponent,
+    AgendarPacienteComponent
   ],
   imports: [
     BrowserModule,

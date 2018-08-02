@@ -13,11 +13,11 @@
     <h5>Francisca Andrea Velasco Ferrada</h5>
     <div class="mail-paciente" [ngClass]="{'editMail': editmail }">
       <span>francisca.v@gmail.com</span>
-      <img src="assets/icons/icon-edit.svg" (click)="editmail = !editmail;">
+      <img src="assets/icons/icon-edit.svg" (click)="changeMail()">
     </div>
     <div class="mail-editable">
       <input type="text" value="francisca.v@gmail.com">
-      <button><img src="assets/icons/icon-mail.svg" alt=""></button>
+      <button (click)="changeMail()"><img src="assets/icons/icon-mail.svg" alt=""></button>
     </div>
   </div>
   <div class="section-consulta">

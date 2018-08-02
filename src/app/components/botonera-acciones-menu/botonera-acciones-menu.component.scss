@@ -1,27 +1,11 @@
 @import '../../scss/var.scss';
 @import '../../scss/mixin.scss';
 .botonera-acciones_menu {
-  width: 15em;
-  margin: 0 4.5em;
   .patients-buttons {
-  border-radius: 4px;
-  font-size: 14px;
-  width: 100%;
-  border: solid 1px $brand-blue_main;
-  background-color: #fff;
-  margin-bottom: 1.5em;
-  text-align: left;
-  color: $brand-blue_main;
-  font-weight: $regular;
-  padding: 1em;
-  cursor: pointer;
-  .icon-arrow-right{
-    height: .9em;
-    margin-top: .3em;
-    float: right;
-  }
+    @include buttons-patients;
+    height: 4.2em;
     &:focus {
-      outline: none;
+      outline: 0;
     }
   }
 }

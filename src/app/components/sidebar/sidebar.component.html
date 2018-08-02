@@ -1,4 +1,4 @@
-<nav class="sidebar_background">
+<nav class="sidebar_background" [ngClass]="sidebar ? 'openSidebar' : 'closeSidebar'">
   <ul class="sidebar-list-button">
     <li class="buttons-sidebar">
       <img class="sidebar-icon" src="assets/icons/icon-home.svg" alt=""/>
@@ -12,7 +12,7 @@
       <img class="sidebar-icon" src="assets/icons/icon-promociones.svg" alt=""/>
       <span>Promociones</span>
     </li>
-    <li class="buttons-sidebar">
+    <li class="buttons-sidebar" (click)="abrirAgenda()">
       <img class="sidebar-icon" src="assets/icons/icon-cbclic.svg" alt=""/>
       <span>CB Clic</span>
     </li>

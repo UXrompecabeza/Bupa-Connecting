@@ -15,6 +15,12 @@ table{
       width: 10px;
       margin: 0 .5em;
     }
+    &:first-child {
+      width: 21%;
+    }
+    &:nth-child(2) {
+      width: 13%;
+    }
   }
 
   .table-body-order{

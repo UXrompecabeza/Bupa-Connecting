@@ -1,14 +1,19 @@
 @import '../../scss/var.scss';
 @import '../../scss/mixin.scss';
 .botonera-acciones_reserva {
-  width: 60%;
-  margin: auto;
+  width: 85%;
+  margin: 0 auto;
+  button {
+    @media only screen and (min-width: 995px) and (max-width: 1150px) {
+      font-size: 12px!important;
+    }
+  }
   .patients-buttons {
     @include buttons-patients;
     padding-left: 1em;
     cursor: pointer;
     &:focus {
-        outline: none;
+        outline: 0;
     }
   }
 }

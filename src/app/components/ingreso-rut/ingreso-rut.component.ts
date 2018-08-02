@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-ingreso-rut',
@@ -10,6 +10,11 @@ export class IngresoRutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  @Output() dismissLoginEmpty:EventEmitter<any> = new EventEmitter();
+
+  showPaciente() {
+    this.dismissLoginEmpty.emit();
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SidebarSlideService } from './../../sidebar-slide.service';
 
 @Component({
@@ -11,6 +11,12 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  @Output() clickMenuBurguer:EventEmitter<any> = new EventEmitter();
+
+  clickMenu() {
+    console.log("clickBurguer")
+    this.clickMenuBurguer.emit();
   }
 
 }

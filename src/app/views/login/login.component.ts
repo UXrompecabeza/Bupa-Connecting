@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   @Output() dismissLogin:EventEmitter<any> = new EventEmitter();
 
   dismissWindow() {
-
     this.dismissLogin.emit();
   }
 }

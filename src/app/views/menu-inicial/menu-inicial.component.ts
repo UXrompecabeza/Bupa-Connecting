@@ -12,4 +12,12 @@ export class MenuInicialComponent implements OnInit {
   ngOnInit() {
   }
 
+  loginSuccess: boolean = false;
+  noLoginEmpty:boolean = true;
+
+  changeLogin() {
+    this.noLoginEmpty = false;
+    this.loginSuccess = true;
+  }
+
 }

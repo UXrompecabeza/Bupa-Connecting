@@ -1,11 +1,13 @@
 @import '../../scss/var.scss';
 .info-paciente-encontrado {
   .icon-woman {
-    padding-left: 30%;
-    padding-right: 30%;
+    cursor: pointer;
   }
   .patient-logo {
     text-align: center;
+    a{
+      display: none;
+    }
   }
   .patients-data {
     padding-top: 5%;

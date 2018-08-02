@@ -5,28 +5,28 @@
     display: block;
     height: 100vh;
     border-right: 1px solid $gray_disabled;
-    padding-top: 5%;
+    padding-top: 2em;
     text-align: center;
     .datos-paciente {
         color: $brand-blue_main;
         font-size: 11px;
         padding: .7em 0 1em 0;
     }
-    .container-state {
-        padding-top: 5%;
-        width: 90%;
-        margin-left: 10%;
-        text-align: left;
-        @media (min-width: 1220px) and (max-width: 1249px) {
-            margin-left: 12%;
-        }
-        @media (min-width: 1250px) and (max-width: 1400px) {
-            margin-left: 15%;
-        }
-        @media (min-width: 1400px) {
-            margin-left: 20%;
-        }
-    }
+    // .container-state {
+    //     padding-top: 5%;
+    //     width: 90%;
+    //     margin-left: 10%;
+    //     text-align: left;
+    //     @media (min-width: 1220px) and (max-width: 1249px) {
+    //         margin-left: 12%;
+    //     }
+    //     @media (min-width: 1250px) and (max-width: 1400px) {
+    //         margin-left: 15%;
+    //     }
+    //     @media (min-width: 1400px) {
+    //         margin-left: 20%;
+    //     }
+    // }
     .patients-state {
         font-size: 12px;
         color: $gray_disabled;

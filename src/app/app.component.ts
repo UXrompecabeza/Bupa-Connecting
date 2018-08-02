@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  login: boolean = true;
 
   noLogin:boolean = true;
+  menuInicial:boolean = true;
+  agenda:boolean = false;
+
   hideLogin() {
     this.noLogin = false;
+  }
+  mostrarAgenda() {
+    this.menuInicial = false;
+    this.agenda = true;
+  }
+
+  @ViewChild(SidebarComponent) sidebar:SidebarComponent;
+
+  recibeClickBurguer() {
+    console.log("click en App")
+    this.sidebar.openSidebar;
   }
 }

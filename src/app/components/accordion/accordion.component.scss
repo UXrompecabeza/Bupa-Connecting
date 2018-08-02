@@ -73,4 +73,14 @@
       max-height: 90vh;
     }
   }
+  .mejores-opciones {
+    text-align: center;
+    padding: .5em 0;
+    .link {
+      color: $brand-blue_link;
+      padding-left: .5em;
+      font-size: 12px;
+      font-weight: $regular;
+    }
+  }
 }

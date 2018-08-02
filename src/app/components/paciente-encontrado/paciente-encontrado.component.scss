@@ -24,8 +24,9 @@
     p {
       font-size: 14px !important;
     }
-    .editar_telefono {
+    .editar_paciente {
       padding-top: 1em;
+      cursor: pointer;
       a {
         font-size: 12px;
         color: $brand-blue_main;
@@ -36,8 +37,9 @@
   .botonera {
     display: inline-block;
     vertical-align: top;
-    margin-left: -1.5em;
-    width: 40%;
+    margin-left: 5%;
+    width: 25%;
+    min-width: 16em;
     button {
       height: 4.2em;
       margin-bottom: 2em;

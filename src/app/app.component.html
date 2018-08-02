@@ -1,20 +1,13 @@
+<!-- Login -->
 <app-login *ngIf="noLogin" (dismissLogin)="hideLogin()"></app-login>
+<!-- Pantalla principal -->
 <div class="menuRut">
-  <app-header></app-header>
-  <app-sidebar></app-sidebar>
-  <!-- Pantalla paciente agendar -->
-  <!-- <div class="row container-views">
-    <div class="col-lg-3 display-content">
-      <app-info-patients></app-info-patients>
-    </div> 
-    <div class="col-lg-9">
-      <app-container-box-main-view></app-container-box-main-view>
-    </div>    
-  </div> -->
-  <!-- <app-carrusel-mes></app-carrusel-mes> -->
+  <app-header (clickMenuBurguer)="recibeClickBurguer()"></app-header>
+  <app-sidebar (dismissMenu)="mostrarAgenda()"></app-sidebar>
   <!-- Pantalla menú principal -->
-  <app-menu-inicial></app-menu-inicial>
-  <!-- <app-popover></app-popover> -->
+  <app-menu-inicial *ngIf="menuInicial"></app-menu-inicial>
+  <!-- Pantalla paciente agendar -->
+  <app-agendar-paciente *ngIf="agenda"></app-agendar-paciente>
 </div>
 <!-- Modales -->
 <app-modal-indications></app-modal-indications>

@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ResumenMedicoComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit() {
+  }
+
+  editmail: boolean = false;
+  changeMail() {
+    this.editmail = !this.editmail;
   }
 
 }
