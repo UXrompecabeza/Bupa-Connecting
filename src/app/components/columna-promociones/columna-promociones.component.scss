@@ -1,0 +1,67 @@
+@import '../../scss/var.scss';
+.columna-promociones {
+  border: 1px solid #CACACA;
+  border-radius: 8px;
+  h3 {
+    font-size: 18px;
+    color: $brand-blue_dark;
+    font-weight: $regular;
+    padding: 1em;
+  }
+  .nav-pills {
+    padding: 0 1em;
+    li {
+      width: 33.3%;
+      border-top: 2px solid $brand-blue_main;
+      border-left: 2px solid $brand-blue_main;
+      border-bottom: 2px solid $brand-blue_main;
+      text-align: center;
+      overflow: hidden;
+      a {
+        border-radius: 0;
+        font-size: 10px;
+        font-weight: $light;
+        padding: .5em 0;
+        color: $brand-blue_main;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .active {
+        color: #FFF;
+        font-weight: $regular;
+      }
+      &:last-child {
+        border-right: 2px solid $brand-blue_main;
+      }
+    }
+  }
+  .tab-content {
+    height: 73vh;
+    overflow: scroll;
+  }
+  .tab-pane {
+    ul {
+      padding: 1em;
+      li {
+        border: 1px solid #CACACA;
+        border-radius: 8px;
+        margin-bottom: 1em;
+        list-style: none;
+        h5 {
+          font-size: 14px;
+          font-weight: $regular;
+          color: $brand-blue_main;
+          padding: 1em 1em .35em;
+          margin: 0;
+        }
+        p {
+          font-size: 14px;
+          font-weight: $light;
+          color: $gray_typo;
+          padding: 0 1em;
+        }
+      }
+    }
+  }
+}

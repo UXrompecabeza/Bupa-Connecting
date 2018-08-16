@@ -46,6 +46,14 @@
                   cursor: pointer;
                 }
               }
+              .apellidos {
+                input {
+                  width: 48%;
+                }
+                .firstLastName {
+                  margin-right: 2% !important;
+                }
+              }
               .fecha-nacimiento {
                 input {
                     width: 25%;

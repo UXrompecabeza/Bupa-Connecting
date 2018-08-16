@@ -1,7 +1,7 @@
 @import '../../../scss/var';
 
 .container-box{
-  width: 100%;
+  width: 101.5%;
   background-color: $brand-blue_light;
   padding-top: 1em;
 
@@ -31,8 +31,8 @@
     padding: .8em;
     background-color: #FFF;
     height: 100%;
-    height: 90vh;
-    overflow: scroll;
+    // height: 90vh;
+    // overflow: scroll;
   }
   .container-inner_ready{
     @extend .container-inner_todo;

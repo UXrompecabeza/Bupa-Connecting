@@ -19,9 +19,17 @@ export class EditarPacienteComponent implements OnInit {
     {id: 4, name: 'Banmédica'},
     {id: 5, name: 'Consalud'}
   ];
-  telefono = [
-    {id: 1, name: '+569 62224567'},
-    {id: 2, name: '+569 53524567'}
+  genero = [
+    {id: 1, name: 'Mujer'},
+    {id: 2, name: 'Hombre'},
+    {id: 3, name: 'Otro'}
+  ];
+  nacionalidad = [
+    {id: 1, name: 'Chilena'},
+    {id: 1, name: 'Venezolana'},
+    {id: 2, name: 'Colombiana'},
+    {id: 1, name: 'Haitiana'},
+    {id: 2, name: 'Argentina'}
   ];
   region = [
     {id: 0, name: 'Región Metropolitana de Santiago'},
@@ -40,5 +48,34 @@ export class EditarPacienteComponent implements OnInit {
     {id: 13, name: 'Región de Aysén del General Carlos Ibáñez del Campo'},
     {id: 14, name: 'Región de Magallanes y de la Antártica Chilena'}
   ];
+
+  numberOnly(event): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
+  }
+
+  email(event): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode == 46) {
+      return true;
+    }
+    if (charCode == 45) {
+      return true;
+    }
+    if (charCode == 64) {
+      return true;
+    }
+    if (charCode == 95) {
+      return true;
+    }
+    if (charCode > 31 && ((charCode < 97 || charCode > 122) && (charCode < 48 || charCode > 57))) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
 }

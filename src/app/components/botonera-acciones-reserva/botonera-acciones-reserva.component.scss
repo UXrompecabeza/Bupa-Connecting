@@ -10,7 +10,8 @@
   }
   .patients-buttons {
     @include buttons-patients;
-    padding-left: 1em;
+    padding: 0 1em 0 1em;
+    height: 2.5em;
     cursor: pointer;
     &:focus {
         outline: 0;

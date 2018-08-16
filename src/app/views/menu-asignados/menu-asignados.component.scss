@@ -1,0 +1,89 @@
+@import '../../scss/var.scss';
+.menuAsignados {
+  @media (max-width: 995px) {
+    display: none;
+  }
+  @media only screen and (min-width: 900px) and (max-width: 1024px) {
+    margin-top: 6.2%;
+    margin-left: 5.5%;
+  }
+  @media only screen and (min-width: 1025px) and (max-width: 1058px) {
+    margin-top: 6%;
+    margin-left: 5.5%;
+  }
+  @media only screen and (min-width: 1059px) and (max-width: 1094px) {
+    margin-top: 5.8%;
+    margin-left: 5.5%;
+  }
+  @media only screen and (min-width: 1095px) and (max-width: 1133px) {
+    margin-top: 5.6%;
+    margin-left: 5.5%;
+  }
+  @media only screen and (min-width: 1134px) and (max-width: 1175px) {
+    margin-top: 5.4%;
+    margin-left: 5%;
+  }
+  @media only screen and (min-width: 1176px) and (max-width: 1221px) {
+    margin-top: 5.2%;
+    margin-left: 5%;
+  }
+  @media only screen and (min-width: 1222px) and (max-width: 1269px) {
+    margin-top: 5%;
+    margin-left: 3.9%;
+  }
+  @media only screen and (min-width: 1270px) and (max-width: 1322px) {
+    margin-top: 4.8%;
+    margin-left: 3.9%;
+  }
+  @media only screen and (min-width: 1323px) and (max-width: 1380px) {
+    margin-top: 4.6%;
+    margin-left: 3.9%;
+  }
+  @media (min-width: 1381px) {
+    margin-top: 4.4%;
+    margin-left: 3.9%;
+  }
+  height: 93%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  .container-views {
+    margin: 0;
+    width: 96%;
+    .date {
+      text-align: center;
+      width: 100%;
+      padding: .57em;
+      h4 {
+        font-size: 18px;
+        color: $brand-blue_dark;
+        font-weight: $medium;
+        position: absolute;
+        left: 2em;
+      }
+      span {
+        font-size: 16px;
+        color: $brand-blue_dark;
+        font-weight: $regular;
+      }
+    }
+  }
+  .col-3 {
+    text-align: right;
+    padding-right: 6em; 
+    button {
+      border: none;
+      background-color: #e5f2f9;
+      padding: .6em 1em;
+      height: 2.7em;
+      margin-top: 16.5%;
+      &:first-child {
+        border-right: 1px solid rgba(0, 121, 200, 0.3);
+      }
+    }
+  }
+  .col-12 {
+    padding: 0;
+    margin-top: 1em;
+  }
+}

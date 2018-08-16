@@ -47,6 +47,15 @@ import { LoginComponent } from './views/login/login.component';
 import { PacienteNoEncontradoComponent } from './components/paciente-no-encontrado/paciente-no-encontrado.component';
 import { EditarPacienteComponent } from './components/modales/editar-paciente/editar-paciente.component';
 import { AgendarPacienteComponent } from './views/agendar-paciente/agendar-paciente.component';
+import { CrearPacienteComponent } from './components/modales/crear-paciente/crear-paciente.component';
+import { TableAgendadoComponent } from './components/table-agendado/table-agendado.component';
+import { MenuAsignadosComponent } from './views/menu-asignados/menu-asignados.component';
+import { TableAsignadosComponent } from './components/table-asignados/table-asignados.component';
+import { FiltroCalendarioComponent } from './components/modales/filtro-calendario/filtro-calendario.component';
+import { FiltroEmbudoComponent } from './components/modales/filtro-embudo/filtro-embudo.component';
+import { ColumnaPromocionesComponent } from './components/columna-promociones/columna-promociones.component';
+import { MenuPromocionesComponent } from './views/menu-promociones/menu-promociones.component';
+import { ResumenGestionesComponent } from './components/resumen-gestiones/resumen-gestiones.component';
 
 
 @NgModule({
@@ -87,7 +96,16 @@ import { AgendarPacienteComponent } from './views/agendar-paciente/agendar-pacie
     LoginComponent,
     PacienteNoEncontradoComponent,
     EditarPacienteComponent,
-    AgendarPacienteComponent
+    AgendarPacienteComponent,
+    CrearPacienteComponent,
+    TableAgendadoComponent,
+    MenuAsignadosComponent,
+    TableAsignadosComponent,
+    FiltroCalendarioComponent,
+    FiltroEmbudoComponent,
+    ColumnaPromocionesComponent,
+    MenuPromocionesComponent,
+    ResumenGestionesComponent
   ],
   imports: [
     BrowserModule,

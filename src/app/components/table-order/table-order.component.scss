@@ -1,50 +1,51 @@
 @import '../../scss/var';
 
-table{
-  width: 100%;
-
-  .table-header-order{
-    background-color: $grey-background;
-    color: $gray_typo;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 1em 1.2em;
-    cursor: pointer;
-
-    .icon_orden{
-      width: 10px;
-      margin: 0 .5em;
-    }
-    &:first-child {
-      width: 21%;
-    }
-    &:nth-child(2) {
-      width: 13%;
-    }
-  }
-
-  .table-body-order{
-    position: relative;
-    background-color: #f5fcfc;
-    font-size: 14px;
-    color: $brand-blue_dark;
-    cursor: pointer;
-    .table-body-row{
-      font-weight: 300;
-      padding: 1em;
-
-      &:first-child{
-        font-weight: 500 !important;
+.tabla-ordenes{
+  table{
+    width: 100%;
+    .table-header-order{
+      background-color: $grey-background;
+      color: $gray_typo;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 1em 1.2em;
+      cursor: pointer;
+  
+      .icon_orden{
+        width: 10px;
+        margin: 0 .5em;
+      }
+      &:first-child {
+        width: 21%;
+      }
+      &:nth-child(2) {
+        width: 14%;
       }
     }
-    .icon_bottom{
-      width: 1.15em;
+  
+    .table-body-order{
+      position: relative;
+      background-color: #f5fcfc;
+      font-size: 14px;
+      color: $brand-blue_dark;
+      cursor: pointer;
+      .table-body-row{
+        font-weight: 300;
+        padding: 1em;
+  
+        &:first-child{
+          font-weight: 500 !important;
+        }
+      }
+      .icon_bottom{
+        width: 1.15em;
+      }
     }
-  }
-
-  .table-submenu{
-    td{
-      padding: 0 !important;
+  
+    .table-submenu{
+      td{
+        padding: 0 !important;
+      }
     }
   }
 }

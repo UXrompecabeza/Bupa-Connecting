@@ -1,4 +1,4 @@
-<div class="modal" id="modal-editarPaciente" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="modal-editarPaciente" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" data-backdrop="static">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body">
@@ -11,63 +11,66 @@
             <div class="col-4">
               <div class="rut campo-datos">
                 <label>RUT</label>
-                <input type="text" value="16.456.789-0" disabled>
+                <input autocomplete="off" type="text" value="16.456.789-0" disabled>
               </div>
               <div class="fecha-nacimiento campo-datos">
                 <label>Fecha de nacimiento</label>
-                <input type="text" value="01" disabled>
-                <input type="text" value="10" disabled>
-                <input type="text" value="1986" disabled>
+                <input autocomplete="off" type="text" maxlength="2" value="20" (keypress)="numberOnly($event)">
+                <input autocomplete="off" type="text" value="12"  maxlength="2" (keypress)="numberOnly($event)">
+                <input autocomplete="off" type="text" maxlength="4" value="1975" (keypress)="numberOnly($event)">
               </div>
               <div class="correo campo-datos">
                 <label>Correo</label>
-                <span>Agregar otro</span>
-                <input type="text" value="francisca.v@gmail.com">
+                <!-- <span>Agregar otro</span> -->
+                <input autocomplete="off" type="email" value="francisca.v@gmail.com" (keypress)="email($event)">
               </div>
               <div class="calle campo-datos">
                 <label>Dirección</label>
-                <input type="text" value="Calle / número">
+                <input autocomplete="off" type="text" value="Manquehue 155">
               </div>
             </div>
             <div class="col-4">
               <div class="nombres campo-datos">
                 <label>Nombres</label>
-                <input type="text" value="Francisca Andrea" disabled>
+                <input autocomplete="off" type="text" value="Francisca Andrea">
               </div>
               <div class="genero campo-datos">
                 <label>Género</label>
-                <input type="text" value="Mujer" disabled>
+                <ng-select [items]="genero"
+                  bindLabel="name" placeholder="Mujer">
+                </ng-select>
               </div>
               <div class="telefono campo-datos">
                 <label>Teléfono</label>
-                <span>Agregar otro</span>
-                <!-- <input type="text"> -->
-                <ng-select [items]="telefono"
-                  bindLabel="name" placeholder="+569 62224567">
-                </ng-select>
+                <!-- <span>Agregar otro</span> -->
+                <input autocomplete="off" type="text" value="56912345678" maxlength="11" (keypress)="numberOnly($event)">
               </div>
               <div class="ciudad campo-datos">
-                <input type="text" value="Comuna">
+                <input autocomplete="off" type="text" value="Las Condes">
               </div>
             </div>
             <div class="col-4">
               <div class="apellidos campo-datos">
                 <label>Apellidos</label>
-                <input type="text" value="Velasco Ferrada" disabled>
+                <input class="firstLastName" autocomplete="off" type="text" value="Velasco">
+                <input autocomplete="off" type="text" value="Ferrada">
               </div>
               <div class="prevision campo-datos">
                 <label>Previsión</label>
-                <!-- <input type="text"> -->
+                <!-- <input autocomplete="off" type="text"> -->
                 <ng-select [items]="prestacion"
                   bindLabel="name" placeholder="Cruz Blanca">
                 </ng-select>
               </div>
               <div class="nacionalidad campo-datos">
                 <label>Nacionalidad</label>
-                <input type="text" value="Chilena" disabled>
+                <ng-select [items]="nacionalidad"
+                  bindLabel="name"
+                  placeholder="Chilena">
+                </ng-select>
               </div>
               <div class="region campo-datos">
-                <!-- <input type="text"> -->
+                <!-- <input autocomplete="off" type="text"> -->
                 <ng-select [items]="region"
                   bindLabel="name"
                   placeholder="Región Metropolitana">

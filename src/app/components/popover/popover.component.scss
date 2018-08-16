@@ -1,67 +1,99 @@
-@import '../../scss/var';
-@import "~@ng-select/ng-select/themes/default.theme.css";
+// @import '../../scss/var';
+// @import "~@ng-select/ng-select/themes/default.theme.css";
 
-.container-popover {
-  position: absolute;
+// .container-popover {
+//   position: absolute;
+//   display: inline-block;
+//   z-index: 1;
+//   .triangle {
+//     position: absolute;
+//     width: 0; 
+//     height: 0; 
+//     &-back {
+//       @extend .triangle;
+//       border-left: 6px solid transparent;
+//       border-right: 6px solid transparent;
+//       border-bottom: 6px solid $grey-background;
+//       right: 1em;
+//       top: -.39em;
+//     }
+//     &-front {
+//       @extend .triangle;
+//       border-left: 6px solid transparent;
+//       border-right: 6px solid transparent;
+//       border-bottom: 6px solid #FFF;
+//       right: 1em;
+//       top: -.35em;
+//     }
+//   }
+//   ul {
+//     list-style: none;
+//     width: 11.25em;
+//     padding: 0;
+//     background-color: #FFF;
+//     li {
+//       border: 1px solid $grey-background;
+//       border-bottom: none;
+//       padding: .5em 1.5em;
+//       color: $gray_typo;
+//       font-size: 12px;
+//       cursor: pointer;
+//       &:last-child {
+//         border-bottom: 1px solid $grey-background;
+//       }
+//       &:hover {
+//         background-color: $brand-blue_main;
+//         color: #FFF;
+//       }
+//     }
+//   }
+//   &:hover ul li + .triangle-back {
+//     border-bottom-color: red;
+//   }
+// }
+
+// .filtro {
+//   position: relative;
+//   padding-bottom: 1em;
+//   img {
+//     position: absolute;
+//     z-index: 10;
+//     top: .7em;
+//     left: 1em;
+//   }
+// }
+// .container-calendar {
+//   width: 30%;
+// }
+
+
+#content {
+  white-space: nowrap;
+  font-size: 0;
+  text-align: center;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 300px; /*this is indicative*/
+  transition: width 1s;
+}
+
+#content > li {
   display: inline-block;
-  z-index: 1;
-  .triangle {
-    position: absolute;
-    width: 0; 
-    height: 0; 
-    &-back {
-      @extend .triangle;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-bottom: 6px solid $grey-background;
-      right: 1em;
-      top: -.39em;
-    }
-    &-front {
-      @extend .triangle;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-bottom: 6px solid #FFF;
-      right: 1em;
-      top: -.35em;
-    }
-  }
-  ul {
-    list-style: none;
-    width: 11.25em;
-    padding: 0;
-    background-color: #FFF;
-    li {
-      border: 1px solid $grey-background;
-      border-bottom: none;
-      padding: .5em 1.5em;
-      color: $gray_typo;
-      font-size: 12px;
-      cursor: pointer;
-      &:last-child {
-        border-bottom: 1px solid $grey-background;
-      }
-      &:hover {
-        background-color: $brand-blue_main;
-        color: #FFF;
-      }
-    }
-  }
-  &:hover ul li + .triangle-back {
-    border-bottom-color: red;
-  }
+  width: 150px;
+  font-size: 16px;
+  height: 100%;
+  max-height: 100%;
+  padding-top: 20px;
 }
 
-.filtro {
-  position: relative;
-  padding-bottom: 1em;
-  img {
-    position: absolute;
-    z-index: 10;
-    top: .7em;
-    left: 1em;
-  }
+#content > li > p {
+  width: 100px;
+  padding: 10px 0;
+  background: #ccc;
+  margin: 0 auto;
 }
-.container-calendar {
-  width: 30%;
+.contraer {
+background-color: pink;
+width: 30% !important;
 }

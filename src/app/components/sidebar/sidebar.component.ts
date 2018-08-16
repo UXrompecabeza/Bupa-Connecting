@@ -12,10 +12,22 @@ export class SidebarComponent implements OnInit {
   }
 
   @Output() dismissMenu:EventEmitter<any> = new EventEmitter();
-
+  @Output() dismissMenu2:EventEmitter<any> = new EventEmitter();
+  @Output() dismissMenu3:EventEmitter<any> = new EventEmitter();
+  @Output() dismissMenu4:EventEmitter<any> = new EventEmitter();
   abrirAgenda() {
     this.dismissMenu.emit();
   }
+  abrirAsignados() {
+    this.dismissMenu2.emit();
+  }
+  abrirPromociones() {
+    this.dismissMenu3.emit();
+  }
+  abrirInicio() {
+    this.dismissMenu4.emit();
+  }
+
   sidebar: boolean = false;
   openSidebar(){
     console.log("clickSidebar")

@@ -1,6 +1,8 @@
 @import '../../scss/var';
 @import '../../scss/mixin';
 .login {
+  height: 100vh;
+  overflow: hidden;
   .login-group {
     padding: 9em 8.5%;
     .logo {
@@ -46,6 +48,11 @@
     overflow: hidden;
     height: 100vh;
     img {
+      @media only screen and (min-width: 900px) and (max-width: 1054px) {
+        min-height: 48em;
+        height: 100%;
+        left: -50%;
+      }
       height: 52em;
       position: absolute;
       left: -30%;

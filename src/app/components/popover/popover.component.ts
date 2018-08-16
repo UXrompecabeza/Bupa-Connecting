@@ -27,13 +27,30 @@ export class PopoverComponent implements OnInit {
     this._http.get('https://picsum.photos/list')
         .pipe(map((images: Array<{id: number}>) => this._randomImageUrls(images)))
         .subscribe(images => this.images = images);
-  }
 
+        
+      }
+      
   private _randomImageUrls(images: Array<{id: number}>): Array<string> {
     return [1, 2, 3].map(() => {
       const randomId = images[Math.floor(Math.random() * images.length)].id;
       return `https://picsum.photos/900/500?image=${randomId}`;
     });
   }
+  move(event) {
+    let element = event.target.parentElement;
+    console.log(element)
+    let content = document.getElementById("content");
+    content.classList.toggle("contraer"); 
+    element.parentElement.scrollLeft += element.offsetLeft;
+    // element.scrollLeft += 600;
+    // setInterval(
+    //   function(){ element.parentElement.parentElement.scrollLeft += element.offsetLeft; },
+    //   200
+    // );
+    // setTimeout(function(){ 
+    //   let element = document.getElementById("box-11");
+    //   element.parentElement.parentElement.scrollLeft += element.offsetLeft; 
+    // console.log("ok")}, 3000);
+  }
 }
-

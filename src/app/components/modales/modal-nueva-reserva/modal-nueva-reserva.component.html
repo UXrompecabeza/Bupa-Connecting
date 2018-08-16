@@ -1,4 +1,4 @@
-<div class="modal" id="nuevaReserva" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="nuevaReserva" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" data-backdrop="static">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content no-padding">
       <div class="modal-body no-padding">
@@ -97,20 +97,20 @@
                         placeholder="Región">
                       </ng-select>
                     </div>
-                    <div class="filtro">
+                    <div class="filtro last">
+                      <img src="../../../assets/icons/icon-search.svg" alt="">
+                      <ng-select [items]="centro"
+                      bindLabel="name"
+                      placeholder="Centro médico *">
+                      </ng-select>
+                    </div>
+                    <!-- <div class="filtro">
                       <img src="../../../assets/icons/icon-search.svg" alt="">
                       <ng-select [items]="comuna"
                         bindLabel="name"
                         placeholder="Comuna">
                       </ng-select>
-                    </div>
-                    <div class="filtro">
-                      <img src="../../../assets/icons/icon-search.svg" alt="">
-                      <ng-select [items]="centro"
-                        bindLabel="name"
-                        placeholder="Centro médico *">
-                      </ng-select>
-                    </div>
+                    </div> -->
                     <div class="calendar">
                       <button (click)="calendar1 = !calendar1">
                         <img src="../../../../assets/icons/icon-more-hours.svg" alt="">
@@ -228,10 +228,10 @@
                     </table>
                   </div>
                 </div>
-                <div class="col-4 horas" (click)="resumen = !resumen" >
+                <div class="col-4 horas">
                   <div class="container-vacio">
                     <div *ngIf="next2" class="apartado-hora">
-                        <app-apartado-bxmedico></app-apartado-bxmedico>
+                        <app-apartado-bxmedico (openNewResume)="showResume()"></app-apartado-bxmedico>
                     </div>
                     <div *ngIf="calendar2 && !next2" class="apartado-calendario">
                       <app-calendario-extendido></app-calendario-extendido>

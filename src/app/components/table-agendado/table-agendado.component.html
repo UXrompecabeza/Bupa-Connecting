@@ -1,0 +1,157 @@
+
+<table>
+  <thead>
+    <tr>
+      <!-- <th class="table-header" [class.active]="order === 'info.date'"(click)="setOrder('info.date')"> Fecha
+        <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+      </th> -->
+      <th class="table-header" [class.active]="order === 'info.order'"(click)="setOrder('info.order')"> Orden médica
+        <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+      </th>
+      <th class="table-header" [class.active]="order === 'info.prestador'"(click)="setOrder('info.prestador')"> Prestador
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+      <th class="table-header" [class.active]="order === 'info.hour'"(click)="setOrder('info.hour')"> Hora
+        <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+      </th>
+      <th class="table-header" [class.active]="order === 'info.copago'"(click)="setOrder('info.copago')"> Copago
+        <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+      </th>
+      <th class="table-header" [class.active]="order === 'info.doctor'"(click)="setOrder('info.doctor')"> Médico
+        <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+      </th>
+      <th class="table-header"></th>
+    </tr>
+  </thead>
+  <tbody class="table-body">
+    <tr *ngFor="let row of collection | orderBy: order:reverse:'case-insensitive'; let i = index">
+      <!-- <td class="table-body-row"> 
+        <span class="table-typo-light_blue_dark"> {{ row.info.date }}</span>
+      </td> -->
+      <td class="table-body-row info-centro"> 
+        <span class="table-typo-light_blue_dark">{{ row.info.date }} | OCM {{ row.info.ocm }}</span> 
+        <span class="table-typo_strong">{{ row.info.order }}</span> 
+        <span class="table-typo-light_blue_dark">Dr. {{ row.info.medico }}</span> 
+      </td>
+      <td class="table-body-row info-centro"> 
+        <span class="table-typo_strong">{{ row.info.prestador[0] }}</span> 
+        <a class="table-typo-light_blue_link" href="https://www.google.com/maps/place/Integram%C3%A9dica+Manquehue/@-33.4109654,-70.5689973,17z/data=!3m1!4b1!4m5!3m4!1s0x9662ceddf67196bb:0xa970f45009653d42!8m2!3d-33.4109654!4d-70.5668086" target="_blank">
+          <img class="icon_location" src="./assets/icons/icon-location.svg"/>
+          <div class="link-direccion">
+            <span>{{ row.info.prestador[1] }}</span>
+          </div>
+        </a> 
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo_strong">{{ row.info.hour[0] }}</span> 
+        <span class="table-typo-light_blue_dark">{{ row.info.hour[1] }}</span> 
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo-light_blue_dark"> ${{ row.info.copago }}</span>
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo-light_blue_dark">{{ row.info.doctor }}</span>
+        <img class="icon_image" data-dismiss="modal" data-toggle="modal" data-target="#modal-cvDoctor" src="{{row.info.image}}"/> 
+      </td>
+      <td class="table-body-row">
+        <a class="more-options" (click)="openPop($event)">
+          <img class="icon_dots" src="./assets/icons/icon-chevron-button.svg"/> 
+        </a>
+        <div class="container-popover" *ngIf="popup">
+          <ul>
+            <li data-dismiss="modal">
+              Modificar
+            </li>
+            <li data-dismiss="modal">
+              Eliminar
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <!-- <tr *ngFor="let row of collection2; let i = index">
+      <td class="table-body-row info-centro"> 
+        <span class="table-typo-light_blue_dark">{{ row.info.date }} | OCM {{ row.info.ocm }}</span> 
+        <span class="table-typo_strong">{{ row.info.order }}</span> 
+        <span class="table-typo-light_blue_dark">Dr. {{ row.info.medico }}</span> 
+      </td>
+      <td class="table-body-row info-centro"> 
+        <span class="table-typo_strong">{{ row.info.prestador[0] }}</span> 
+        <a class="table-typo-light_blue_link" href="https://www.google.com/maps/place/Integram%C3%A9dica+Manquehue/@-33.4109654,-70.5689973,17z/data=!3m1!4b1!4m5!3m4!1s0x9662ceddf67196bb:0xa970f45009653d42!8m2!3d-33.4109654!4d-70.5668086" target="_blank">
+          <img class="icon_location" src="./assets/icons/icon-location.svg"/>
+          <div class="link-direccion">
+            <span>{{ row.info.prestador[1] }}</span>
+          </div>
+        </a> 
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo_strong">{{ row.info.hour[0] }}</span> 
+        <span class="table-typo-light_blue_dark">{{ row.info.hour[1] }}</span> 
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo-light_blue_dark"> ${{ row.info.copago }}</span>
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo-light_blue_dark">{{ row.info.doctor }}</span>
+        <img class="icon_image" data-dismiss="modal" data-toggle="modal" data-target="#modal-cvDoctor-hora" src="{{row.info.image}}"/> 
+      </td>
+      <td class="table-body-row">
+        <a class="more-options" (click)="popup2 = !popup2">
+          <img class="icon_dots" src="./assets/icons/icon-chevron-button.svg"/> 
+        </a>
+        <div class="container-popover" *ngIf="popup2">
+          <ul>
+            <li data-dismiss="modal">
+              Modificar
+            </li>
+            <li data-dismiss="modal">
+              Eliminar
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr *ngFor="let row of collection3; let i = index">
+      <td class="table-body-row info-centro"> 
+        <span class="table-typo-light_blue_dark">{{ row.info.date }} | OCM {{ row.info.ocm }}</span> 
+        <span class="table-typo_strong">{{ row.info.order }}</span> 
+        <span class="table-typo-light_blue_dark">Dr. {{ row.info.medico }}</span> 
+      </td>
+      <td class="table-body-row info-centro"> 
+        <span class="table-typo_strong">{{ row.info.prestador[0] }}</span> 
+        <a class="table-typo-light_blue_link" href="https://www.google.com/maps/place/Integram%C3%A9dica+Manquehue/@-33.4109654,-70.5689973,17z/data=!3m1!4b1!4m5!3m4!1s0x9662ceddf67196bb:0xa970f45009653d42!8m2!3d-33.4109654!4d-70.5668086" target="_blank">
+          <img class="icon_location" src="./assets/icons/icon-location.svg"/>
+          <div class="link-direccion">
+            <span>{{ row.info.prestador[1] }}</span>
+          </div>
+        </a> 
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo_strong">{{ row.info.hour[0] }}</span> 
+        <span class="table-typo-light_blue_dark">{{ row.info.hour[1] }}</span> 
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo-light_blue_dark"> ${{ row.info.copago }}</span>
+      </td>
+      <td class="table-body-row"> 
+        <span class="table-typo-light_blue_dark">{{ row.info.doctor }}</span>
+        <img class="icon_image" data-dismiss="modal" data-toggle="modal" data-target="#modal-cvDoctor-hora" src="{{row.info.image}}"/> 
+      </td>
+      <td class="table-body-row">
+        <a class="more-options" (click)="popup3 = !popup3">
+          <img class="icon_dots" src="./assets/icons/icon-chevron-button.svg"/> 
+        </a>
+        <div class="container-popover" *ngIf="popup3">
+          <ul>
+            <li data-dismiss="modal">
+              Modificar
+            </li>
+            <li data-dismiss="modal">
+              Eliminar
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr> -->
+  </tbody>
+</table>

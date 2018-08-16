@@ -16,6 +16,9 @@
         font-weight: $medium;
         padding-right: 6%;
         padding-left: 6%;
+        @media only screen and (min-width: 900px) and (max-width: 1150px) {
+          font-size: 18px;
+      }
     }
     .patients-{
       margin-bottom: 0;
@@ -24,11 +27,11 @@
       &contact {
         @extend .patients-;
         font-size: 14px;
-        padding-bottom: .5em;
+        padding-bottom: 1%;
       }
       &mail {
         @extend .patients-;
-        padding-top: 1em;
+        padding-top: 3%;
         font-size: 12px;
       }
     }

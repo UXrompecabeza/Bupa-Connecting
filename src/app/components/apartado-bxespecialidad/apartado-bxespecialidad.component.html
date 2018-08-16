@@ -1,30 +1,33 @@
 <div class="apartado-bxespecialidad" [ngClass]="{'contraer': hourSelected }">
   <div class="header">
     <h3>Martes 16 Mayo 2018</h3>
-    <h4>Disponibilidad de horas por especialidad</h4>
+    <img *ngIf="hourSelected" (click)="hourSelected = !hourSelected;" src="assets/icons/icon-expand.svg" alt="">
+    <img *ngIf="!hourSelected" (click)="hourSelected = !hourSelected;" src="assets/icons/icon-contract.svg" alt="">
+    <h4 *ngFor="let info of filtros">{{info.specialty}} - {{info.center}}</h4>
+    <h5>Disponibilidad de horas por especialidad</h5>
   </div>
-  <ul>
+  <ul class="doctors">
     <li class="list-doctors" *ngFor="let doctor of doctors">
       <div class="row">
         <div class="col-2">
-          <img src="{{doctor.info.image}}" alt="">
+          <img src="./assets/icons/icon-cv-doctor.svg" alt="">
         </div>
         <div class="col-10">
           <h4>{{ doctor.info.doctor }}</h4>
-          <h5>{{ doctor.info.specialty }}</h5>
-          <p>{{ doctor.info.center }}</p>
+          <!-- <h5>{{ doctor.info.specialty }}</h5>
+          <p>{{ doctor.info.center }}</p> -->
         </div>
       </div>
       <div class="carrusel-horas">
         <div class="icon-day">
           <img src="./assets/icons/icon-dawn.svg">
         </div>
-        <ul>
+        <ul data-spy="scroll" data-target="#hours" data-offset="0" >
           <li *ngFor="let hora of hoursAvailable">
-            <label class="container">
+            <label class="container" (click)="move($event); close()">
               <input type="radio" name="hour">
-              <span class="setTime" (click)="hourSelected = !hourSelected;">{{ hora }}</span>
-              <span class="checkmark" (click)="hourSelected = !hourSelected;"></span>
+              <span class="setTime">{{ hora }}</span>
+              <span class="checkmark"></span>
             </label>
             <span class="separador">-</span>
           </li>
@@ -34,10 +37,10 @@
         </div>
         <ul>
           <li *ngFor="let horaT of hoursAvailableAfternoon">
-            <label class="container">
+            <label class="container" (click)="move($event); close()">
               <input type="radio" name="hour">
-              <span class="setTime" (click)="hourSelected = !hourSelected;">{{ horaT }}</span>
-              <span class="checkmark" (click)="hourSelected = !hourSelected;"></span>
+              <span class="setTime">{{ horaT }}</span>
+              <span class="checkmark"></span>
             </label>
             <span class="separador">-</span>
           </li>

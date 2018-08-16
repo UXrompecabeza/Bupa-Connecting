@@ -1,0 +1,98 @@
+<div class="table-asignados">
+  <table>
+    <thead>
+      <tr>
+        <th class="table-header" [class.active]="order === 'info.estado'"(click)="setOrder('info.estado')"> Estado
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.telefono'"(click)="setOrder('info.telefono')"> Teléfono
+            <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+          </th>
+        <th class="table-header" [class.active]="order === 'info.nombre'"(click)="setOrder('info.nombre')"> Nombre
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.edad'"(click)="setOrder('info.edad')"> Edad
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.rut'"(click)="setOrder('info.rut')"> RUT
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.prevision'"(click)="setOrder('info.prevision')"> Previsión
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.centro'"(click)="setOrder('info.centro')"> Centro médico
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.op'"(click)="setOrder('info.op')"> Nº O.P.
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header" [class.active]="order === 'info.espera'"(click)="setOrder('info.espera')"> En espera
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+      </tr>
+    </thead>
+    <thead class="thead-sticky">
+      <tr>
+        <th class="header-sticky" [class.active]="order === 'info.estado'"(click)="setOrder('info.estado')"> Estado
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="header-sticky" [class.active]="order === 'info.telefono'"(click)="setOrder('info.telefono')"> Teléfono
+            <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+          </th>
+        <th class="header-sticky" [class.active]="order === 'info.nombre'"(click)="setOrder('info.nombre')"> Nombre
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="header-sticky" [class.active]="order === 'info.edad'"(click)="setOrder('info.edad')"> Edad
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="header-sticky" [class.active]="order === 'info.rut'"(click)="setOrder('info.rut')"> RUT
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="header-sticky" [class.active]="order === 'info.prevision'"(click)="setOrder('info.prevision')"> Previsión
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="header-sticky" [class.active]="order === 'info.centro'"(click)="setOrder('info.centro')"> Centro médico
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="header-sticky" [class.active]="order === 'info.op'"(click)="setOrder('info.op')"> Nº O.P.
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="header-sticky" [class.active]="order === 'info.espera'"(click)="setOrder('info.espera')"> En espera
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      <tr *ngFor="let row of collection | orderBy: order:reverse:'case-insensitive'">
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.estado }}</span> 
+        </td>
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.telefono }}</span> 
+        </td>
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.nombre }}</span> 
+        </td>
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.edad }}</span> 
+        </td>
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.rut }}</span> 
+        </td>
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.prevision }}</span> 
+        </td>
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.centro }}</span> 
+        </td>
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.op }}</span> 
+        </td>
+        <td class="table-body-row info-centro">
+          <span class="table-typo-light_blue_dark"> {{ row.info.espera }}</span> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  

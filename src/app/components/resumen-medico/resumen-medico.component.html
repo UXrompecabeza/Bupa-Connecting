@@ -11,14 +11,7 @@
   <div class="section-paciente">
     <img src="assets/icons/icon-woman.svg" alt=""/>
     <h5>Francisca Andrea Velasco Ferrada</h5>
-    <div class="mail-paciente" [ngClass]="{'editMail': editmail }">
-      <span>francisca.v@gmail.com</span>
-      <img src="assets/icons/icon-edit.svg" (click)="changeMail()">
-    </div>
-    <div class="mail-editable">
-      <input type="text" value="francisca.v@gmail.com">
-      <button (click)="changeMail()"><img src="assets/icons/icon-mail.svg" alt=""></button>
-    </div>
+    <p>francisca.v@gmail.com</p>
   </div>
   <div class="section-consulta">
     <div class="date-selected">
@@ -35,7 +28,7 @@
         <span class="date-info-text">$ 48.999</span>
       </div>
     </div>
-    <h5 data-dismiss="modal" data-toggle="modal" data-target="#modal-indications-back2new">Leer indicaciones</h5>
+    <!-- <h5 data-dismiss="modal" data-toggle="modal" data-target="#modal-indications-back2new">Leer indicaciones</h5> -->
   </div>
   <button data-dismiss="modal" data-toggle="modal" data-target="#modal-success">Agendar</button>
 </div>

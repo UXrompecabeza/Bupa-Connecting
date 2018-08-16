@@ -2,8 +2,10 @@
 
 .accordion {
   background-color: #FFF;
+  max-height: 55vh;
+  overflow: scroll;
   .accordion-item {
-    border-top: 1px solid $brand-blue_main;
+    border-top: 1px solid #f0f0f0;
     position: relative;
     overflow: hidden;
     input {
@@ -26,37 +28,34 @@
       cursor: pointer;
 
       .accordion-title{
-        color: $brand-blue_dark;
+        color: #05345C;
         font-weight: 500;
       }
       .accordion-subtitle{
         color: $brand-blue_main;
         font-weight: 300;
         padding-left: 1em;
+        img {
+          vertical-align: sub;
+        }
 
         &:hover{
           text-decoration: underline;
         }
       }
-      .icon{
-        position: absolute;
-
-        &_mail{
-          @extend .icon;
-          right: 1.5em;
-          top: 1.2em;
-        }
-        &_search{
-          @extend .icon;
-          right: 4.5em;
-          top: 1em;
-        }
-        &_noexam{
-          @extend .icon;
-          width: 1.8em;
-          top: 1em;
-          right: 1.5em;
-        }
+    }
+    .icon{
+      position: absolute;
+      &_mail{
+        @extend .icon;
+        right: 1.5em;
+        top: 1.2em;
+      }
+      &_noexam{
+        @extend .icon;
+        width: 1.6em;
+        top: 1em;
+        right: 1.5em;
       }
     }
     &:last-child{
@@ -77,10 +76,20 @@
     text-align: center;
     padding: .5em 0;
     .link {
-      color: $brand-blue_link;
+      color: $brand-blue_main;
       padding-left: .5em;
       font-size: 12px;
       font-weight: $regular;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+}
+.off {
+  background-color: $gray_disabled;
+  span {
+    color: $gray_typo !important;
   }
 }

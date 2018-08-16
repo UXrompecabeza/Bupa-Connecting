@@ -4,29 +4,44 @@
     <label for="acc{{i}}" class="accordion-header">
         <span class="accordion-title"> {{orden.info.exam}} </span> 
         <span class="accordion-subtitle" data-toggle="modal" data-target="#modal-indications"> {{orden.info.indication}} </span>
-        <img class="icon_mail" src="../../../assets/icons/icon-mail.svg">
-    </label>
+      </label>
+      <img (click)="sendMail(orden)" class={{orden.info.class}} src={{orden.info.icon}} >
     <div class="accordion-body">
       <app-table-exams></app-table-exams>
       <div class="mejores-opciones">
-        <img class="icon_search" src="../../../assets/icons/icon-search.svg">
-        <span class="link">¿Quieres buscar otras mejores opciones?</span>
+        <img class="icon_search" src="./assets/icons/icon-otras_opciones.svg">
+        <span data-toggle="modal" data-target="#reservaHoraPrecio" class="link">¿Quieres buscar otras mejores opciones?</span>
       </div>
     </div>
   </div>
   <div class="tab accordion-item" *ngFor="let orden of ordenes2; let i = index">
-    <input id="acc{{i + 1}}" type="checkbox">
-    <label for="acc{{i + 1}}" class="accordion-header">
+    <input id="accy{{i}}" type="checkbox">
+    <label for="accy{{i}}" class="accordion-header on">
         <span class="accordion-title"> {{orden.info.exam}} </span> 
         <span class="accordion-subtitle" data-toggle="modal" data-target="#modal-indications"> {{orden.info.indication}} </span>
-        <img class="icon_noexam" src="../../../assets/icons/icon-no-exam-on.svg">
-    </label>
+      </label>
+      <img (click)="noMolestar($event)" class={{orden.info.class}} src={{orden.info.icon}} >
     <div class="accordion-body">
       <app-table-exams></app-table-exams>
       <div class="mejores-opciones">
-        <img class="icon_search" src="../../../assets/icons/icon-search.svg">
-        <span class="link">¿Quieres buscar otras mejores opciones?</span>
+        <img class="icon_search" src="./assets/icons/icon-otras_opciones.svg">
+        <span data-toggle="modal" data-target="#reservaHoraPrecio" class="link">¿Quieres buscar otras mejores opciones?</span>
       </div>
     </div>
+  </div>
+  <div class="tab accordion-item" *ngFor="let orden of ordenes3; let i = index">
+    <input id="acc2{{i + 1}}" type="checkbox" disabled>
+    <label for="acc2{{i + 1}}" class="accordion-header">
+      <span class="accordion-title"> {{orden.info.exam}} </span> 
+      <span class="accordion-subtitle"> 
+        <img (click)="sendPresupuesto(orden)" src={{orden.info.icon}} > {{orden.info.indication}} </span>
+    </label>
+    <!-- <div class="accordion-body">
+      <app-table-exams></app-table-exams>
+      <div class="mejores-opciones">
+        <img class="icon_search" src="./assets/icons/icon-otras_opciones.svg">
+        <span data-toggle="modal" data-target="#reservaHoraPrecio" class="link">¿Quieres buscar otras mejores opciones?</span>
+      </div>
+    </div> -->
   </div>
 </div>

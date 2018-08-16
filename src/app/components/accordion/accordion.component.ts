@@ -12,7 +12,9 @@ export class AccordionComponent implements OnChanges {
     {
       info: {
         exam: ['Exámen de laboratorio de sangre'],
-        indication: ['Leer indicaciones']
+        indication: ['Leer indicaciones'],
+        class: ['icon_mail icon-accordion'],
+        icon: ['./assets/icons/icon-mail-off.svg']
       }
     },
   ];
@@ -20,12 +22,26 @@ export class AccordionComponent implements OnChanges {
     {
       info: {
         exam: ['Endoscopia digestiva gastroscópica de mitad superior'],
-        indication: ['Leer indicaciones']      
+        indication: ['Leer indicaciones'],
+        class: ['icon_noexam icon-accordion'],
+        icon: ['./assets/icons/icon-no-exam-on.svg'] 
       }
-    }, {
+    }, 
+    {
       info: {
         exam: ['Resonancia magnética espalda'],
-        indication: ['Leer indicaciones']
+        indication: ['Leer indicaciones'],
+        class: ['icon_noexam icon-accordion'],
+        icon: ['./assets/icons/icon-no-exam-on.svg'] 
+      }
+    }, 
+  ];
+  ordenes3: any[] = [
+    {
+      info: {
+        exam: ['Orden quirúrgica'],
+        indication: ['Pedir presupuesto'],
+        icon: ['./assets/icons/icon-presupuesto-off.svg'] 
       }
     }, 
   ];
@@ -35,4 +51,22 @@ export class AccordionComponent implements OnChanges {
   ngOnChanges() {
   }
 
+  // desactivar: boolean = true;
+  noMolestar(event) {
+    let attrLabel = event.target.parentNode.childNodes[1].attributes[1].value.split(' ');
+    let className = event.target.parentNode.childNodes[1].attributes[1].value;
+    if(attrLabel[1] === 'on'){
+      event.target.parentNode.childNodes[1].attributes[1].value = attrLabel[0] +' off';
+    } else {
+      event.target.parentNode.childNodes[1].attributes[1].value = attrLabel[0] +' on';
+    }
+    console.log(className);
+  }
+
+  sendMail(orden) {
+    orden.info.icon = "./assets/icons/icon-mail-on.svg"
+  }
+  sendPresupuesto(orden) {
+    orden.info.icon = "./assets/icons/icon-presupuesto-on.svg"
+  }
 }

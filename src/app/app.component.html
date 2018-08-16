@@ -3,16 +3,23 @@
 <!-- Pantalla principal -->
 <div class="menuRut">
   <app-header (clickMenuBurguer)="recibeClickBurguer()"></app-header>
-  <app-sidebar (dismissMenu)="mostrarAgenda()"></app-sidebar>
+  <app-sidebar (dismissMenu)="mostrarAgenda()" (dismissMenu2)="mostrarAsignados()" (dismissMenu3)="mostrarPromociones()" (dismissMenu4)="mostrarInicio()"></app-sidebar>
   <!-- Pantalla menú principal -->
   <app-menu-inicial *ngIf="menuInicial"></app-menu-inicial>
+  <!-- Pantalla menú asignados -->
+  <app-menu-asignados *ngIf="menuAsignados"></app-menu-asignados>
+  <!-- Pantalla menú promociones -->
+  <app-menu-promociones *ngIf="menuPromociones"></app-menu-promociones>
   <!-- Pantalla paciente agendar -->
   <app-agendar-paciente *ngIf="agenda"></app-agendar-paciente>
 </div>
 <!-- Modales -->
 <app-modal-indications></app-modal-indications>
+<app-crear-paciente></app-crear-paciente>
 <app-editar-paciente></app-editar-paciente>
 <app-modal-indications-back2new></app-modal-indications-back2new>
+<app-filtro-embudo></app-filtro-embudo>
+<app-filtro-calendario></app-filtro-calendario>
 <app-modal-scheduled></app-modal-scheduled>
 <app-modal-scheduled-fail></app-modal-scheduled-fail>
 <app-modal-promotions></app-modal-promotions>

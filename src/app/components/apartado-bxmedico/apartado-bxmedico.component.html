@@ -10,7 +10,7 @@
               <img src="../../../assets/icons/icon-hours-on.svg">
           </div>
           <img (click)="shadow = !shadow" src="../../../assets/icons/icon-hours-off.svg">
-          <span (click)="shadow = !shadow">8:00</span>
+          <span (click)="shadow = !shadow; clickResume()">8:00</span>
         </li>
         <li *ngFor="let hora of morning">
           <img src="../../../assets/icons/icon-hours-off.svg">

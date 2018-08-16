@@ -12,4 +12,6 @@ export class InfoPatientsComponent implements OnInit {
   ngOnInit() {
   }
 
+  exam:boolean = true;
+
 }

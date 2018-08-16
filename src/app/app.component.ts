@@ -11,6 +11,8 @@ export class AppComponent {
 
   noLogin:boolean = true;
   menuInicial:boolean = true;
+  menuAsignados:boolean = false;
+  menuPromociones:boolean = false;
   agenda:boolean = false;
 
   hideLogin() {
@@ -18,13 +20,32 @@ export class AppComponent {
   }
   mostrarAgenda() {
     this.menuInicial = false;
+    this.menuAsignados = false;
+    this.menuPromociones = false;
     this.agenda = true;
   }
-
-  @ViewChild(SidebarComponent) sidebar:SidebarComponent;
+  mostrarAsignados(){
+    this.menuInicial = false;
+    this.menuAsignados = true;
+    this.menuPromociones = false;
+    this.agenda = false;
+  }
+  mostrarPromociones(){
+    this.menuInicial = false;
+    this.menuPromociones = true;
+    this.menuAsignados = false;
+    this.agenda = false;
+  }
+  mostrarInicio(){
+    this.menuInicial = true;
+    this.menuPromociones = false;
+    this.menuAsignados = false;
+    this.agenda = false;
+  }
+  @ViewChild(SidebarComponent) 
+  private sidebar:SidebarComponent;
 
   recibeClickBurguer() {
-    console.log("click en App")
-    this.sidebar.openSidebar;
+    this.sidebar.openSidebar();
   }
 }

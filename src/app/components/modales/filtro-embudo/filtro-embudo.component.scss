@@ -1,0 +1,111 @@
+@import '../../../scss/var.scss';
+@import '../../../scss/mixin.scss';
+#modalFiltro {
+    .modal-content {
+        background: none !important;
+        border: none !important;
+        .modal-header {
+            background: #fff;
+            border-radius: 5px 5px 0px 0px;
+            padding: 35px 15px 10px;
+            display: block;
+            text-align: center;
+            position: relative;
+            button {
+                border: none;
+                background: none;
+                font-size: 35px;
+                position: absolute;
+                right: .5em;
+                color: #6d6e72;
+                top: .5em;
+                cursor: pointer;
+            }
+        }
+        .modal-body {
+            background: #fff;
+            border-radius: 0px 0px 5px 5px;
+            #accordion {
+                .card {
+                    #headingOne, #headingTwo, #headingThree {
+                        span {
+                            font-weight: 500 !important;
+                        }
+                    }
+                    border: none !important;
+                    border-bottom: 1px solid #e6e6e6 !important;
+                    border-radius: 0 !important;
+                    .card-header {
+                        background: none !important;
+                        padding: .5em 0 !important;
+                        border: none !important;
+                        h5 {
+                            text-align: left;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #000!important;
+                            &:active {
+                                color: $brand-blue_dark;
+                            }
+                            button {
+                                text-align: unset !important;
+                                width: 100%;
+                                color: #000;
+                                font-weight: 500;
+                                span {
+                                    float: left;
+                                    text-decoration: none !important;
+                                }
+                                img {
+                                    float: right;
+                                    position: relative;
+                                    top: 9px;
+                                    width: 1em;
+                                }
+                            }
+                        }
+                    }
+                    .card-body {
+                        text-align: left;
+                        padding: 0 1em !important;
+                        font-size: 14px;
+                        height: 8em;
+                        overflow: scroll;
+                        ul {
+                        padding: 0 0 0 .3em;
+                            li {
+                            list-style: none;
+                                a {
+                                    text-decoration: none;
+                                    color: #333;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        h4 {
+                        font-size: 16px;
+                        }
+                        label {
+                        display: block;
+                        }
+                        input {
+                        width: 4em;
+                        }
+                    
+                    }
+                }
+            }
+        }
+        .modal-footer {
+            border-top: none !important;
+            button {
+            @include button;
+            width: 100%;
+            cursor: pointer;
+            }
+        }
+    }
+    .activeCard {
+        color: $brand-blue_main !important;
+    }
+}

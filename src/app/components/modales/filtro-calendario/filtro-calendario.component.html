@@ -1,0 +1,112 @@
+<div class="action-sheet modal fade" id="modalCalendario" tabindex="-1" role="dialog" aria-labelledby="fechas-modalLabel"
+  aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h5 class="modal-title_small" id="fechas-modalLabel">Calendario</h5>
+      </div>
+      <div class="modal-body">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOneCalendar">
+              <h5 class="mb-0">
+                <button (click)="choosenCard($event)" class="btn btn-link active-item-accordion btn_month" data-toggle="collapse" data-target="#collapseOneCalendar"
+                  aria-expanded="false" aria-controls="collapseOneCalendar">
+                  <span class="card-span">Todos los meses</span>
+                </button>
+              </h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwoCalendar">
+              <h5 class="mb-0">
+                <button (click)="choosenCard($event)" class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseTwoCalendar"
+                  aria-expanded="false" aria-controls="collapseTwoCalendar">
+                  <span class="card-span">Mes en curso</span>
+                </button>
+              </h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThreeCalendar">
+              <h5 class="mb-0">
+                <button (click)="choosenCard($event)" class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseThreeCalendar"
+                  aria-expanded="false" aria-controls="collapseThreeCalendar">
+                  <span class="card-span">Mes y día</span>
+                  <img src="assets/icons/icon-arrow-blue-bottom.svg" alt="" />
+                </button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapseThreeCalendar" aria-labelledby="headingThreeCalendar" data-parent="#accordion">
+              <div class="card-body">
+                <div class="mesDia">
+                  <div class="row">
+                    <div class="col-2">
+                      <label>Mes</label>
+                      <input (keypress)="numberOnly($event)" type="text" value="09" maxlength="2">
+                    </div>
+                    <div class="col-2">
+                      <label>Día</label>
+                      <input (keypress)="numberOnly($event)" type="text" value="25" maxlength="2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFourCalendar">
+              <h5 class="mb-0">
+                <button (click)="choosenCard($event)" class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseFourCalendar"
+                  aria-expanded="false" aria-controls="collapseFourCalendar">
+                  <span class="card-span">Desde - hasta</span>
+                  <img src="assets/icons/icon-arrow-blue-bottom.svg" alt="" />
+                </button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapseFourCalendar" aria-labelledby="headingFourCalendar" data-parent="#accordion">
+              <div class="card-body">
+                <div class="desde">
+                  <div class="row">
+                    <div class="col-6">
+                      <h4>Desde:</h4>
+                      <div class="row">
+                        <div class="col-4">
+                          <label>Mes</label>
+                          <input (keypress)="numberOnly($event)" type="text" value="09" maxlength="2">
+                        </div>
+                        <div class="col-4">
+                          <label>Día</label>
+                          <input (keypress)="numberOnly($event)" type="text" value="25" maxlength="2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <h4>Hasta:</h4>
+                      <div class="row">
+                        <div class="col-4">
+                          <label>Mes</label>
+                          <input (keypress)="numberOnly($event)" type="text" value="09" maxlength="2">
+                        </div>
+                        <div class="col-4">
+                          <label>Día</label>
+                          <input (keypress)="numberOnly($event)" type="text" value="25" maxlength="2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer center">
+        <button class="btn-blue" type="button" data-dismiss="modal" aria-label="Close">Filtrar</button>
+      </div>
+    </div>
+  </div>
+</div>

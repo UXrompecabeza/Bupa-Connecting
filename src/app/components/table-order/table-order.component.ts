@@ -38,12 +38,6 @@ export class TableOrderComponent implements OnInit {
         date: '25/02/18',
         doctor: 'Elena San Matín Hidalgo'
       }
-    }, {
-      order: 3,
-      info: {
-        date: '28/02/18',
-        doctor: 'Rodrigo Miranda Caballero'
-      }
     },
   ];
   sortedCollection: any[];

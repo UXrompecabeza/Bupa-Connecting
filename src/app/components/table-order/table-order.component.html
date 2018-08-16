@@ -1,38 +1,39 @@
-
-<table>
-  <thead>
-    <tr>
-      <th class="table-header-order" [class.active]="order === 'order'"(click)="setOrder('order')"> Orden médica 
-        <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-      </th>
-      <th class="table-header-order" [class.active]="order === 'info.date'"(click)="setOrder('info.date')"> Fecha
-        <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-      </th>
-      <th class="table-header-order" [class.active]="order === 'info.doctor'"(click)="setOrder('info.doctor')"> Médico
-        <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-      </th>
-      <th class="table-header-order"></th>
-      <th class="table-header-order"></th>
-    </tr>
-  </thead>
-  <tbody *ngFor="let tip of tips | orderBy: order:reverse:'case-insensitive' ; let i = index">
-    <tr class="table-body-order" [ngClass]="{'table-body-order--active' : tip.isOpen}" (click)="showContent(tip)" [ngStyle]="{'background-color': this.tip.isOpen === true ? '#bfe0e0' : '#f5fcfc'}">
-      <td class="table-body-row"> Orden {{ tip.order }}</td>
-      <td class="table-body-row">{{ tip.info.date }}</td>
-      <td class="table-body-row"> Dr. {{ tip.info.doctor }}</td>
-      <td class="table-body-row">
-        <span>Paciente: Francisca Andrea Velasco Ferrada</span>
-      </td>
-      <td>
-        <img class="icon_bottom" src="../../../assets/icons/icon-arrow-blue-bottom.svg" [ngStyle]="{'transform': this.tip.isOpen === true ? 'rotate(180deg)' : 'rotate(0deg)'}">
-      </td>
-    </tr>
-    <tr class="table-submenu" [hidden]="!tip.isOpen">
-      <td colspan="5">
-        <div>
-          <app-accordion id="{{i}}"></app-accordion>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="tabla-ordenes">
+  <table>
+    <thead>
+      <tr>
+        <th class="table-header-order" [class.active]="order === 'order'"(click)="setOrder('order')"> Orden médica 
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header-order" [class.active]="order === 'info.date'"(click)="setOrder('info.date')"> Fecha
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header-order" [class.active]="order === 'info.doctor'"(click)="setOrder('info.doctor')"> Médico
+          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
+        </th>
+        <th class="table-header-order"></th>
+        <th class="table-header-order"></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let tip of tips | orderBy: order:reverse:'case-insensitive' ; let i = index">
+      <tr class="table-body-order" [ngClass]="{'table-body-order--active' : tip.isOpen}" (click)="showContent(tip)" [ngStyle]="{'background-color': this.tip.isOpen === true ? '#bfe0e0' : '#f5fcfc'}">
+        <td class="table-body-row"> Orden {{ tip.order }}</td>
+        <td class="table-body-row">{{ tip.info.date }}</td>
+        <td class="table-body-row"> Dr. {{ tip.info.doctor }}</td>
+        <td class="table-body-row">
+          <span>Paciente: Francisca Andrea Velasco Ferrada</span>
+        </td>
+        <td>
+          <img class="icon_bottom" src="../../../assets/icons/icon-arrow-blue-bottom.svg" [ngStyle]="{'transform': this.tip.isOpen === true ? 'rotate(180deg)' : 'rotate(0deg)'}">
+        </td>
+      </tr>
+      <tr class="table-submenu" [hidden]="!tip.isOpen">
+        <td colspan="5">
+          <div>
+            <app-accordion id="{{i}}"></app-accordion>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

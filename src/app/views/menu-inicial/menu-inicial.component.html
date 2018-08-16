@@ -8,6 +8,11 @@
       <app-paciente-encontrado *ngIf="loginSuccess"></app-paciente-encontrado>
       <app-paciente-no-encontrado *ngIf="noLoginEmpty"></app-paciente-no-encontrado>
     </div>
-    <div class="col-3"></div>
+    <div class="col-3">
+      <app-columna-promociones *ngIf="loginSuccess"></app-columna-promociones>
+    </div>
+    <div class="col-12">
+      <app-resumen-gestiones *ngIf="home"></app-resumen-gestiones>
+    </div>
   </div>
 </div>

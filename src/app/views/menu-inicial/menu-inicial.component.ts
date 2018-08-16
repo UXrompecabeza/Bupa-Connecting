@@ -13,11 +13,13 @@ export class MenuInicialComponent implements OnInit {
   }
 
   loginSuccess: boolean = false;
-  noLoginEmpty:boolean = true;
+  noLoginEmpty:boolean = false;
+  home:boolean = true;
 
   changeLogin() {
     this.noLoginEmpty = false;
     this.loginSuccess = true;
+    this.home = false;
   }
 
 }

@@ -98,4 +98,8 @@ export class ModalNuevaReservaComponent implements OnInit {
         {id: 4, name: 'Integramédica Plaza Egaña'},
         {id: 5, name: 'Integramédica Los Dominicos'}
       ];
+
+      showResume() {
+        this.resumen = true;
+      }
 }

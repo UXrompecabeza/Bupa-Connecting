@@ -14,8 +14,6 @@
   z-index: 2;
   position: relative;
   height: 32.85em;
-  overflow-y: scroll;
-  overflow-x: hidden;
   background-color: #FFF;
   border: 1px solid $gray_disabled;
   border-radius: 8px;
@@ -23,27 +21,44 @@
   transition: width 1s;
   .header {
     border-bottom: 1px solid $gray_disabled;
+    img {
+      position: absolute;
+      right: 0.5em;
+      top: .6em;
+      width: 16px;
+      cursor: pointer;
+    }
     h3 {
       font-size: 16px;
-      padding-top: 1.5em;
+      padding-top: 1em;
       margin: 0;
     }
     h4 {
+      font-size: 14px;
+      padding-top: .3em;
+      margin: 0;
+      font-weight: $regular;
+    }
+    h5 {
       font-size: 12px;
       font-weight: $light;
       color: $gray_typo;
-      padding-bottom: 2em;
+      padding-bottom: 1em;
     }
   }
-  ul {
+  .doctors {
     list-style: none;
     padding: 0;
     margin: 0;
+    overflow-y: scroll;
+    height: 27.3em;
+    position: relative;
     .list-doctors {
       padding: .7em 1em;
       border-bottom: 1px solid $gray_disabled;
       .row {
         margin: 0;
+        padding-bottom: 1em;
         .col-2 , .col-10 {
           padding: 0;
         }
@@ -51,7 +66,7 @@
           width: 3em;
           flex: unset;
           img {
-            height: 40px;
+            height: 2.2em;
           }
         }
         .col-10 {
@@ -60,17 +75,7 @@
           h4 {
             font-size: 16px;
             color: $brand-blue_main;
-            margin-bottom: .2em;
-          }
-          h5 {
-            font-size: 14px;
-            font-weight: $light;
-            margin-bottom: .2em;
-          }
-          p {
-            font-size: 14px;
-            font-weight: $light;
-            color: $gray_typo;
+            margin: .5em 0 0;
           }
         }
       }
@@ -80,15 +85,15 @@
         .icon-day, .icon-afternoon {
           background-color: #FFF;
           position: absolute;
-          padding: 0 .5em;
+          padding: 0 .7em;
           z-index: 2;
           img {
-            width: 25px;
+            width: 1.5em;
           }
         }
         ul {
           text-align: left;
-          padding: 0 0 1em 3.5em;
+          padding: 0 0 .7em 3.5em;
           width: 110em;
           li {
             display: inline-block;
