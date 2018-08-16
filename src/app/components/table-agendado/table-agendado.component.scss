@@ -108,32 +108,10 @@ table{
       }
       .container-popover {
         position: absolute;
-        display: inline-block;
+        display: none;
         z-index: 1;
         right: 1em;
         top: 5.5em;
-      }
-        .triangle {
-          position: absolute;
-          width: 0; 
-          height: 0; 
-          &-back {
-            @extend .triangle;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-bottom: 6px solid $grey-background;
-            right: 1em;
-            top: -.39em;
-          }
-          &-front {
-            @extend .triangle;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-bottom: 6px solid #FFF;
-            right: 1em;
-            top: -.4em;
-          }
-        }
         ul {
           list-style: none;
           width: 11.25em;
@@ -158,3 +136,7 @@ table{
       }
     }
   }
+}
+.show {
+  display: block !important;
+}

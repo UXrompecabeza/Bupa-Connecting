@@ -69,9 +69,7 @@ export class TableAgendadoComponent implements OnInit {
   }
 
   openPop(event) {
-    console.log(event.target.parentNode.parentNode.childNodes)
-    // this.popup = !this.popup
+    let target = event.target.parentElement.nextSibling;
+    target.classList.toggle("show")
   }
-
-  popup: boolean = false;
 }

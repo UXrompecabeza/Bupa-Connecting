@@ -29,8 +29,17 @@ export class SidebarComponent implements OnInit {
   }
 
   sidebar: boolean = false;
+  
   openSidebar(){
-    console.log("clickSidebar")
     this.sidebar = !this.sidebar;       
+  }
+
+  active(event) {
+    let target = event.target.parentElement;
+    let buttonsSidebar = document.getElementsByClassName("buttons-sidebar");
+    for (let i = 0; i < buttonsSidebar.length; i++) {
+      buttonsSidebar[i].classList.remove("active");
+    }
+    target.classList.add("active");
   }
 }

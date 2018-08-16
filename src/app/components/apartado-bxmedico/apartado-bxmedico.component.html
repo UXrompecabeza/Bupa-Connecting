@@ -5,20 +5,20 @@
     <div class="col-6 col-mañana">
       <h6>Horario Mañana</h6>
       <ul>
-        <li>
+        <!-- <li>
           <div *ngIf="shadow" class="back-shadow">
               <img src="../../../assets/icons/icon-hours-on.svg">
           </div>
           <img (click)="shadow = !shadow" src="../../../assets/icons/icon-hours-off.svg">
           <span (click)="shadow = !shadow; clickResume()">8:00</span>
-        </li>
+        </li> -->
         <li *ngFor="let hora of morning">
-          <img src="../../../assets/icons/icon-hours-off.svg">
-          <span>{{hora}}</span>
-          <!-- <label class="container">{{hora}}
+          <!-- <img src="../../../assets/icons/icon-hours-off.svg">
+          <span (click)="clickResume(); clickResume2()">{{hora}}</span> -->
+          <label class="container" (click)="clickResume(); clickResume2()">{{hora}}
             <input type="radio" name="radio">
             <span class="checkmark"></span>
-          </label> -->
+          </label>
         </li>
       </ul>
     </div>
@@ -26,12 +26,12 @@
       <h6>Horario Tarde</h6>
       <ul>
         <li *ngFor="let hora of afternoon">
-          <img src="../../../assets/icons/icon-hours-off.svg">
-          <span>{{hora}}</span>
-          <!-- <label class="container">{{hora}}
+          <!-- <img src="../../../assets/icons/icon-hours-off.svg">
+          <span (click)="clickResume(); clickResume2()">{{hora}}</span> -->
+          <label class="container" (click)="clickResume(); clickResume2()">{{hora}}
             <input type="radio" name="radio">
             <span class="checkmark"></span>
-          </label> -->
+          </label>
         </li>
       </ul>
     </div>

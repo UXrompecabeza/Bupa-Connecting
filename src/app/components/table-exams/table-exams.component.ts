@@ -51,7 +51,10 @@ export class TableExamsComponent implements OnInit {
     this.order = value;
   }
 
-  popover = ['Agendar hora', 'Más horarios']
+  openPop(event) {
+    let target = event.target.parentElement.nextSibling;
+    target.classList.toggle("show")
+  }
 
   ngOnInit() {
   }

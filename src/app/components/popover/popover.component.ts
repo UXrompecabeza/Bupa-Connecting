@@ -39,18 +39,8 @@ export class PopoverComponent implements OnInit {
   }
   move(event) {
     let element = event.target.parentElement;
-    console.log(element)
     let content = document.getElementById("content");
     content.classList.toggle("contraer"); 
     element.parentElement.scrollLeft += element.offsetLeft;
-    // element.scrollLeft += 600;
-    // setInterval(
-    //   function(){ element.parentElement.parentElement.scrollLeft += element.offsetLeft; },
-    //   200
-    // );
-    // setTimeout(function(){ 
-    //   let element = document.getElementById("box-11");
-    //   element.parentElement.parentElement.scrollLeft += element.offsetLeft; 
-    // console.log("ok")}, 3000);
   }
 }

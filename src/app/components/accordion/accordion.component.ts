@@ -54,13 +54,16 @@ export class AccordionComponent implements OnChanges {
   // desactivar: boolean = true;
   noMolestar(event) {
     let attrLabel = event.target.parentNode.childNodes[1].attributes[1].value.split(' ');
-    let className = event.target.parentNode.childNodes[1].attributes[1].value;
+    let input = event.target.parentNode.childNodes[0];
+    // console.log(event.target.parentNode.childNodes[0])
+    // let className = event.target.parentNode.childNodes[1].attributes[1].value;
     if(attrLabel[1] === 'on'){
+      input.disabled = true;
       event.target.parentNode.childNodes[1].attributes[1].value = attrLabel[0] +' off';
     } else {
+      input.disabled = false;
       event.target.parentNode.childNodes[1].attributes[1].value = attrLabel[0] +' on';
     }
-    console.log(className);
   }
 
   sendMail(orden) {

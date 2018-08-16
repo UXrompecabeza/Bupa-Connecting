@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   @Output() clickMenuBurguer:EventEmitter<any> = new EventEmitter();
 
   clickMenu() {
-    console.log("clickBurguer")
     this.clickMenuBurguer.emit();
   }
 

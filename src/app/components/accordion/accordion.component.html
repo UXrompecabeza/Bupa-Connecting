@@ -17,10 +17,10 @@
   <div class="tab accordion-item" *ngFor="let orden of ordenes2; let i = index">
     <input id="accy{{i}}" type="checkbox">
     <label for="accy{{i}}" class="accordion-header on">
-        <span class="accordion-title"> {{orden.info.exam}} </span> 
-        <span class="accordion-subtitle" data-toggle="modal" data-target="#modal-indications"> {{orden.info.indication}} </span>
-      </label>
-      <img (click)="noMolestar($event)" class={{orden.info.class}} src={{orden.info.icon}} >
+      <span class="accordion-title"> {{orden.info.exam}} </span> 
+      <span class="accordion-subtitle" data-toggle="modal" data-target="#modal-indications"> {{orden.info.indication}} </span>
+    </label>
+    <img (click)="noMolestar($event)" class={{orden.info.class}} src={{orden.info.icon}} >
     <div class="accordion-body">
       <app-table-exams></app-table-exams>
       <div class="mejores-opciones">

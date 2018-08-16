@@ -46,6 +46,7 @@
     }
     .icon{
       position: absolute;
+      cursor: pointer;
       &_mail{
         @extend .icon;
         right: 1.5em;

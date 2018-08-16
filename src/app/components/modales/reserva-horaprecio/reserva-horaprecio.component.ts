@@ -21,6 +21,37 @@ export class ReservaHoraprecioComponent implements OnInit {
     ngOnInit() {
   }
 
+  monthWeek = ['Mayo 2018','Junio 2018'];
+    weekDays = ['15','21'];
+    weekCalendar = ['Mie','Jue','Vie','Sab','Dom','Lun','Mar'];
+    daysWeekCalendar = [
+      {day: 15, class: '', classb:'circle-background'},
+      {day: 16, class: 'active', classb:'circle-background active-b'},
+      {day: 17, class: 'active', classb:'circle-background active-b'},
+      {day: 18, class: 'active', classb:'circle-background active-b'},
+      {day: 19, class: '', classb:'circle-background'},
+      {day: 20, class: '', classb:'circle-background'},
+      {day: 21, class: '', classb:'circle-background'}
+    ];
+    
+    selectedDay(event) {
+      let day = event.target;
+      let number = document.getElementsByClassName("active");
+      let circle = document.getElementsByClassName("circle-background");
+      for (let i = 0; i < number.length; i++) {
+        number[i].classList.remove("selected");
+      }
+      for (let i = 0; i < circle.length; i++) {
+        circle[i].classList.remove("selected");
+      }
+      if(day.classList.contains("active")) {
+        day.classList.add("selected");
+      }
+      if(day.nextSibling.classList.contains("active-b")) {
+        day.nextSibling.classList.add("selected");
+      }
+    }
+
   doctor = [
     {id: 1, name: 'Karen Medina'},
     {id: 2, name: 'Úrsula Barros'},

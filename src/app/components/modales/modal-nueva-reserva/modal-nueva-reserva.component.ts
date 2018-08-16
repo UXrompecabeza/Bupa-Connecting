@@ -9,7 +9,6 @@ export class ModalNuevaReservaComponent implements OnInit {
 
   constructor() { }
 
-  daySelected: boolean = false;
   next: boolean = false;
   next2: boolean = false;
   next3: boolean = false;
@@ -36,6 +35,23 @@ export class ModalNuevaReservaComponent implements OnInit {
       {day: 21, class: '', classb:'circle-background'}
     ];
     
+    selectedDay(event) {
+      let day = event.target;
+      let number = document.getElementsByClassName("active");
+      let circle = document.getElementsByClassName("circle-background");
+      for (let i = 0; i < number.length; i++) {
+        number[i].classList.remove("selected");
+      }
+      for (let i = 0; i < circle.length; i++) {
+        circle[i].classList.remove("selected");
+      }
+      if(day.classList.contains("active")) {
+        day.classList.add("selected");
+      }
+      if(day.nextSibling.classList.contains("active-b")) {
+        day.nextSibling.classList.add("selected");
+      }
+    }
       doctor = [
         {id: 1, name: 'Karen Medina'},
         {id: 2, name: 'Úrsula Barros'},
@@ -101,5 +117,8 @@ export class ModalNuevaReservaComponent implements OnInit {
 
       showResume() {
         this.resumen = true;
+      }
+      showResume2() {
+        this.resumen2 = true;
       }
 }

@@ -49,7 +49,6 @@ export class ApartadoBxespecialidadComponent implements OnInit {
 
   move(event) {
     var element = event.target.parentElement.parentElement;
-    console.log(element);
     setTimeout(function(){ 
         element.scrollIntoView({behavior: "smooth", inline: "center"})}, 1000);
   }

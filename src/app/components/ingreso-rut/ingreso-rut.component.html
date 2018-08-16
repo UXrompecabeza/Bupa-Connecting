@@ -1,6 +1,6 @@
 <div class="ingreso-rut">
   <img data-toggle="modal" data-target="#modal-crearPaciente" class="sidebar-icon" src="assets/icons/icon-asignados-blue.svg" alt=""/>
   <span>Pacientes</span>
-  <input type="text" placeholder="Ingresa rut">
+  <input type="text" maxLength="12" (keyup)="rut($event)" placeholder="Ingresa rut">
   <button class="btn" (click)="showPaciente()" data-toggle="modal" data-target="#modalPromocion">Ingresa</button>
 </div>
