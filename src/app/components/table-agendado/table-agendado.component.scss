@@ -51,9 +51,9 @@ table{
             position: relative;
           }
         }
-        &:last-child {
-          position: relative;
-        }
+        // &:last-child {
+        //   position: relative;
+        // }
       }
 
       // .info-centro {
@@ -88,6 +88,41 @@ table{
       }
       .more-options {
         cursor: pointer;
+        position: relative;
+        height: 4em;
+        display: inline-block;
+        width: 2em;
+        .container-popover {
+          display: none;
+          position: absolute;
+          z-index: 1;
+          right: 0;
+          top: 3.9em;
+          ul {
+            list-style: none;
+            width: 11.25em;
+            padding: 0;
+            background-color: #FFF;
+            li {
+              border: 1px solid $grey-background;
+              border-bottom: none;
+              padding: .5em 1.5em;
+              color: $gray_typo;
+              font-size: 12px;
+              cursor: pointer;
+              &:last-child {
+                border-bottom: 1px solid $grey-background;
+              }
+              &:hover {
+                background-color: $brand-blue_main;
+                color: #FFF;
+              }
+            }
+          }
+        }
+        &:hover {
+          .container-popover {display: block;}
+        }
       }
       .icon {
         &_location {
@@ -106,34 +141,34 @@ table{
         padding-left: 1em;
         display: inline-block;
       }
-      .container-popover {
-        position: absolute;
-        display: none;
-        z-index: 1;
-        right: 1em;
-        top: 5.5em;
-        ul {
-          list-style: none;
-          width: 11.25em;
-          padding: 0;
-          background-color: #FFF;
-          li {
-            border: 1px solid $grey-background;
-            border-bottom: none;
-            padding: .5em 1.5em;
-            color: $gray_typo;
-            font-size: 12px;
-            cursor: pointer;
-            &:last-child {
-              border-bottom: 1px solid $grey-background;
-            }
-            &:hover {
-              background-color: $brand-blue_main;
-              color: #FFF;
-            }
-          }
-        }
-      }
+      // .container-popover {
+      //   position: absolute;
+      //   display: none;
+      //   z-index: 1;
+      //   right: 1em;
+      //   top: 5.5em;
+      //   ul {
+      //     list-style: none;
+      //     width: 11.25em;
+      //     padding: 0;
+      //     background-color: #FFF;
+      //     li {
+      //       border: 1px solid $grey-background;
+      //       border-bottom: none;
+      //       padding: .5em 1.5em;
+      //       color: $gray_typo;
+      //       font-size: 12px;
+      //       cursor: pointer;
+      //       &:last-child {
+      //         border-bottom: 1px solid $grey-background;
+      //       }
+      //       &:hover {
+      //         background-color: $brand-blue_main;
+      //         color: #FFF;
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
 }
