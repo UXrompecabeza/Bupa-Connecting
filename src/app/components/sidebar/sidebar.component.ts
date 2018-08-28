@@ -29,7 +29,7 @@ export class SidebarComponent implements OnInit {
   }
 
   sidebar: boolean = false;
-  
+
   openSidebar(){
     this.sidebar = !this.sidebar;       
   }
@@ -40,6 +40,8 @@ export class SidebarComponent implements OnInit {
     for (let i = 0; i < buttonsSidebar.length; i++) {
       buttonsSidebar[i].classList.remove("active");
     }
-    target.classList.add("active");
+    if (target.classList.contains("buttons-sidebar")) {
+      target.classList.add("active");
+    }
   }
 }

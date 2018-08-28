@@ -51,9 +51,9 @@
       position: fixed;
       width: 96%;
       top: 12.55em;
-      // @media only screen and (min-width: 900px) and (max-width: 1300px) {
-      //   top: 26.3%;
-      // }
+      @media only screen and (min-width: 1500px) {
+        top: 15.25em;
+      }
       .header-sticky {
         @extend .table-header;
         position: absolute;

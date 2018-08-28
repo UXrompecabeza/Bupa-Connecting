@@ -53,9 +53,13 @@
         height: 100%;
         left: -50%;
       }
-      height: 52em;
+      @media only screen and (min-width: 1500px) {
+        left: -20%;
+      }
+      min-height: 52em;
       position: absolute;
       left: -30%;
+      height: 100%;
     }
   }
 }

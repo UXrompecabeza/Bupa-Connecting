@@ -56,6 +56,7 @@ import { FiltroEmbudoComponent } from './components/modales/filtro-embudo/filtro
 import { ColumnaPromocionesComponent } from './components/columna-promociones/columna-promociones.component';
 import { MenuPromocionesComponent } from './views/menu-promociones/menu-promociones.component';
 import { ResumenGestionesComponent } from './components/resumen-gestiones/resumen-gestiones.component';
+import { ConfirmacionComponent } from './components/modales/confirmacion/confirmacion.component';
 
 
 @NgModule({
@@ -105,7 +106,8 @@ import { ResumenGestionesComponent } from './components/resumen-gestiones/resume
     FiltroEmbudoComponent,
     ColumnaPromocionesComponent,
     MenuPromocionesComponent,
-    ResumenGestionesComponent
+    ResumenGestionesComponent,
+    ConfirmacionComponent
   ],
   imports: [
     BrowserModule,
