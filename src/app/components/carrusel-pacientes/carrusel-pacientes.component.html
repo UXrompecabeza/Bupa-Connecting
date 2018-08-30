@@ -1,15 +1,15 @@
-<div class="carrusel-pacientes">
+<div class="carrusel-pacientes" *ngFor="let dato of patient">
   <div class="patient-logo">
     <!-- <a href="#"><img class="icon-arrow-left" src="assets/icons/icon-arrow-left-grey.svg" alt=""/></a> -->
-    <img class="icon-woman" src="assets/icons/icon-woman.svg" alt=""/>
+    <img src="{{dato.logo}}" alt=""/>
     <!-- <a href="#"><img class="icon-arrow-right" src="assets/icons/icon-arrow-right-blue.svg" alt=""/></a> -->
   </div>
   <div class="patients-data">
-    <h5 class="patients-name">Francisca Andrea Velasco Ferrada</h5>
-    <p class="patients-genre-age">M | 30 años, 2 meses y 8 días</p>
-    <p class="patients-contact patients-mail">francisca.v@gmail.com</p>
-    <p class="patients-contact">+569 6222 4567</p>
-    <p class="patients-rut">RUT:  16.456.789-0</p>
-    <p class="patients-rut">Previsión: Isapre Cruz Blanca</p>
+    <h5 class="patients-name">{{dato.name}}</h5>
+    <p class="patients-genre-age">{{dato.genre}} | {{dato.age}}</p>
+    <p class="patients-contact patients-mail">{{dato.mail}}</p>
+    <p class="patients-contact">{{dato.cel}}</p>
+    <p class="patients-rut">RUT:  {{dato.rut}}</p>
+    <p class="patients-rut">Previsión: {{dato.prev}}</p>
   </div>
 </div>

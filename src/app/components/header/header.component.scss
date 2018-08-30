@@ -45,9 +45,9 @@ header {
       .user-info {
         display: inline-block;
         .user-img {
-          border-radius: 50%;
-          height: 2.6em;
-          margin: 0 .5em .7em 0;
+          height: 2em;
+          vertical-align: sub;
+          margin-right: .5em;
         }
         .user-info_text {
           display: inline-block;

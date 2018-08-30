@@ -1,9 +1,13 @@
 @import '../../scss/var.scss';
-.carrusel-pacientes {
-  .icon-woman {
-    padding-left: 30%;
-    padding-right: 30%;
+@media only screen and (min-height: 630px) and (max-height: 755px) {
+  .patient-logo {
+    display: none;
   }
+  .patients-name {
+    font-size: 16px!important;
+  }
+}
+.carrusel-pacientes {
   .patient-logo {
     text-align: center;
   }

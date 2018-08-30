@@ -1,6 +1,14 @@
 @import '../../scss/var.scss';
 @import '../../scss/mixin.scss';
 
+@media only screen and (min-height: 630px) and (max-height: 710px) {
+    .ultima-consulta, .info-patients, .container-state {
+        padding-top: 3%!important;
+    }
+    .datos-paciente {
+        padding: 1% 0 2% 0!important;
+    }
+}
 .info-patients {
     @media only screen and (min-width: 900px) and (max-width: 1150px) {
         padding-top: 5%;
