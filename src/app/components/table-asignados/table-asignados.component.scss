@@ -5,6 +5,11 @@
   overflow: scroll;
   table{
     width: 100%;
+    thead {
+      &:first-child {
+        opacity: 0;
+      }
+    }
     .table-header{
       background-color: #f2f2f2;
       color: $gray_typo;
@@ -50,10 +55,7 @@
     .thead-sticky {
       position: fixed;
       width: 96%;
-      top: 12.55em;
-      @media only screen and (min-width: 1500px) {
-        top: 15.25em;
-      }
+      margin-top: -2.7em;
       .header-sticky {
         @extend .table-header;
         position: absolute;
