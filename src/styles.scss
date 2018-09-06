@@ -48,6 +48,39 @@ input:-moz-focusring {
   }
 }
 
+.ng-select.hourSelect {
+  border: none;
+  border-bottom: 2px solid $gray_disabled;
+  width: 8em;
+  margin-left: 1em;
+  font-weight: 500;
+  color: $brand-blue_dark;
+  .ng-select-container {
+    border: none!important;
+    height: 2em;
+    min-height: 25px;
+    background-position-x: 90%;
+    background-size: 10%;
+  }
+  .ng-value-container {
+    padding: 0;
+  }
+  .ng-value {
+    padding: 0;
+    .ng-value-label {
+      padding: 0;
+    }
+  }
+  .ng-input {
+    input {
+      padding: 0!important;
+    }
+  }
+  .ng-dropdown-panel-items {
+    max-height: 6em;
+  }
+}
+
 @media only screen and (min-width: 900px) and (max-width: 1139px) {
 	.ngb-dp-day{
     width: 2.4rem !important;

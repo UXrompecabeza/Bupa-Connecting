@@ -2,7 +2,7 @@
 
 .accordion {
   background-color: #FFF;
-  max-height: 55vh;
+  max-height: 65vh;
   overflow: scroll;
   .accordion-item {
     border-top: 1px solid #f0f0f0;
@@ -75,7 +75,9 @@
   }
   .mejores-opciones {
     text-align: center;
-    padding: .5em 0;
+    padding: .8em 0;
+    position: relative;
+    z-index: 0;
     .link {
       color: $brand-blue_main;
       padding-left: .5em;
