@@ -47,17 +47,17 @@
       <td class="table-body-row">
         <a class="more-options" (click)="openPop($event)">
           <img class="icon_dots" src="./assets/icons/icon-chevron-button.svg" />
+          <div class="container-popover">
+            <ul>
+              <li data-dismiss="modal" data-toggle="modal" data-target="#modal-success">
+                Agendar hora
+              </li>
+              <li data-dismiss="modal" data-toggle="modal" data-target="#nuevaReservaAbierta">
+                Más horas
+              </li>
+            </ul>
+          </div>
         </a>
-        <div class="container-popover">
-          <ul>
-            <li data-dismiss="modal" data-toggle="modal" data-target="#modal-success">
-              Agendar hora
-            </li>
-            <li data-dismiss="modal" data-toggle="modal" data-target="#nuevaReservaAbierta">
-              Más horas
-            </li>
-          </ul>
-        </div>
       </td>
     </tr>
   </tbody>
