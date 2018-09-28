@@ -55,7 +55,6 @@ export class CrearPacienteComponent implements OnInit {
       return false;
     }
     return true;
-
   }
 
   email(event): boolean {

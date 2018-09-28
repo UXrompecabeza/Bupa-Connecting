@@ -10,13 +10,77 @@
       <app-paciente-no-encontrado *ngIf="noLoginEmpty"></app-paciente-no-encontrado> -->
     </div>
     <div class="col-3">
-      <button data-toggle="modal" data-target="#modalCalendario">
+      <!-- <button data-toggle="modal" data-target="#modalCalendario">
         <img src="assets/icons/icon-calendar.svg" alt="">
-      </button>
-      <button data-toggle="modal" data-target="#modalFiltro">
+      </button> -->
+      <button [ngClass]="{'filterBorder': filtrosOn }" (click)="filtrosOn = !filtrosOn">
         <img src="assets/icons/icon-filter.svg" alt="">
       </button>
     </div>
+    <div class="filtro" *ngIf="filtrosOn">
+      <div class="row">
+        <div class="col-2 singleCol">
+          <h4>Estado</h4>
+          <label class="container"> Gestionado
+            <input type="checkbox" class="filterCheck">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"> Pendiente
+            <input type="checkbox" class="filterCheck">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"> No quiere contacto
+            <input type="checkbox" class="filterCheck">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"> Llamar en otro momento
+            <input type="checkbox" class="filterCheck">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="col-4 doubleCol">
+          <h4>Previsión</h4>
+          <h4 class="fake-title">Previsión</h4>
+          <label class="container" *ngFor="let prev of prevision"> {{prev}}
+            <input type="checkbox" class="filterCheck">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="col-4 doubleCol">
+          <h4>Centro médico</h4>
+          <h4 class="fake-title">Centro médico</h4>
+          <label class="container" *ngFor="let centro of centros"> {{centro}}
+            <input type="checkbox" class="filterCheck">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="col-2 filterCal">
+          <div class="triangle"></div>
+          <h4>Fecha</h4>
+          <label class="from">Desde</label>
+          <input type="text" (keypress)="numberOnly($event)" maxlength="2" placeholder="DD">
+          <input type="text" (keypress)="numberOnly($event)" maxlength="2" placeholder="MM">
+          <input type="text" (keypress)="numberOnly($event)" maxlength="4" placeholder="AAAA" 
+          class="year">
+          <img src="assets/icons/icon-calendar.svg" alt="">
+          <div class="lastDate">
+            <label class="from">Hasta</label>
+            <input type="text" (keypress)="numberOnly($event)" maxlength="2" placeholder="DD">
+            <input type="text" (keypress)="numberOnly($event)" maxlength="2" placeholder="MM">
+            <input type="text" (keypress)="numberOnly($event)" maxlength="4" placeholder="AAAA" class="year">
+            <img src="assets/icons/icon-calendar.svg" alt="">
+          </div>
+          <!-- <button class="button-white" (click)="filtrosOn = false">Cancelar</button>
+          <button class="button" (click)="filtrosOn = false">Aplicar</button>
+          <label class="clean" (click)="clean()" ><a class="close"></a>LIMPIAR FILTRO</label> -->
+        </div>
+        <div class="buttonsBar">
+          <label class="clean" (click)="clean()" ><a class="close"></a>LIMPIAR FILTRO</label>
+          <button class="button-white" (click)="filtrosOn = false">Cancelar</button>
+          <button class="button" (click)="filtrosOn = false">Aplicar</button>
+        </div>
+      </div>
+  </div>
     <div class="col-12">
       <app-table-asignados></app-table-asignados>
     </div>

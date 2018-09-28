@@ -1,4 +1,5 @@
 @import '../../scss/var.scss';
+@import '../../scss/mixin.scss';
 .menuAsignados {
   @media (max-width: 995px) {
     display: none;
@@ -50,6 +51,7 @@
   .container-views {
     margin: 0;
     width: 96%;
+    position: relative;
     .date {
       text-align: center;
       width: 100%;
@@ -70,15 +72,227 @@
   }
   .col-3 {
     text-align: right;
-    padding-right: 6em; 
     button {
       border: none;
       background-color: #e5f2f9;
       padding: .6em 1em;
       height: 2.7em;
-      margin-top: 16.5%;
-      &:first-child {
-        border-right: 1px solid rgba(0, 121, 200, 0.3);
+      position: absolute;
+      bottom: 10px;
+      right: calc(10% + 61px);
+    }
+    .filterBorder {
+      border: 1px solid $brand-blue_main;
+    }
+  }
+  .filtro {
+    position: absolute;
+    top: 17.6%;
+    width: 95%;
+    background-color: #FFF;
+    margin: 0 2.5%;
+    z-index: 10;
+    border: 1px solid #e6e6e6;
+    box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.34);
+    border-radius: 2px;
+    padding-top: 1em;
+    .row {
+      margin: 0;
+      h4 {
+        font-size: 12px;
+        color: $gray_typo;
+        font-weight: $medium;
+        padding: 1em 0 1em;
+      }
+      label {
+        font-size: 11px;
+        font-weight: $regular;
+        color: $gray_typo;
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 1.5em;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+      }
+      .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          border: 1px solid #979797;
+          border-radius: 2px;
+      }
+      input:checked ~ .checkmark {
+          background-color: #0079c8;
+          border: 1px solid #0079c8;
+      }
+      .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+      }
+      input:checked ~ .checkmark:after {
+          display: block;
+      }
+      .checkmark:after {
+          left: 5px;
+          top: 1px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .doubleCol {
+      height: 230px;
+      overflow-y: scroll;
+      .container {
+        width: 49%;
+        display: inline-block;
+        margin-bottom: 1.2em;
+      }
+      &:nth-child(2) {
+        border-left: 2px solid #f2f2f2;
+      }
+      &:nth-child(3) {
+        border-left: 2px solid #f2f2f2;
+        border-right: 2px solid #f2f2f2;
+      }
+      .fake-title {
+        position: fixed;
+        margin-top: -4.25em;
+        width: 28%;
+        z-index: 10;
+        background-color: white;
+      }
+    }
+    .filterCal {
+      position: relative;
+      .triangle::before{
+        content: "";
+        position: absolute;
+        width: 0;
+        z-index: 1;
+        height: 0;
+        margin-left: -0.5em;
+        top: -1em;
+        right: 64px;
+        box-sizing: border-box;
+        border: 7px solid black;
+        border-color: transparent transparent #fff #fff;
+        transform-origin: 0 0;
+        transform: rotate(135deg);
+        }
+      .triangle::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin-left: -0.5em;
+        top: -1em;
+        right: 61px;
+        box-sizing: border-box;
+        border: 8px solid black;
+        border-color: transparent transparent #e6e6e6 #e6e6e6;
+        transform-origin: 0 0;
+        transform: rotate(135deg);
+        }
+      .from {
+        padding: 0;
+        margin: 0 0 .2em;
+      }
+      input[type="text"] {
+        @media (max-width: 1025px) {
+          padding: 0 3px;
+          width: 25%;
+        }
+        display: inline-block;
+        width: 20%;
+        height: 30px;
+        border: 1px solid #d8d8d8;
+        padding: 0 5px;
+        font-size: 13px;
+        margin-right: 4px;
+      }
+      input[type="text"]::-webkit-input-placeholder {
+        font-size: 13px;
+      }
+      input[type="text"]::-moz-placeholder {
+        font-size: 13px;
+      }
+      input[type="text"].year {
+        @media (max-width: 1025px) {
+          width: 40%;
+        }
+        width: 40%;
+      }
+      img {
+        @media (max-width: 1025px) {
+          display: none;
+        }
+        width: 13%;
+        max-width: 26px;
+        margin-top: -3px;
+      }
+      .lastDate {
+        margin: 1em 0;
+      }
+    }
+    .buttonsBar {
+      border-top: 1px solid #d8d8d8;
+      width: 100%;
+      margin-top: 1em;
+      padding-left: .5em;
+      .button {
+        @include button;
+        width: 90px;
+        height: 30px;
+      }
+      .button-white {
+        @include button-white;
+        width: 90px;
+        height: 30px;
+        margin-right: 1em;
+      }
+      .clean {
+        margin-top: 1.5em;
+        padding-left: 2.5em;
+        display: inline-block;
+        width: 84%;
+        @media (max-width: 1025px) {
+          width: 78%;
+        }
+        .close {
+          width: 8px;
+          height: 8px;
+          &:before, &:after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 15px;
+            width: 2px;
+            background-color: #919295;
+          }
+          &:before {
+            transform: rotate(45deg);
+          }
+          &:after {
+            transform: rotate(-45deg);
+          }
+        }
       }
     }
   }
