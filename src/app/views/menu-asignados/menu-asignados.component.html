@@ -17,40 +17,40 @@
         <img src="assets/icons/icon-filter.svg" alt="">
       </button>
     </div>
-    <div class="filtro" *ngIf="filtrosOn">
+    <div class="filtro" *ngIf="filtrosOn" (change)="filtrar()">
       <div class="row">
         <div class="col-2 singleCol">
           <h4>Estado</h4>
           <label class="container"> Gestionado
-            <input type="checkbox" class="filterCheck">
+            <input type="checkbox" class="filterCheck" value="es-1">
             <span class="checkmark"></span>
           </label>
           <label class="container"> Pendiente
-            <input type="checkbox" class="filterCheck">
+            <input type="checkbox" class="filterCheck" value="es-2">
             <span class="checkmark"></span>
           </label>
           <label class="container"> No quiere contacto
-            <input type="checkbox" class="filterCheck">
+            <input type="checkbox" class="filterCheck" value="es-3">
             <span class="checkmark"></span>
           </label>
           <label class="container"> Llamar en otro momento
-            <input type="checkbox" class="filterCheck">
+            <input type="checkbox" class="filterCheck" value="es-4">
             <span class="checkmark"></span>
           </label>
         </div>
         <div class="col-4 doubleCol">
           <h4>Previsión</h4>
           <h4 class="fake-title">Previsión</h4>
-          <label class="container" *ngFor="let prev of prevision"> {{prev}}
-            <input type="checkbox" class="filterCheck">
+          <label class="container" *ngFor="let prev of prevision"> {{prev.name}}
+            <input type="checkbox" class="filterCheck" value="{{prev.previsionId}}">
             <span class="checkmark"></span>
           </label>
         </div>
         <div class="col-4 doubleCol">
           <h4>Centro médico</h4>
           <h4 class="fake-title">Centro médico</h4>
-          <label class="container" *ngFor="let centro of centros"> {{centro}}
-            <input type="checkbox" class="filterCheck">
+          <label class="container" *ngFor="let centro of centros"> {{centro.name}}
+            <input type="checkbox" class="filterCheck" value="{{centro.centroId}}">
             <span class="checkmark"></span>
           </label>
         </div>
@@ -77,12 +77,12 @@
         <div class="buttonsBar">
           <label class="clean" (click)="clean()" ><a class="close"></a>LIMPIAR FILTRO</label>
           <button class="button-white" (click)="filtrosOn = false">Cancelar</button>
-          <button class="button" (click)="filtrosOn = false">Aplicar</button>
+          <button class="button" (click)="filtrosOn = false; filterActivate()">Aplicar</button>
         </div>
       </div>
   </div>
     <div class="col-12">
-      <app-table-asignados></app-table-asignados>
+      <app-table-asignados [filterCheck]="filterCheck"></app-table-asignados>
     </div>
   </div>
 </div>

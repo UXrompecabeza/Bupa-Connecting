@@ -2,94 +2,94 @@
   <table>
     <thead>
       <tr>
-        <th class="table-header" [class.active]="order === 'info.estado'"(click)="setOrder('info.estado')"> Estado
+        <th class="table-header" [class.active]="order === 'estado'"(click)="setOrder('estado')"> Estado
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="table-header" [class.active]="order === 'info.telefono'"(click)="setOrder('info.telefono')"> Teléfono
+        <th class="table-header" [class.active]="order === 'telefono'"(click)="setOrder('telefono')"> Teléfono
             <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
           </th>
-        <th class="table-header" [class.active]="order === 'info.nombre'"(click)="setOrder('info.nombre')"> Nombre
+        <th class="table-header" [class.active]="order === 'nombre'"(click)="setOrder('nombre')"> Nombre
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="table-header" [class.active]="order === 'info.edad'"(click)="setOrder('info.edad')"> Edad
+        <th class="table-header" [class.active]="order === 'edad'"(click)="setOrder('edad')"> Edad
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="table-header" [class.active]="order === 'info.rut'"(click)="setOrder('info.rut')"> RUT
+        <th class="table-header" [class.active]="order === 'rut'"(click)="setOrder('rut')"> RUT
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="table-header" [class.active]="order === 'info.prevision'"(click)="setOrder('info.prevision')"> Previsión
+        <th class="table-header" [class.active]="order === 'prevision'"(click)="setOrder('prevision')"> Previsión
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="table-header" [class.active]="order === 'info.centro'"(click)="setOrder('info.centro')"> Centro médico
+        <th class="table-header" [class.active]="order === 'centro'"(click)="setOrder('centro')"> Centro médico
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="table-header" [class.active]="order === 'info.op'"(click)="setOrder('info.op')"> Nº O.P.
+        <th class="table-header" [class.active]="order === 'op'"(click)="setOrder('op')"> Nº O.P.
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="table-header" [class.active]="order === 'info.espera'"(click)="setOrder('info.espera')"> En espera
+        <th class="table-header" [class.active]="order === 'espera'"(click)="setOrder('espera')"> En espera
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
       </tr>
     </thead>
     <thead class="thead-sticky">
       <tr>
-        <th class="header-sticky" [class.active]="order === 'info.estado'"(click)="setOrder('info.estado')"> Estado
+        <th class="header-sticky" [class.active]="order === 'estado'"(click)="setOrder('estado')"> Estado
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="header-sticky" [class.active]="order === 'info.telefono'"(click)="setOrder('info.telefono')"> Teléfono
+        <th class="header-sticky" [class.active]="order === 'telefono'"(click)="setOrder('telefono')"> Teléfono
             <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
           </th>
-        <th class="header-sticky" [class.active]="order === 'info.nombre'"(click)="setOrder('info.nombre')"> Nombre
+        <th class="header-sticky" [class.active]="order === 'nombre'"(click)="setOrder('nombre')"> Nombre
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="header-sticky" [class.active]="order === 'info.edad'"(click)="setOrder('info.edad')"> Edad
+        <th class="header-sticky" [class.active]="order === 'edad'"(click)="setOrder('edad')"> Edad
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="header-sticky" [class.active]="order === 'info.rut'"(click)="setOrder('info.rut')"> RUT
+        <th class="header-sticky" [class.active]="order === 'rut'"(click)="setOrder('rut')"> RUT
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="header-sticky" [class.active]="order === 'info.prevision'"(click)="setOrder('info.prevision')"> Previsión
+        <th class="header-sticky" [class.active]="order === 'prevision'"(click)="setOrder('prevision')"> Previsión
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="header-sticky" [class.active]="order === 'info.centro'"(click)="setOrder('info.centro')"> Centro médico
+        <th class="header-sticky" [class.active]="order === 'centro'"(click)="setOrder('centro')"> Centro médico
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="header-sticky" [class.active]="order === 'info.op'"(click)="setOrder('info.op')"> Nº O.P.
+        <th class="header-sticky" [class.active]="order === 'op'"(click)="setOrder('op')"> Nº O.P.
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
-        <th class="header-sticky" [class.active]="order === 'info.espera'"(click)="setOrder('info.espera')"> En espera
+        <th class="header-sticky" [class.active]="order === 'espera'"(click)="setOrder('espera')"> En espera
           <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
         </th>
       </tr>
     </thead>
     <tbody class="table-body">
-      <tr *ngFor="let row of collection | orderBy: order:reverse:'case-insensitive'">
+      <tr *ngFor="let row of newCollection | orderBy: order:reverse:'case-insensitive'">
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.estado }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.estado }}</span> 
         </td>
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.telefono }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.telefono }}</span> 
         </td>
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.nombre }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.nombre }}</span> 
         </td>
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.edad }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.edad }}</span> 
         </td>
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.rut }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.rut }}</span> 
         </td>
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.prevision }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.prevision }}</span> 
         </td>
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.centro }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.centro }}</span> 
         </td>
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.op }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.op }}</span> 
         </td>
         <td class="table-body-row info-centro">
-          <span class="table-typo-light_blue_dark"> {{ row.info.espera }}</span> 
+          <span class="table-typo-light_blue_dark"> {{ row.espera }}</span> 
         </td>
       </tr>
     </tbody>
