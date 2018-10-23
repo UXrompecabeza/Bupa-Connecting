@@ -10,10 +10,8 @@
           <img src="assets/icons/icon_alert.svg" alt=""> No agendable
         </span>
       </label>
-      <div class="iconFloat">
-        <a class="more-options">
-          <img class="icon_mail" (click)="openPop($event)" src={{orden.icon}} >
-        </a>
+      <div class="iconFloat" (click)="openPop($event)">
+        <!-- <img class="icon_mail"  src={{orden.icon}} > -->
       </div>
     </div>
     <div class="container-popover">
@@ -31,10 +29,8 @@
         <span class="accordion-title"> {{orden.exam}} </span> 
         <span class="accordion-subtitle" data-toggle="modal" data-target="#modal-indications"> {{orden.indication}} </span>
       </label>
-      <div class="iconFloat">
-        <a class="more-options">
-          <img class="icon_mail" (click)="openPop($event)" src={{orden.icon}} >
-        </a>
+      <div class="iconFloat" (click)="openPop($event)">
+        <!-- <img class="icon_mail"  src={{orden.icon}} > -->
       </div>
       <div class="accordion-body">
         <app-table-exams></app-table-exams>
@@ -61,10 +57,8 @@
           <img src="assets/icons/icon_alert.svg" alt=""> No agendable
         </span> 
       </label>
-      <div class="iconFloat">
-        <a class="more-options">
-          <img class="icon_mail" (click)="openPop($event)" src={{orden.icon}} >
-        </a>
+      <div class="iconFloat" (click)="openPop($event)">
+        <!-- <img class="icon_mail"  src={{orden.icon}} > -->
       </div>
     </div>
     <div class="container-popover">

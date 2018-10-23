@@ -31,37 +31,6 @@
         </th>
       </tr>
     </thead>
-    <thead class="thead-sticky">
-      <tr>
-        <th class="header-sticky" [class.active]="order === 'estado'"(click)="setOrder('estado')"> Estado
-          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-        </th>
-        <th class="header-sticky" [class.active]="order === 'telefono'"(click)="setOrder('telefono')"> Teléfono
-            <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-          </th>
-        <th class="header-sticky" [class.active]="order === 'nombre'"(click)="setOrder('nombre')"> Nombre
-          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-        </th>
-        <th class="header-sticky" [class.active]="order === 'edad'"(click)="setOrder('edad')"> Edad
-          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-        </th>
-        <th class="header-sticky" [class.active]="order === 'rut'"(click)="setOrder('rut')"> RUT
-          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-        </th>
-        <th class="header-sticky" [class.active]="order === 'prevision'"(click)="setOrder('prevision')"> Previsión
-          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-        </th>
-        <th class="header-sticky" [class.active]="order === 'centro'"(click)="setOrder('centro')"> Centro médico
-          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-        </th>
-        <th class="header-sticky" [class.active]="order === 'op'"(click)="setOrder('op')"> Nº O.P.
-          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-        </th>
-        <th class="header-sticky" [class.active]="order === 'espera'"(click)="setOrder('espera')"> En espera
-          <img class="icon_orden" src="./assets/icons/icon-orden.svg"/>
-        </th>
-      </tr>
-    </thead>
     <tbody class="table-body">
       <tr *ngFor="let row of newCollection | orderBy: order:reverse:'case-insensitive'">
         <td class="table-body-row info-centro">

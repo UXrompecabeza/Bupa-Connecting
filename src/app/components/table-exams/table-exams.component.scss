@@ -2,7 +2,6 @@
 
 table{
   width: 100%;
-  
   .table-header{
     background-color: #F5FFFA;
     color: $gray_typo;
@@ -142,6 +141,7 @@ table{
           width: 11.25em;
           padding: 0;
           background-color: #FFF;
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.19);
           li {
             border: 1px solid $grey-background;
             border-bottom: none;

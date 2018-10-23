@@ -5,18 +5,15 @@
   overflow: scroll;
   table{
     width: 100%;
-    thead {
-      &:first-child {
-        opacity: 0;
-      }
-    }
     .table-header{
       background-color: #f2f2f2;
       color: $gray_typo;
       font-size: 12px;
       font-weight: 500;
       padding: 1em;
-      position: relative;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
       cursor: pointer;
       .icon_orden{
         width: 10px;
@@ -76,91 +73,6 @@
         }
         &:nth-child(9) {
           width: 12%;
-        }
-      }
-    }
-    .thead-sticky {
-      position: fixed;
-      width: 96%;
-      margin-top: -2.7em;
-      .header-sticky {
-        @extend .table-header;
-        position: absolute;
-          .icon_orden{
-            width: 10px;
-            margin: 0 .5em;
-          }
-        &:first-child {
-          width: 15%;
-        }
-        &:nth-child(2) {
-          left: 15%;
-          width: 8%;
-        }
-        &:nth-child(3) {
-          left: 23%;
-          width: 16.5%;
-        }
-        &:nth-child(4) {
-          left: 39.5%;
-          width: 6.5%;
-        }
-        &:nth-child(5) {
-          left: 46%;
-          width: 8%;
-        }
-        &:nth-child(6) {
-          left: 54%;
-          width: 17.5%;
-        }
-        &:nth-child(7) {
-          left: 71.5%;
-          width: 12%;
-        }
-        &:nth-child(8) {
-          left: 83.5%;
-          width: 7.5%;
-        }
-        &:nth-child(9) {
-          left: 91%;
-          width: 9%;
-        }
-        @media only screen and (min-width: 900px) and (max-width: 1300px) {
-          &:first-child {
-            width: 11.8;
-          }
-          &:nth-child(2) {
-            left: 11.8%;
-            width: 10.4%;
-          }
-          &:nth-child(3) {
-            left: 22.1%;
-            width: 12.2%;
-          }
-          &:nth-child(4) {
-            left: 34.3%;
-            width: 8.7%;
-          }
-          &:nth-child(5) {
-            left: 43%;
-            width: 9.9%;
-          }
-          &:nth-child(6) {
-            left: 52.9%;
-            width: 11.8%;
-          }
-          &:nth-child(7) {
-            left: 64.7%;
-            width: 14.3%;
-          }
-          &:nth-child(8) {
-            left: 79%;
-            width: 9.5%;
-          }
-          &:nth-child(9) {
-            left: 88.5%;
-            width: 11.5%;
-          }
         }
       }
     }

@@ -11,7 +11,6 @@ export class AccordionComponent implements OnChanges {
     {
       exam: ['Exámen de laboratorio de sangre'],
       indication: ['Leer indicaciones'],
-      icon: ['./assets/icons/button_multi.svg'],
       opacity: ['opacity'],
       options: [{name:'Enviar indicaciones',block:'no'},{name:'Rechazar asesoría',block:'yes1'}]
     },
@@ -20,14 +19,12 @@ export class AccordionComponent implements OnChanges {
     {
       exam: ['Endoscopia digestiva gastroscópica de mitad superior'],
       indication: ['Leer indicaciones'],
-      icon: ['./assets/icons/button_multi.svg'],
       opacity: '',
       options: [{name:'Rechazar asesoría',block:'yes'}]
     }, 
     {
       exam: ['Resonancia magnética espalda'],
       indication: ['Leer indicaciones'],
-      icon: ['./assets/icons/button_multi.svg'],
       opacity: '',
       options: [{name:'Rechazar asesoría',block:'yes'}]
     }, 
@@ -36,7 +33,6 @@ export class AccordionComponent implements OnChanges {
     {
       exam: ['Orden quirúrgica'],
       indication: ['Pedir presupuesto'],
-      icon: ['./assets/icons/button_multi.svg'],
       opacity: ['opacity'],
       options: [{name:'Pedir presupuesto',block:'no'},{name:'Rechazar asesoría',block:'yes1'}]
     }, 
@@ -48,8 +44,8 @@ export class AccordionComponent implements OnChanges {
   }
 
   openPop(event) {
-    let pop = event.target.parentNode.parentNode.parentNode.parentNode.childNodes[1];
-    let accordion = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
+    let pop = event.target.parentNode.parentNode.childNodes[1];
+    let accordion = event.target.parentNode.parentNode.parentNode;
     pop.classList.toggle("active");
     accordion.classList.toggle("scrollOff");
   }

@@ -1,174 +1,181 @@
 @import '../../scss/var';
 
-table{
-  width: 100%;
+.table-agendado {
+  height: 83vh;
+  overflow-y: scroll;
+  table{
+    width: 100%;
+    .table-header{
+      background-color: #f2f2f2;
+      color: $gray_typo;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 1em;
+      position: relative;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      z-index: 5;
+      cursor: pointer;
+      .icon_orden{
+        width: 10px;
+        margin: 0 .5em;
+      }
+      &:first-child {
+        width: 30%;
+      }
+      &:nth-child(2) {
+        width: 25%;
+      }
+      &:nth-child(3) {
+        width: 10%;
+      }
+      &:nth-child(4) {
+        @media only screen and (min-width: 900px) and (max-width: 1094px) {
+          width: 15% !important;
+      }
+        width: 10%;
+      }
+      &:nth-child(5) {
+        width: 15%;
+      }
+      &:nth-child(6) {
+        width: 5%;
+      }
+    }
   
-  .table-header{
-    background-color: #f2f2f2;
-    color: $gray_typo;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 1em;
-    position: relative;
-    cursor: pointer;
-    .icon_orden{
-      width: 10px;
-      margin: 0 .5em;
-    }
-    &:first-child {
-      width: 30%;
-    }
-    &:nth-child(2) {
-      width: 25%;
-    }
-    &:nth-child(3) {
-      width: 10%;
-    }
-    &:nth-child(4) {
-      @media only screen and (min-width: 900px) and (max-width: 1094px) {
-        width: 15% !important;
-    }
-      width: 10%;
-    }
-    &:nth-child(5) {
-      width: 15%;
-    }
-    &:nth-child(6) {
-      width: 5%;
-    }
-  }
-
-  .table-body{
-    font-size: 12px;
-    tr{
-      border-bottom: 1px solid #f0f0f0;
-      vertical-align: top;
-      td {
-        padding: 1em;
-        span {
-          padding-bottom: .3em;
-          &:last-child {
-            position: relative;
+    .table-body{
+      font-size: 12px;
+      tr{
+        border-bottom: 1px solid #f0f0f0;
+        vertical-align: top;
+        td {
+          padding: 1em;
+          span {
+            padding-bottom: .3em;
+            &:last-child {
+              position: relative;
+            }
+          }
+          // &:last-child {
+          //   position: relative;
+          // }
+        }
+  
+        // .info-centro {
+        //   padding-right: 3.5em;
+        // }
+  
+        .table-typo-light_blue_link{
+          font-weight: 300;
+          color: $brand-blue_main;
+          display: inline;
+          // padding: 0 0 .5em 1em;
+          cursor: pointer;
+  
+          &:hover{
+            text-decoration: underline;
           }
         }
-        // &:last-child {
-        //   position: relative;
-        // }
-      }
-
-      // .info-centro {
-      //   padding-right: 3.5em;
-      // }
-
-      .table-typo-light_blue_link{
-        font-weight: 300;
-        color: $brand-blue_main;
-        display: inline;
-        // padding: 0 0 .5em 1em;
-        cursor: pointer;
-
-        &:hover{
-          text-decoration: underline;
+        .table-typo-light_blue_dark{
+          font-weight: 300;
+          color: $brand-blue_dark;
+          display: block;   
+          // padding: 1em 0 .5em 1em;   
         }
-      }
-      .table-typo-light_blue_dark{
-        font-weight: 300;
-        color: $brand-blue_dark;
-        display: block;   
-        // padding: 1em 0 .5em 1em;   
-      }
-      .table-typo_strong {
-        font-weight: 500;
-        color: $brand-blue_dark;
-        display: block;
-        // padding: 1em 1em .5em 1em;
-      }
-      .no-padding-top {
-        padding-top: 0 !important;
-      }
-      .more-options {
-        cursor: pointer;
-        position: relative;
-        height: 4em;
-        display: inline-block;
-        width: 2em;
-        .container-popover {
-          display: none;
-          position: absolute;
-          z-index: 1;
-          right: 0;
-          top: 3.9em;
-          ul {
-            list-style: none;
-            width: 11.25em;
-            padding: 0;
-            background-color: #FFF;
-            li {
-              border: 1px solid $grey-background;
-              border-bottom: none;
-              padding: .5em 1.5em;
-              color: $gray_typo;
-              font-size: 12px;
-              cursor: pointer;
-              &:last-child {
-                border-bottom: 1px solid $grey-background;
-              }
-              &:hover {
-                background-color: $brand-blue_main;
-                color: #FFF;
+        .table-typo_strong {
+          font-weight: 500;
+          color: $brand-blue_dark;
+          display: block;
+          // padding: 1em 1em .5em 1em;
+        }
+        .no-padding-top {
+          padding-top: 0 !important;
+        }
+        .more-options {
+          cursor: pointer;
+          position: relative;
+          height: 4em;
+          display: inline-block;
+          width: 2em;
+          .container-popover {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 3.9em;
+            ul {
+              list-style: none;
+              width: 11.25em;
+              padding: 0;
+              background-color: #FFF;
+              li {
+                border: 1px solid $grey-background;
+                border-bottom: none;
+                padding: .5em 1.5em;
+                color: $gray_typo;
+                font-size: 12px;
+                cursor: pointer;
+                &:last-child {
+                  border-bottom: 1px solid $grey-background;
+                }
+                &:hover {
+                  background-color: $brand-blue_main;
+                  color: #FFF;
+                }
               }
             }
           }
+          &:hover {
+            .container-popover {display: block;}
+          }
         }
-        &:hover {
-          .container-popover {display: block;}
+        .icon {
+          &_location {
+            vertical-align: sub;
+          }
+          &_image{
+            margin: -3.5em 0 0 -2.5em;
+            width: 2em;
+          }
+          &_dots{
+            margin: 2em 0 0 1em;
+          }
         }
+        .link-direccion {
+          width: 85%;
+          padding-left: 1em;
+          display: inline-block;
+        }
+        // .container-popover {
+        //   position: absolute;
+        //   display: none;
+        //   z-index: 1;
+        //   right: 1em;
+        //   top: 5.5em;
+        //   ul {
+        //     list-style: none;
+        //     width: 11.25em;
+        //     padding: 0;
+        //     background-color: #FFF;
+        //     li {
+        //       border: 1px solid $grey-background;
+        //       border-bottom: none;
+        //       padding: .5em 1.5em;
+        //       color: $gray_typo;
+        //       font-size: 12px;
+        //       cursor: pointer;
+        //       &:last-child {
+        //         border-bottom: 1px solid $grey-background;
+        //       }
+        //       &:hover {
+        //         background-color: $brand-blue_main;
+        //         color: #FFF;
+        //       }
+        //     }
+        //   }
+        // }
       }
-      .icon {
-        &_location {
-          vertical-align: sub;
-        }
-        &_image{
-          margin: -3.5em 0 0 -2.5em;
-          width: 2em;
-        }
-        &_dots{
-          margin: 2em 0 0 1em;
-        }
-      }
-      .link-direccion {
-        width: 85%;
-        padding-left: 1em;
-        display: inline-block;
-      }
-      // .container-popover {
-      //   position: absolute;
-      //   display: none;
-      //   z-index: 1;
-      //   right: 1em;
-      //   top: 5.5em;
-      //   ul {
-      //     list-style: none;
-      //     width: 11.25em;
-      //     padding: 0;
-      //     background-color: #FFF;
-      //     li {
-      //       border: 1px solid $grey-background;
-      //       border-bottom: none;
-      //       padding: .5em 1.5em;
-      //       color: $gray_typo;
-      //       font-size: 12px;
-      //       cursor: pointer;
-      //       &:last-child {
-      //         border-bottom: 1px solid $grey-background;
-      //       }
-      //       &:hover {
-      //         background-color: $brand-blue_main;
-      //         color: #FFF;
-      //       }
-      //     }
-      //   }
-      // }
     }
   }
 }

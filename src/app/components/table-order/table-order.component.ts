@@ -38,7 +38,85 @@ export class TableOrderComponent implements OnInit {
         date: '25/02/18',
         doctor: 'Elena San Matín Hidalgo'
       }
-    },
+    }, {
+      order: 3,
+      info: {
+        date: '23/02/18',
+        doctor: 'Hilda Ordenes Durán'
+      }
+    }, {
+      order: 4,
+      info: {
+        date: '16/02/18',
+        doctor: 'Elena San Matín Hidalgo'
+      }
+    }, {
+      order: 5,
+      info: {
+        date: '05/02/18',
+        doctor: 'Elena San Matín Hidalgo'
+      }
+    }, {
+      order: 6,
+      info: {
+        date: '02/02/18',
+        doctor: 'Elena San Matín Hidalgo'
+      }
+    }, {
+      order: 7,
+      info: {
+        date: '25/02/18',
+        doctor: 'Elena San Matín Hidalgo'
+      }
+    }, {
+      order: 8,
+      info: {
+        date: '25/02/18',
+        doctor: 'Elena San Matín Hidalgo'
+      }
+    }, {
+      order: 9,
+      info: {
+        date: '25/02/18',
+        doctor: 'Elena San Matín Hidalgo'
+      }
+    }, {
+      order: 10,
+      info: {
+        date: '25/02/18',
+        doctor: 'Elena San Matín Hidalgo'
+      }
+    }, {
+      order: 11,
+      info: {
+        date: '24/02/18',
+        doctor: 'Fernando Arredondo Salgado'
+      }
+    }, {
+      order: 12,
+      info: {
+        date: '28/02/18',
+        doctor: 'Fernando Arredondo Salgado'
+      }
+    }, {
+      order: 13,
+      info: {
+        date: '13/02/18',
+        doctor: 'Fernando Arredondo Salgado'
+      }
+    }, {
+      order: 14,
+      info: {
+        date: '19/02/18',
+        doctor: 'Fernando Arredondo Salgado'
+      }
+    }, {
+      order: 15,
+      info: {
+        date: '21/02/18',
+        doctor: 'Fernando Arredondo Salgado'
+      }
+    }, 
   ];
   sortedCollection: any[];
   
